@@ -2,9 +2,9 @@
 title: test-day-2
 show: true
 date: 2021-08-05 00:37:11
-categories:
-tags:
-description:
+categories: test
+tags: test
+description: life as Test Contractor at EADP-C&I Test-Infra Team
 ---
 第三天的心情稍微有点糟
 
@@ -79,3 +79,8 @@ Jenkins上的这些job本身就是
 不过现在的本职毕竟还是测试，前端的东西晚上回家再学
 
 不知不觉晚上又坐到了快7点，好在今天到家精力比昨天更充沛一些
+
+回家之后在X470-RisingSun上简单配置了下开发环境，可以继续更新博客了
+
+文章非常、非常、非常少，以后会慢慢变多的吧
+
