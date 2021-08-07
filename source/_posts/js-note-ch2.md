@@ -2,7 +2,7 @@
 title: JS 笔记 第 2 章 HTML中的JavaScript
 categories: 读书笔记
 tags: JavaScript
-description: 有关\<script>元素的使用小知识，包括加载顺序和异步脚本使用注意事项等
+description: 有关script元素的使用小知识，包括加载顺序和异步脚本使用注意事项等
 show: true
 date: 2021-08-08 00:41:46
 ---
