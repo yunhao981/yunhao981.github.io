@@ -19,7 +19,9 @@ date: 2021-08-09 16:25:15
 
 比如说异步回调这边我就完全摸不着头脑
 
-中午休息时间做了道使用最小堆的题
+中午休息时间做了道使用最小堆的题，还对照着自己常用的键盘用PowerToys修改了下按键布局
+
+这样以后 Backspace 和退出 vim 的 insert 模式就不会因为肌肉记忆按错了
 
 下午依旧在试着让 1-Box Run Full-Cycle
 
@@ -44,6 +46,12 @@ kanas 和 paragon 都在 nucleus 的 repo 里
 才想起来在安装 node 的时候，为了从源代码编译 node， 自动安装了 3.9.6，临时卸掉吧
 
 现在用的是lts，不急着更新
+
+大概从三点半开始在本地 One-Box 里面执行了 Build-Nucleus 和 Build-Catalog
+
+Catalog花了25分钟，Nucleus估计要挂着一晚上了
+
+稍微有点点担心超时，下班前是 build 不完了
 
 check了若干 url-list群组里面的 jenkins job url
 
