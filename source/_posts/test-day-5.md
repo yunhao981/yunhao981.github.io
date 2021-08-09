@@ -4,46 +4,49 @@ categories: test
 tags: test
 description: life as Test Contractor at EADP-C&I Test-Infra Team
 show: true
-date: 2021-08-09 11:56:48
+date: 2021-08-09 16:25:15
 ---
-# Useful Links
 
-[Process of Release and Regression](https://developer.ea.com/display/CI/Process+of+Release+and+Regression)
+第二周！
 
-[CHGxxxxxxx-CD-Regression](https://developer.ea.com/display/CI/CHG0150415-CD-Regression)
+上午更新了Fastrun Daily Tracking，在 19539 发现了Fail to get Jenkins Job
 
-[cd develop spreadsheel](https://developer.ea.com/pages/viewpage.action?pageId=313443489)
+随后类似的错误报了相当多，也许是磁盘写满了的缘故
 
-[Fastrun-CN](https://fastrun.china.online.ea.com/regression?page=1)
+接着看了看 fastrun.portal 的源码，虽说同样都用了react，但整个项目结构和官网上的井字棋教程完全不一样
 
-[Release Runbook](https://developer.ea.com/pages/viewpage.action?spaceKey=CI&title=Release+Runbook)
+后面还是需要多去读一读看看的
 
-[Staging deployment jenkins job](https://developer.ea.com/display/CI/Staging+deployment+jenkins+job)
+比如说异步回调这边我就完全摸不着头脑
 
-# General Procedures
+中午休息时间做了道使用最小堆的题
 
-1. find intersections with my jobs from the process and CHGxxxxxx-CD-Regresssion
+下午依旧在试着让 1-Box Run Full-Cycle
 
-    1.1 get table info from both 2 pages
+起初又一次遇到了Permission Denied的问题，
 
-    1.2 calculate which repo is for whom
+在Jenkins master上执行了Jenkins Job Add_Token
 
-2. merge those repos using jenkins tools
+大概是 cygwin 下的 ssh-keygen 生成的 id_rsa.pub 地址并不在使用 powershell 生成的地址吧
 
-    is there any way to run build with parameters from console?
+cygwin 的位于 `/home/yunhaoliu/.ssh/` 下
 
-    is there any way to check build info without frequently cheking page manually?
+ps 的位于`C:\Users\yunhaoliu\.ssh\`下
 
-3. check parameters: keymaster's release is rel550, and access is 542, others 551.
+然后解决了权限问题之后，发现先前在 `~/.bashrc`中加入的各种 \<repo>_HOME 并没有被 export，每次在 Windows Terminal中开启一个新的 cygwin 标签页，都需要重新执行 source ~/.bashrc，大概是需要写进win系统设置的path里吧
 
-4. build image of those repos (still using jenkins tools)
+kanas 和 paragon 都在 nucleus 的 repo 里
 
-5. send merge links & bulid links to slack cm-url-list channel
+随后遇到了 build catalog failed 的问题，
 
-    check slack apis for auto sending messages
+翻了翻log，发现是用 python 3.9 去执行了 2.7 的脚本
 
-6. deploy staging after image was built
+才想起来在安装 node 的时候，为了从源代码编译 node， 自动安装了 3.9.6，临时卸掉吧
 
-7. update build numbers to chgxxx-cd-regression. lockbox-v2's is in jenkins console log, search tagged for it.
+现在用的是lts，不急着更新
 
-8. initialize regression test with Fastrun
+check了若干 url-list群组里面的 jenkins job url
+
+明日版本是 CHG0150416-CD-Regression
+
+看看我再可以多做些什么？
