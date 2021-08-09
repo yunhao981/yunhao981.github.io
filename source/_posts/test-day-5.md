@@ -58,3 +58,9 @@ check了若干 url-list群组里面的 jenkins job url
 明日版本是 CHG0150416-CD-Regression
 
 看看我再可以多做些什么？
+
+audit -> code-merge -> (recut) -> build image(check version!!!!) -> regression(check parameters) -> sign off
+
+code-merge-pipeline 仍然无法创建分支，明日确认
+
+明日确认参数与build情况
