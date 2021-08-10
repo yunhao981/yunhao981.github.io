@@ -89,3 +89,12 @@ false: “”, 0, NaN, null, undefined
 
 NaN != NaN
 
+# TL,DR 小结
+
+ - 六种基本数据类型
+ - 没有浮点数和整数的区别，全是Number
+ - Object是所有对象的基类
+ - ECMAScript提供了类似 C 语言中常见的基本操作符
+ - 流控制语句也差不多都是从其他语言那里借鉴过来的
+ - 任何函数都可以在任何时候返回任何值
+ - 不指定返回值的函数，返回Undefined
