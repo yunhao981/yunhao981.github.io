@@ -38,6 +38,10 @@ date: 2021-08-16 15:11:37
 
 修复的思路那就是把它们给补上，但不清楚具体的细节，也要再多问问
 
+朝 Artifactory 创建目录的步骤，是 mvn deploy
+
+那么明天来的下一步就是找到这个 mvn deploy 具体在哪里执行
+
 临时先写了个判断 tarfile 是否存在，若不存在则 exit 1
 
 至少在 wget 没有成功从 Artifactory 处获得 tarfile 的时候，最后不会报个 success 了吧
