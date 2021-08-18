@@ -2,7 +2,7 @@
 title: test-day-10
 categories: test
 tags: test
-description: life as Test Contractor at EADP-C&I Test-Infra Team
+description: 修改了 imagetag，处理了一次merge conflict
 show: true
 date: 2021-08-16 15:11:37
 ---
