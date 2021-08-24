@@ -35,6 +35,17 @@ git log liquibase.data/src/main/resources/changelogs/paragon/
 ```
 3. 如果有变动更新，通知 Yanqin 或 Guangyao
 
+# Code Merge 相关
+
+如果遇到了权限问题， `/home/${user}/code_merge/${repo}` 下执行 `git remote -v` 确认 url 的 token 是否配置正常
+
+如果不正常，
+
+```bash
+sudo git remote set-url origin https://svc_candi_git_admin%40ea.com:xuDCuBjVKLSGT_XCestx@gitlab.ea.com/eci/${repo}.git
+```
+
+
 # release image 相关
 
 在 Release${repo} 执行完毕后，通常结尾会给出一个自动跳转至 upload binary 的 job
