@@ -35,14 +35,25 @@ git log liquibase.data/src/main/resources/changelogs/paragon/
 ```
 3. 如果有变动更新，通知 Yanqin 或 Guangyao
 
+# Audit Tool & Component Audit
+
+每次默认一定要有的 nucleus, nexus, paragon
+
+DOUBLE CHECK 不要漏 component
+
+Keymaster 和 Access 需要手动检查 
+
+
+
+
 # Code Merge 相关
 
 如果遇到了权限问题， `/home/${user}/code_merge/${repo}` 下执行 `git remote -v` 确认 url 的 token 是否配置正常
 
-如果不正常，
+如果不正常，换成带有 secret_token 的 link
 
 ```bash
-sudo git remote set-url origin https://svc_candi_git_admin%40ea.com:xuDCuBjVKLSGT_XCestx@gitlab.ea.com/eci/${repo}.git
+sudo git remote set-url origin https://svc_candi_git_admin%40ea.com:${token}@gitlab.ea.com/eci/${repo}.git
 ```
 
 
@@ -83,3 +94,14 @@ risk, risk-ui 单独运行
 nexus, nexus-ui 单独运行
 
 在 cut 当日，下午一点前发起 regression
+
+# Int-Regression 注意事项
+
+`(legacy) eaid-proxy-int` 仅在 INT 时加入
+
+如下 Components 仅在 CD Regression 时加入
+ - consoletracking
+ - identity
+ - infra
+ - batch-framework
+
