@@ -15,7 +15,7 @@ date: 2021-08-24 18:06:24
 | PlayerSearch               | Chihiro      | 千寻找父母？ |
 | CommerceProvision          | Paragon      | 新加坡商场？ |
 | ValueTransfer              | Citadel      | |
-| PlayerInfractionLedger     | Guardiola    | 瓜帅？ |
+| PlayerInfractionLedger     | Guardiola    | 瓜迪奥拉做假账？ |
 | PlayerOwnership            | Shadowbroker | |
 | PlayerControl              | Porpoise     | |
 | PlayerSettings             | ibex         | |
@@ -43,7 +43,9 @@ DOUBLE CHECK 不要漏 component
 
 Keymaster 和 Access 需要手动检查 
 
+Keymaster 用 releases/rel550
 
+Access 用 releases/rel551
 
 
 # Code Merge 相关
