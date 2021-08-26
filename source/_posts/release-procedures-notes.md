@@ -81,6 +81,12 @@ Wiki page上的原有 image 记录需要用删除线划掉，并且删掉 review
 
 先要检查 Sanity 对应组件的部分 Job 是否 Success，确认铺 STG 是否完成
 
+nexus ui failed， use new test cases
+
+```
+com.ea.eadp.nexus.portal.tests.newconsole.TestScenarios_Console_AccountSelfRecovery#testDisabledAccountRecovery_trustworthy_NewEmail
+```
+
 设置 code client for rerun，减少出错反复运行调试的准备工作时间开销
 
 发起人的邮件填公用自动账号 EADPAutoExReportingS@ea.com
