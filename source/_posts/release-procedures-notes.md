@@ -113,3 +113,20 @@ nexus, nexus-ui 单独运行
  - infra
  - batch-framework
 
+# Sign-off 相关
+
+如果当前 production 中包含若干 INT
+
+同一个 repo 在先前 A 版和 B 版里都有
+
+那么 A 如果没签可以签掉
+
+而如果这个 repo 在 C 版 里也有
+
+但 C 不是当前 prod
+
+那么 B 不能直接签
+
+可以在 cm 里的详情找到其所属 production
+
+也可以在 production 的 wiki page 里确认到
