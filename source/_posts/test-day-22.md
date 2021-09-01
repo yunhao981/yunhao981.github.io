@@ -2,7 +2,7 @@
 title: test-day-22
 categories: test
 tags: test
-description: life as Test Contractor at EADP-C&I Test-Infra Team
+description: 给 code merge pipeline 合并，debug，换证书
 show: true
 date: 2021-09-02 00:31:35
 ---
