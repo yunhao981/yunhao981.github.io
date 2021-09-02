@@ -65,6 +65,8 @@ sudo git remote set-url origin https://svc_candi_git_admin%40ea.com:${token}@git
 
 需要确认这个 job 是否执行成功，否则将不会有更新推送至 Artifactory
 
+需要根据 commit 标识符人工确认 gitlab ，image 是否包含了目标对应的改动
+
 # STG 细节
 
 先铺 nexus 再铺 nucleus 可以节省时间
