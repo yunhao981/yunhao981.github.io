@@ -22,7 +22,13 @@ date: 2021-08-24 18:06:24
 | SubscriptionRewards        | hyas         | |
 | Healthy-play-*             | saola        | |
 
+# checklist
 
+曾经有过，人工熟练后逐渐失去效用
+
+为了避免遗漏 component，在自动化搞定之前
+
+还是开了个 Excel
 
 # paragon 相关
 
@@ -95,6 +101,8 @@ com.ea.eadp.nexus.portal.tests.newconsole.TestScenarios_Console_AccountSelfRecov
 
 至少开 2 台 VM，可以作为一台出玄学故障的备份，通常会根据 Component 的数量和种类开 4 台
 
+晚上开的话可以冲到 8 台 10 台，因为是使用率低谷
+
 选择 Component 的时候要注意名字结尾是否标注了 Int，Int 仅用于 CHGxxx-INT 分支
 
 shadowbroker 单独跑
@@ -104,6 +112,8 @@ risk, risk-ui 单独运行
 nexus, nexus-ui 单独运行
 
 在 cut 当日，下午一点前发起 regression
+
+确认 branch 设置，component list
 
 # Int-Regression 注意事项
 
