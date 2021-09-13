@@ -12,7 +12,7 @@ date: 2021-09-08 17:06:00
 
 或者从这个 pipeline 本身开始触发 build，然后汇总所有 image tag 到一起
 
-
+先考虑已知 image tag 的情况下要怎么处理
 
 # image 的存储形式？
 

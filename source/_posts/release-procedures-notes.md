@@ -60,6 +60,8 @@ Access 用 releases/rel551
 
 如果不正常，换成带有 secret_token 的 link
 
+如果还是遇到了权限问题，而且gitlab 的账号配置没问题的话，再重新设置一次一模一样的 url 
+
 ```bash
 sudo git remote set-url origin https://svc_candi_git_admin%40ea.com:${token}@gitlab.ea.com/eci/${repo}.git
 ```
@@ -72,6 +74,8 @@ sudo git remote set-url origin https://svc_candi_git_admin%40ea.com:${token}@git
 需要确认这个 job 是否执行成功，否则将不会有更新推送至 Artifactory
 
 需要根据 commit 标识符人工确认 gitlab ，image 是否包含了目标对应的改动
+
+如果邮件 / CM 里指定的 component 名字太模糊，需要去确认具体的内容
 
 # STG 细节
 
