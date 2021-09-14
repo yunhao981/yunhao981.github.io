@@ -77,6 +77,10 @@ sudo git remote set-url origin https://svc_candi_git_admin%40ea.com:${token}@git
 
 如果邮件 / CM 里指定的 component 名字太模糊，需要去确认具体的内容
 
+如果遇到了服务器磁盘容量不够，no space left 之类的情况，先问问 Jen 执行 docker prune
+
+实在没啥办法又很紧急的话，发邮件问 24x7
+
 # STG 细节
 
 先铺 nexus 再铺 nucleus 可以节省时间
