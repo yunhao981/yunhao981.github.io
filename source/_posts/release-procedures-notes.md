@@ -22,6 +22,7 @@ date: 2021-08-24 18:06:24
 | SubscriptionRewards        | hyas         | |
 | Healthy-play-*             | saola        | |
 
+
 # checklist
 
 曾经有过，人工熟练后逐渐失去效用
@@ -29,6 +30,8 @@ date: 2021-08-24 18:06:24
 为了避免遗漏 component，在自动化搞定之前
 
 还是开了个 Excel
+
+后来真的发现不好用
 
 # paragon 相关
 
@@ -53,6 +56,7 @@ Keymaster 用 releases/rel550
 
 Access 用 releases/rel551
 
+Saola 的 Saola.infra 下，存在其依赖组件，需要用各自单独的 Pipeline 去 build image，比如说 Kafka，Cassandra, Zookeeper
 
 # Code Merge 相关
 
