@@ -70,6 +70,17 @@ Saola 的 Saola.infra 下，存在其依赖组件，需要用各自单独的 Pip
 sudo git remote set-url origin https://svc_candi_git_admin%40ea.com:${token}@gitlab.ea.com/eci/${repo}.git
 ```
 
+如果 merge conflict，通知完 Yanqin / James / Kyle 之后问 Owner
+
+然后登上 testinfra-master 进 /home/root/code-merge/ 里面找到对应 repo
+
+git status 确认哪个冲突了，没有的话手动 merge 一把
+
+改完之后 add, commit, push 一条龙
+
+最后一定一定要去再执行一次 code-merge pipeline，
+
+目的是为了删掉 CHG branch，同时保证真的所有改动都合并进 release 了
 
 # release image 相关
 
