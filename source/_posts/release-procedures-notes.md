@@ -138,6 +138,8 @@ nexus, nexus-ui 单独运行
 
 确认 branch 设置，component list
 
+Keymaster 跑 Local
+
 # Int-Regression 注意事项
 
 `(legacy) eaid-proxy-int` 仅在 INT 时加入
