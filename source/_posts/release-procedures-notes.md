@@ -167,3 +167,9 @@ Keymaster 跑 Local
 可以在 cm 里的详情找到其所属 production
 
 也可以在 production 的 wiki page 里确认到
+
+我的催命对象是 nexus 组在 US 的那批人
+
+还有在上海的几个，主要看 bundle
+
+周一来的时候别急着催 US 方面，他们还在周日晚上
