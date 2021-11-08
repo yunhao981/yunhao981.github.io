@@ -25,3 +25,7 @@ date: 2021-10-30 09:52:04
 然后发现主题没有到 github 上
 
 所以 travis ci 没办法生成 index.html
+
+github 上 clone 到 themes 下的主题，需要设置成 submodule
+
+而且 url 用 https 会比 ssh 更稳妥…
