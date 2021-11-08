@@ -16,3 +16,6 @@ deploy:
   on:
     branch: source
   local-dir: public
+
+addons:
+  ssh_known_hosts: git@github.com
