@@ -51,6 +51,16 @@ Chrome 的快捷方式里，加上 `--disable-web-security`
 
 F12, 同样的位置加入自己的 Token
 
+### 3. localhost 直接启动了 PROD
+
+本地 npm run build 了前端
+
+后端的部分部署在了 linux 上
+
+直接 serve -s build 的话，直接打开了 PROD
+
+在相同域名下不同端口，依然会触发跨域
+
 ## backend
 
 ### 1. ENC 的密码设定
