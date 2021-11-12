@@ -102,6 +102,16 @@ git status 确认哪个冲突了，没有的话手动 merge 一把
 
 并不能在铺完 STG 之后立马执行 Sanity Check，需要延迟 2 分钟左右，等待 service 完全启动
 
+# Sanity Check
+
+先 disable 所有 sanity check 自动 job
+
+触发 sync-rs，更新一下新的代码，编译一遍
+
+然后再 enable sanity check，会自动一小时执行一次
+
+如果和 sync 同时执行的话，会触发冲突，需要手动修
+
 # Recut 相关
 
 Wiki page上的原有 image 记录需要用删除线划掉，并且删掉 review 标签

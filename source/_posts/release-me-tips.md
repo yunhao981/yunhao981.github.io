@@ -61,6 +61,32 @@ F12, 同样的位置加入自己的 Token
 
 在相同域名下不同端口，依然会触发跨域
 
+真正需要做的事情是，
+
+要在 `src/Model/Request.tsx` 里加上 endpoint，是 `application.yml` 的后缀
+
+```typescript
+static endpoints: Record<string, string> = {
+    "development": "https://releaseme.citools.ea.com",
+    "local":       "http://local-releaseme.citools.ea.com:8080",
+    "lyh":       "http://localhost:8080",
+    "alpha":       "http://alpha-releaseme.citools.ea.com",
+    "production":  "https://releaseme.citools.ea.com"
+};
+```
+
+还有 `App.js` 里去掉 token 为空时的判断
+
+```typescript 
+render() {
+    // if (Request.token)
+    //     return <MainPage />
+    // else
+    //     return <RedirectPage />
+    return <MainPage />
+}
+```
+
 ## backend
 
 ### 1. ENC 的密码设定
@@ -92,3 +118,16 @@ VM 分的磁盘太小了，docker 起不来
 捡了台退役服务器装了 linux
 
 ssh上去简单弄了下 docker
+
+### 4. insert dummy data
+
+测试用的假数据不知道怎么插进去…
+
+它用了 webhook 去探 gitlab 上的新改动
+
+而且 label 是一定要包含 releaseme 的
+
+component 也必须要在列表里
+
+直接往数据库里插表是不行的
+
