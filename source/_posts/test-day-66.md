@@ -23,3 +23,11 @@ ReleaseMe 的 feature 改代码只花了 20 分钟
 以及用 idea 配置一个 spring boot 项目的 run configuration
 
 插测试flow，用 postman 朝 backend webhook api 发一个 post
+
+给 idea 换了个 terminal
+
+```
+C:\cygwin64\bin\bash.exe -ilc "cd ${OLDPWD-.}; bash"
+```
+
+powershell 我还是不喜欢
