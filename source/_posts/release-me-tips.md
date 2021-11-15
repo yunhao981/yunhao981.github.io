@@ -87,6 +87,15 @@ render() {
 }
 ```
 
+然后最后才是 
+
+···
+npm install
+REACT_APP_NODE_ENV=local npm run-script build
+···
+
+这里 local 是 application-env 的 env
+
 ## backend
 
 ### 1. ENC 的密码设定

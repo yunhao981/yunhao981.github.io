@@ -34,15 +34,25 @@ url="${urlPrefix}/nucleus/${urlSuffix}"
 curl -v -H "Authorization: Bearer ${t}" "${url}" -o ${tarfile}
 ```
 
-
-
 ```bash
 mkdir -p liquibase.data
 tar -zxf xxx.tar.gz -C liquibase.data
 ```
 
-run script inside the tar
-
 ```bash
 ./my-liquibase.py ${component} staging status 551
 ```
+
+Check db.conf inside each repo to confirm which db it uses.
+
+| Repo | Version |
+| - | - |
+| Citadel | `551` | 
+| Venice | `550` | 
+| Code-Redeption | `546`| 
+| Paragon | `551` |
+| nucleusConfig | `2021` |
+
+version is at `liquibase.data/changelogs/${repo}`
+
+repo names are at `liquibase.data/conf/${repo}`
