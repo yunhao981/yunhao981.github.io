@@ -96,6 +96,18 @@ REACT_APP_NODE_ENV=local npm run-script build
 
 这里 local 是 application-env 的 env
 
+### 4. prod 上发的请求 401 Unothorized
+
+期望的 status 是 409 或者 200
+
+在 Requests.tsx 里如果直接用 fetch，默认是不带 token 的
+
+用 this.releaseMeFetch 的话，会把 409 当作异常抛出来
+
+同时拿到的 response 是个 json 而不是我要的 status 和 text
+
+所以我需要自己在 header 里加上 token 发出去
+
 ## backend
 
 ### 1. ENC 的密码设定

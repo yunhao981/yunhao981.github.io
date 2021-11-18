@@ -119,3 +119,20 @@ ssh 上去是不行的，没有 GUI 的环境
 直接用了 master 上的 settings.xml
 
 并且通过 `-s` 指定这个 xml
+
+# 备注
+
+int 的话，是不用填 nucleus 和 lockbox 的 ip 的
+
+只有在本地跑的时候需要
+
+本地跑的时候，需要 CP 铺好了
+
+也就是跑过一边 CP_Docker 这个 job，`铺`
+
+在 10.86.33.125 上执行就 ok
+
+这个 job 会触发 BVT 和 INTBVT 之类的 job，`跑`
+
+对应的参数照道理来讲会自动传过去
+
