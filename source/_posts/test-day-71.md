@@ -7,7 +7,7 @@ show: true
 date: 2021-11-19 10:20:49
 ---
 ## Today's Task
-- [ ] investigate on releaseMe backend time issue
+- [x] investigate on releaseMe backend time issue
 - [x] ReleaseMe Added more output in web console
 - [ ] change image tag pattern
 - [ ] onebox vmip

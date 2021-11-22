@@ -120,6 +120,10 @@ ssh 上去是不行的，没有 GUI 的环境
 
 并且通过 `-s` 指定这个 xml
 
+## 10. Post script syntax 
+
+remember to double check the correct path to `JenkinsFiles` folder
+
 # 备注
 
 int 的话，是不用填 nucleus 和 lockbox 的 ip 的
@@ -135,4 +139,10 @@ int 的话，是不用填 nucleus 和 lockbox 的 ip 的
 这个 job 会触发 BVT 和 INTBVT 之类的 job，`跑`
 
 对应的参数照道理来讲会自动传过去
+
+所以 ChangeHost 的 ip 也必须一样
+
+ChangeHost 在 slave 1 上依然没法 sudo
+
+CP_One_Case 可以用来确认 nucleusIP 那台机器是不是还活着
 
