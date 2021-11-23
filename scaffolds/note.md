@@ -2,7 +2,7 @@
 title: {{ title }}
 date: {{ date }}
 categories: 读书笔记
-tags: JavaScript
+tags: Books
 description: 
 show: true
 ---
