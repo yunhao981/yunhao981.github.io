@@ -8,7 +8,6 @@ date: 2021-11-22 10:14:58
 ---
 ## Today's Task
 - [ ] change image tag pattern
-
 - [ ] onebox vmip 
     - [x] get client ip
     - [x] get hostname
@@ -16,14 +15,12 @@ date: 2021-11-22 10:14:58
     - [ ] get vm ip
     - [x] no need to get ips from frontend
     - [ ] use nginx or httpd instead of node
-
 - [ ] Transfer jenkins jobs
     - [x] use web hub
     - [x] check CP Docker status
     - [x] Fix Post Steps
     - [x] Fix QAV5-INTBVT
     - [ ] Porpoise_Docker ssh permission
-    
 - [x] check audit / merge output exception
     - [x] Code-Merge
     - [x] Component Audit
