@@ -6,8 +6,17 @@ description: life as Test Contractor at EADP-C&I Test-Infra Team
 show: true
 date: 2021-11-10 17:59:50
 ---
+# TLDR
 
-# 6天里面在迁移 Jenkins Job 上碰到的坑
+33.125 上先跑一次 CP_Docker
+
+然后 slave1 上，根据 CP_Docker 的参数 ChangeHosts
+
+再发起 RL_CP_OneCase 确认
+
+之后就可以跑 RL_CP_BVT 了
+
+# 在迁移 Jenkins Job 上碰到的坑
 
 ## 1. Build Lockbox.Birdwing 的时候 没有找到 LB.api 和 LB.qa
 ```
@@ -124,7 +133,7 @@ ssh 上去是不行的，没有 GUI 的环境
 
 remember to double check the correct path to `JenkinsFiles` folder
 
-# 备注
+# Comments
 
 int 的话，是不用填 nucleus 和 lockbox 的 ip 的
 
@@ -140,9 +149,13 @@ int 的话，是不用填 nucleus 和 lockbox 的 ip 的
 
 对应的参数照道理来讲会自动传过去
 
-所以 ChangeHost 的 ip 也必须一样
+但因为 linux 的 Jenkins 没有 trigger other jobs
 
-ChangeHost 在 slave 1 上依然没法 sudo
+所以需要手动发起 ChangeHost 
+
+ip 也必须一样
+
+ChangeHost 在 slave 1 上依然没法 sudo，用奇妙的办法绕过去了
 
 CP_One_Case 可以用来确认 nucleusIP 那台机器是不是还活着
 

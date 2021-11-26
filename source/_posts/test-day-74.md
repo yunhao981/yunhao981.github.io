@@ -60,3 +60,8 @@ To think otherwise is to demean the Buddha -- which is to demean oneself.
 
 走马观花看教程最多也只能建立空中楼阁
 
+根本没有办法思考
+
+下次再这么晚睡
+
+直接请假睡醒了再说
