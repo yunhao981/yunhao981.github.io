@@ -133,6 +133,23 @@ ssh 上去是不行的，没有 GUI 的环境
 
 remember to double check the correct path to `JenkinsFiles` folder
 
+## 11. Upgrading Jenkins 
+
+When upgrading Jenkins from `2.150.2` to `2.303.3`, 
+
+I changed `jenkins.war` to a new one.
+
+```
+java.lang.IllegalStateException: An attempt to save the global configuration
+  was made before it was loaded
+```
+
+Added `-Dio.jenkins.plugins.casc.ConfigurationAsCode.initialDelay=20000` to `./start_https_jenkins.sh`
+
+Then I copied the entire `plugin` folder from `testinfra-master`'s jenkins
+
+And use the `jenkins.war` of version `2.222.4`
+
 # Comments
 
 int 的话，是不用填 nucleus 和 lockbox 的 ip 的
