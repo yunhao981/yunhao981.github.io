@@ -13,8 +13,8 @@ date: 2021-11-29 18:41:57
     - [x] Install Trigger build plugin
     - [ ] Run LB_QAv5_INTBVT
     - [ ] Run Master_Lockbox_BVT
-- [ ] Release Support
-    - [ ] Push sign off for CHG0154788-*, including skipped
+- [x] Release Support
+    - [x] Push sign off for CHG0154788-*, including skipped
 
 ## Additional Task 
 
