@@ -11,7 +11,7 @@ date: 2021-12-14 10:32:43
 - [ ] Transfer Jenkins Jobs
 - [ ] Add a page to search properties on ReleaseMe
     - [ ] Router without React Router
-- [ ] Onebox-setup Dockerfile Debug
+- [x] Onebox-setup Dockerfile Debug
 - [ ] Add comment time to ReleaseMe
 
 ## Additional Task 
