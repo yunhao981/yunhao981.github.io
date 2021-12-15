@@ -1,7 +1,7 @@
 ---
 title: fast-liquibase-manual
-categories: test
-tags: test
+categories: Test Infra Manual
+tags: Test Infra Manualtest
 description: life as Test Contractor at EADP-C&I Test-Infra Team
 show: true
 date: 2021-11-11 12:05:41

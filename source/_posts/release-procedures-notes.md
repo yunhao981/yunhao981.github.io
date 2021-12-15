@@ -1,7 +1,7 @@
 ---
 title: release-procedures-notes
-categories: test
-tags: test
+categories: Test Infra Manual
+tags: Test Infra Manual
 description: 人工执行整个 release cut build 流程中的注意事项
 show: true
 date: 2021-08-24 18:06:24
@@ -17,10 +17,10 @@ date: 2021-08-24 18:06:24
 | ValueTransfer              | Citadel      | |
 | PlayerInfractionLedger     | Guardiola    | 瓜迪奥拉做假账？ |
 | PlayerOwnership            | Shadowbroker | |
-| PlayerControl              | Porpoise     | |
-| PlayerSettings             | ibex         | |
-| SubscriptionRewards        | hyas         | |
-| Healthy-play-*             | saola        | |
+| PlayerControl              | Porpoise     | 江豚 |
+| PlayerSettings             | ibex         | 野山羊 |
+| SubscriptionRewards        | hyas         | 泰坦之女 |
+| Healthy-play-*             | saola        | 中南大羚 |
 
 
 # checklist

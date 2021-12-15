@@ -1,7 +1,7 @@
 ---
 title: Acronym
-categories: test
-tags: test
+categories: Test Infra Manual
+tags: Test Infra Manual
 description: Common Acronym
 show: true
 date: 2021-08-09 12:04:03

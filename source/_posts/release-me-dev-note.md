@@ -1,7 +1,7 @@
 ---
 title: release-me-dev-note
-categories: test
-tags: test
+categories: Test Infra Manual
+tags: Test Infra Manual
 description: life as Test Contractor at EADP-C&I Test-Infra Team
 show: true
 date: 2021-11-30 14:30:13

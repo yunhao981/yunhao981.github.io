@@ -1,7 +1,7 @@
 ---
 title: hadar-manual
-categories: test
-tags: test
+categories: Test Infra Manual
+tags: Test Infra Manual
 description: life as Test Contractor at EADP-C&I Test-Infra Team
 show: true
 date: 2021-11-16 17:06:39

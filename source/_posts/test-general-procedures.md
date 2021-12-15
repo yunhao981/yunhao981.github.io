@@ -1,7 +1,7 @@
 ---
 title: test-general-procedures
-categories: test
-tags: test
+categories: Test Infra Manual
+tags: Test Infra Manual
 description: life as Test Contractor at EADP-C&I Test-Infra Team
 show: true
 date: 2021-08-09 11:56:48
