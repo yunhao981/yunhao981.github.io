@@ -1,7 +1,7 @@
 ---
 title: stg-liquibase-deploy-steps
-categories: test
-tags: test
+categories: Test Infra Manual
+tags: Test Infra Manual
 description: life as Test Contractor at EADP-C&I Test-Infra Team
 show: true
 date: 2021-12-15 17:03:36
