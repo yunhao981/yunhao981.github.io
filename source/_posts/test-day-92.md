@@ -54,6 +54,3 @@ CHG0158744 -> PROD, former PROD CM 20211220
 如果 sanity 某个挂了，sanity-test slack 群里截个图说一声
 
 三种情况，修好了，问owner，不知道问谁
-
-### 4
-
