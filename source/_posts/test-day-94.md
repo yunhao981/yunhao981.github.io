@@ -40,7 +40,7 @@ date: 2021-12-22 10:31:37
 ```
 bind r source-file ~/.tmux.conf
 
-set -g mosue on
+set -g mouse on
 
 bind -n M-Left select-pane -L
 bind -n M-Right select-pane -R
