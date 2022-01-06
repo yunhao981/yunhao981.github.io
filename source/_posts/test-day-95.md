@@ -7,12 +7,18 @@ show: true
 date: 2022-01-05 09:52:34
 ---
 ## Today's Task
-- [ ] Transfer Jenkins Jobs
-    - [x] Fixed Java Home Path
-    - [ ] RLCP-BVT
+
+### ASAP:
 - [ ] Add comment time to ReleaseMe
 - [ ] Add a page to search properties on ReleaseMe
     - [ ] Router without React Router
+    
+### Need to Track
+- [ ] Transfer Jenkins Jobs
+    - [x] Fixed Java Home Path
+    - [ ] RLCP-BVT
+
+### Not so urgent
 - [ ] Add all components to Create-emergency-branch
 - [ ] Split CheckSTG
 
