@@ -79,3 +79,10 @@ slave 1 上 /usr/lib/jvm/zulu-8 从28号开始找不到，做了个符号链接�
 
 看了眼 history，java 全删了…… 只留了一份在 shdev 家
 
+重新配了下 `$JAVA_HOME`
+
+又查出来两个 Post Script 里的 bash 脚本错误
+
+另外还有各种 Repo 的本地路径配置
+
+希望今天可以跑通 INT BVT
