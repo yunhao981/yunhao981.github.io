@@ -24,3 +24,17 @@ error: cannot lock ref 'refs/remotes/origin/release': 'refs/remotes/origin/relea
 ```bash
 git remote prune origin
 ```
+
+# 3. 往自己分支拉一把 master
+
+```bash
+git rebase master
+```
+
+用 rebase 而不是 merge （洁癖星人
+
+# 4. git fetch 与 git pull
+
+git fetch 会去拿 metadata，但不会动本地文件
+
+git pull 会在拿好 metadata 以后，改动本地文件
