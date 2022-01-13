@@ -74,7 +74,9 @@ LB jobs 迁移 ASAP
 
 最离谱的是文档的 SandBox 里面，是在右上角，并不会换行。
 
+然后发现有一个叫 `itemLayout` 的属性，可以设置成 `horizontal` 或者 `vertical`
 
+改成了 `vertical` 就好了……
 
 ```typescript
 renderCommentRecords(flow: Flow): ReactNode{

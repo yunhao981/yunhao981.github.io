@@ -49,7 +49,7 @@ sudo kbuectl get pod -n stg-nucleus
 ipgeo and Completed jobs can be ignored
 
 
-Reboot pod
+## Reboot pod
 
 ```bash
 sudo kubectl delete pod -n stg-xxx stgxxx-1
@@ -66,3 +66,14 @@ kubectl describe pod
 `alert.log` 内有详细信息
 
 `vim -R` 可以让 vim 只读
+
+
+## Manually Deploy image to STG
+
+```bash
+kubectl edit sts -n stg-xxx
+kubectl delete pod -n stg-xxx stgxxx-0
+
+```
+edit `sts` ！！
+delete `pod` ！！
