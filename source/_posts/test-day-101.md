@@ -9,10 +9,14 @@ date: 2022-01-13 17:11:36
 ## Today's Task
 - [ ] [ASAP] Property Page
 - [ ] Migrate ReleaseMe from CRA to Vite
+    - [x] Transfered config files
+    - [x] Mock up Node builtin modules
+    - [x] npm start
 
 ## Additional Task 
 - [x] Rebuild image for Shadowbroker
 - [x] Fix email sending on Node B
+- [x] Release image for Nexus and initialize regresion
 
 ## Thought
 
