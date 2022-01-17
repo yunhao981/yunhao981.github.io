@@ -133,4 +133,49 @@ Uncaught ReferenceError: module is not defined
 
 没啥办法了 换包吧
 
-JWT，Crypto，
+注释掉 JWT 的部分之后就过了，所以可以锁定问题出在 JWT 上
+
+看了眼 node_modules 里的 JWT，确实就在这里
+
+`modules.export` 看到这个心里就抖三抖
+
+试着用了 import filter，没什么效果
+
+最坏情况是自己重写一份支持 ESM 的 JWT
+
+最后是换了 `jwt-decode`
+
+# 9. Cannot find namespace 'NodeJS'
+
+```
+src/Components/Controls/LoadingComponent.tsx:13:20 - error TS2503: Cannot find namespace 'NodeJS'.
+
+13     loadingNumber: NodeJS.Timeout | null = null;
+                      ~~~~~~
+
+src/Model/Jwt.ts:3:20 - error TS2307: Cannot find module 'crypto' or its corresponding type declarations.
+
+3 import crypto from 'crypto'
+                     ~~~~~~~~
+
+
+Found 2 errors.
+
+```
+
+in `tsconfig.json` , add
+
+```json
+"types":[
+    "node"
+]
+```
+
+# 10. index.af9a4108.js:3 Uncaught (in promise) TypeError: rt.randomBytes is not a function
+
+```
+index.af9a4108.js:3 Uncaught (in promise) TypeError: rt.randomBytes is not a function
+```
+
+终究是用 `crypto-js` 绕过去了
+
