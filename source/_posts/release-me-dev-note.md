@@ -37,3 +37,13 @@ ResponseEntity
 Button 的 onChange 需要给的是 callback，而不是一个返回值类型为 void 的 function
 
 在遍历 List Item 的时候，ANT List 的索引和 dataSource 好像可以在 callback 里直接拿到这个对象，但并不能直接 console.log 出来，但这个对象的属性好像是可以访问到的
+
+## 3. Refresh page, then 404
+
+页面刷新之后就 404 了
+
+大抵是朝后端发请求但是没有找到的缘故？
+
+暂时先用一个不好看办法解决了
+
+把 `<BrowserRouter>` 换成了 `<HashRouter>`

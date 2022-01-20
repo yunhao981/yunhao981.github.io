@@ -8,9 +8,8 @@ date: 2022-01-17 10:10:41
 ---
 ## Today's Task
 - [ ] [ASAP] Property Page
-- [ ] Migrate ReleaseMe from CRA to Vite
+- [x] Migrate ReleaseMe from CRA to Vite
     - [x] npm run build
-    - [ ] Fix String Refs
 
 ## Additional Task 
 - [x] Migrate Code Merge to cm-release
