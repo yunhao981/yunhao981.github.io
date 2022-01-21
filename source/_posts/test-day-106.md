@@ -27,14 +27,13 @@ Release Script
 - [ ] access
 - [x] catalog
 - [ ] crypto
-- [ ] customerportal
+- [x] customerportal
 - [ ] dynamic-config-ui
-- [ ] hyas
-- [ ] kakapo
+- [x] hyas
+- [x] kakapo
 - [ ] keymaster
 - [ ] liquibase-deploy
 - [ ] nam
-- [ ] nexus
 - [ ] nexus
 - [ ] nucleussolr
 - [ ] playercard
