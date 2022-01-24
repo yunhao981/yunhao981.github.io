@@ -22,7 +22,7 @@ component audit 编译一份 jar 包出来试试看
 
 ### 2
 
-Release Script
+Release Script migrating progress
 
 - [ ] access
 - [x] catalog
