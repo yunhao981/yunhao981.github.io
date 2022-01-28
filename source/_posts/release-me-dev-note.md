@@ -47,3 +47,11 @@ Button 的 onChange 需要给的是 callback，而不是一个返回值类型为
 暂时先用一个不好看办法解决了
 
 把 `<BrowserRouter>` 换成了 `<HashRouter>`
+
+## 4. Property Page
+
+直接请求后端的 /property/all 这个 api 会返回空 body
+
+需要到 Zookeeper 那里去写点 `@DynamicProperty`
+
+
