@@ -22,3 +22,7 @@ date: 2022-02-08 15:13:39
 {} is an Object
 
 An Object is not a Map
+
+### 2
+
+IDEA 鼠标悬浮，可以直接看见对象类型可太友好了
