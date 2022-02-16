@@ -7,7 +7,7 @@ show: true
 date: 2022-02-11 16:19:35
 ---
 ## Today's Task
-- [ x Release Support
+- [x] Release Support
 - [x] Script Port
 
 ## Additional Task 
