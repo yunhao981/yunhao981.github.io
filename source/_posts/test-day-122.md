@@ -102,4 +102,18 @@ map 本身返回的就是个数组，就不用再特地开个新的去存进去
 
 ### 3. 展开运算符
 
+```typescript
+ renderOptions(properties: {[key: string]: string}) {
+    let options: {value: string, label: JSX.Element}[] = [];
+    if (properties) {
+        Object.keys(properties)?.forEach((key) => options.push(this.renderItem(key, properties[key])))
+    }
+    return options;
+}
+```
 
+```typescript
+let history = { [property]: this.state.property };
+let mergedHistory = { ...this.state.searchHistory, ...history }
+this.setState( {searchHistory: mergedHistory});
+```
