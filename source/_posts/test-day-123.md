@@ -12,6 +12,7 @@ date: 2022-02-21 13:51:04
 - [ ] Split Check STG Pod status
 
 ## Additional Task 
+- [x] Failure Tracking Mail
 
 ## Thought
 
