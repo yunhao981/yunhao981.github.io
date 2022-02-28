@@ -7,7 +7,7 @@ show: true
 date: 2022-02-24 10:49:50
 ---
 ## Today's Task
-- [ ] write image release pipeline for onebox-command-generator
+- [x] write image release pipeline for onebox-command-generator
 
 ## Additional Task 
 
@@ -16,58 +16,4 @@ date: 2022-02-24 10:49:50
 既然在家很少用站立式的布局，现在也很少打游戏，
 
 不如把 22 寸那台显示器竖过来放 4k 旁边
-
-## Cassandra CQL
-
-```sql
-CREATE KEYSPACE sox WITH replication = {'class': 'SimpleStrategy', 'replication_factor': '3'}  AND durable_writes = true;
-
-CREATE TABLE sox.audit_history (
-    hash_code text,
-    cm_num text,
-    message text,
-    tag text,
-    PRIMARY KEY (hash_code, cm_num)
-) WITH CLUSTERING ORDER BY (cm_num ASC)
-    AND bloom_filter_fp_chance = 0.01
-    AND caching = {'keys': 'ALL', 'rows_per_partition': 'NONE'}
-    AND comment = ''
-    AND compaction = {'class': 'org.apache.cassandra.db.compaction.SizeTieredCompactionStrategy', 'max_threshold': '32', 'min_threshold': '4'}
-    AND compression = {'chunk_length_in_kb': '64', 'class': 'org.apache.cassandra.io.compress.LZ4Compressor'}
-    AND crc_check_chance = 1.0
-    AND dclocal_read_repair_chance = 0.1
-    AND default_time_to_live = 0
-    AND gc_grace_seconds = 864000
-    AND max_index_interval = 2048
-    AND memtable_flush_period_in_ms = 0
-    AND min_index_interval = 128
-    AND read_repair_chance = 0.0
-    AND speculative_retry = '99PERCENTILE';
-```
-
-`Keyspace` namespace that defineds data replication on nodes
-
-`Replication Factor`
-
-`Durable Writes`
-
-`Clustering`
-
-`bloom filter fp chance`
-
-`caching`
-
-`comment`
-
-`compaction`
-
-`compression`
-
-`crc check chance`
-
-`dclocal read repair chance`
-
-to be continued...
-
-
 
