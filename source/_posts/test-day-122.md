@@ -7,13 +7,10 @@ show: true
 date: 2022-02-18 10:24:35
 ---
 ## Today's Task
-- [ ] Property Page
-    - [ ] Fix Issues after review
+- [x] Property Page
+    - [x] Fix Issues after review
 
 ## Additional Task 
-
-## After work Task
-- [ ] Deploy Cassandra in Docker on Linux
 
 ## Thought
 
@@ -102,4 +99,16 @@ map 本身返回的就是个数组，就不用再特地开个新的去存进去
 
 ### 3. 展开运算符
 
+```typescript
+let history = this.state.searchHistory;
+    if (history != null) {
+        history[property] = this.state.property;
+    }
+this.setState( {searchHistory: history});
+```
 
+```typescript
+let history = { [property]: this.state.property };
+let mergedHistory = { ...this.state.searchHistory, ...history }
+this.setState( {searchHistory: mergedHistory});
+```
