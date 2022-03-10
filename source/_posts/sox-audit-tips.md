@@ -31,7 +31,7 @@ TODO: 把这棵目录树弄得好看一点……
 
 ```
 src/
-    main/
+    main/G
         java/
             com.soxaudit/
                 conf/
@@ -150,6 +150,18 @@ app(String[] args) 会去判断拿到的参数长度是不是正好是 4， 然�
 卡住了三个小时
 
 然后 start()
+
+### RecordService.removeAll
+
+`@Transactional`
+
+先打一行带 chgNum 的 log
+
+然后用 dao.findAll 去拿到 DB 里所有记录
+
+接着开始遍历每一条记录
+
+如果 CHG 对上了，就去 dao.delete
 
 ### start()
 
