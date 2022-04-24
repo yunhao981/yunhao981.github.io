@@ -6,7 +6,7 @@ description: life as Test Contractor at EADP-C&I Test-Infra Team
 show: true
 date: 2022-02-25 10:46:40
 ---
-## Cassandra CQL
+# Cassandra CQL Sample
 
 ```sql
 CREATE KEYSPACE sox WITH replication = {'class': 'SimpleStrategy', 'replication_factor': '3'}  AND durable_writes = true;
@@ -34,26 +34,103 @@ CREATE TABLE sox.audit_history (
     AND speculative_retry = '99PERCENTILE';
 ```
 
-`Keyspace` namespace that defineds data replication on nodes
+# Cassandra FAQ
 
-`Replication Factor`
+## Simple Strategy
 
-`Durable Writes`
+Assign the same replication factor to the entire cluster. For Test and Dev envs only.
 
-`Clustering`
+## Replication Factor
 
-`bloom filter fp chance`
+How many times the data is replicated across the clusters
 
-`caching`
+Need at least 3 nodes if this value is set to 3.
 
-`comment`
+## Durable Writes
 
-`compaction`
+Bypass the commit log when writing to the keyspace if set to false.
 
-`compression`
+NEVER disable it when using Simple Strategy.
 
-`crc check chance`
+## Bloom Filter FP Chance
 
-`dclocal read repair chance`
+False-positive probability for SSTable bloom filter.
 
-to be continued...
+checks if the row exists before executing disk I/O
+
+0 enables with the largest possible bloom filter and uses the most memory.
+
+1.0 disables it.
+
+Default: 0.01
+
+Recommended: 0.1
+
+## Caching
+
+Optimize the memory usage of tables.
+
+will be weighted by size and frequency.
+
+work with cassandra.yml
+
+## Compaction
+
+## Compression
+
+## CRC Check Chance
+
+## dclocal_read_repair_chance
+
+Probability that a successful read operation triggers a read repair
+
+limited to replicas in the same DC as the coordinator
+
+## default_time_to_live
+
+max: 20 years in second
+
+disabled: 0
+
+a new TTL timestamp is calculated when the data is updated and the row is removed after all the data expires
+
+## gc_grace_seconds
+
+GC: Garbage Collection
+
+Tombstone: Deletion marker
+
+data is marked with a Tombstone -> wait some time -> eligible for gc !
+
+this config is about how long it should wait
+
+Default: 10 days in second
+
+## memtable_flush_period_in_ms
+
+Memtables:
+
+Milliseconds before memtables associated with the table are flushed
+
+## max_index-interval
+
+## min_index_interval
+
+## read_repair_chance
+
+similar to dclocal_read_repair_chance, but this repair is not limited to replicas in the same DC as the coordinator
+
+## speculative_retry
+
+
+# not configured variables
+
+dclocal_read_repair_chance
+
+read_repair_chance
+
+memtable_flush_period_in_ms
+
+# Reference
+
+https://docs.datastax.com/en/cql-oss/3.3/cql/cql_reference/cqlCreateTable.html#cqlCreateTable

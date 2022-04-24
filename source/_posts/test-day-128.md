@@ -7,8 +7,11 @@ show: true
 date: 2022-02-28 10:37:57
 ---
 ## Today's Task
+- [ ] Deploy onebox command generator
 
 ## Additional Task 
+- [x] create a branch from the current image on PRD and build images containing Dev's changes
+- [x] Fix nucleus building scripts
 
 ## Thought
 
@@ -57,4 +60,6 @@ full-cycle script 里面 run 的时候是 -p 80:5000, 外面 host 80，里面是
 
 指定了端口之后为什么会去找 `/etc/nginx/html` ？？？
 
+所以又同时设定了 root /usr/share/nginx/html;
 
+行末分号特别重要
