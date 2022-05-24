@@ -130,3 +130,22 @@ postgres 建库完需要给用户授予权限
 
 `grant all privileges on database "student" to postgres;`
 
+pom 可以认为是后端用到的 mvn package.json
+
+好在 mvn repository 不会像 node_modules 每个 repo 到处都是
+
+db 没配置好之前 spring-boot-starter-data-jpa 会在运行的时候报错
+
+后面也许可以做个大的玩具看看了
+
+多几个对象的 CRUD 啥的（
+
+JPA - Java Persistence API
+
+ORM - Object Relational Mapping
+
+好处是不用手写 sql
+
+……这件事情大一就该开始干了
+
+没事想不开去陪跑什么蓝桥杯啊真的是……
