@@ -38,3 +38,13 @@ git rebase master
 git fetch 会去拿 metadata，但不会动本地文件
 
 git pull 会在拿好 metadata 以后，改动本地文件
+
+# 5. 合并一些 debug 过程中的 commit
+
+git rebase -i ${要合并的起始位置的上一个 commit}
+
+然后把第二行开始的 pick 全部改成 s 
+
+接着改下 commit messages
+
+git push -f
