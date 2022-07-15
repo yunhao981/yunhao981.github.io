@@ -89,8 +89,6 @@ public class CDPlayerTest {
 }
 ```
 
-## 
-
 @Autowired 可以用在构造器和 Setter 上
 
 当 Spring 创建另一个 Bean 的时候，会通过这个构造器实例化，传过去一个可以设置的 Bean
