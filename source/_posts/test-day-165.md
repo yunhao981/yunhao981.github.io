@@ -7,7 +7,7 @@ show: true
 date: 2022-07-18 13:31:34
 ---
 ## Today's Task
-- [ ] Adjust CTS release pipeline default version 
+- [x] Adjust CTS release pipeline default version 
 - [x] Docker image scripts
 - [ ] Prototype of Temp CM Notification Tool
 
@@ -29,4 +29,4 @@ date: 2022-07-18 13:31:34
 
 不能信任 Merge Conflict 箭头包出来的部分修完在语法上一定就是没有问题的
 
-必须自己再检查一遍
+必须自己再检查一遍完整的文件
