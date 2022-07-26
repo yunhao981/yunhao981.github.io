@@ -27,3 +27,15 @@ workaround:
 然后公司的 slack bot 去通过这台 AWS 通信
 
 需要非常强力的 Business Reason 提供给 Security 姐姐们
+
+update:
+
+失败了 = =
+
+如果用私人的 AWS 的话联不通公司内网
+
+## Homework
+
+- [ ] Taco-cloud DB Integration
+- [ ] LeetCode Daily Question
+- [ ] Node.js w/ typescript
