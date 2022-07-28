@@ -7,7 +7,7 @@ show: true
 date: 2022-07-26 13:21:56
 ---
 ## Today's Task
-- [ ] CM Support
+- [x] CM Support
 - [ ] Slack bot
 
 ## Additional Task 
