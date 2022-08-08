@@ -7,20 +7,22 @@ show: true
 date: 2022-08-03 11:27:30
 ---
 ## Today's Task
+
 - [ ] Build Script User Friendly Changes
-    - [x] Extract Common Methods for PCT jobs
-    - [x] Remove Audit Tool from old repo
-    - [ ] Extract Common methods for T1 image release scripts
-        - [x] Nexus
-        - [x] Nucleus
-        - [x] Catalog
+  - [x] Extract Common Methods for PCT jobs
+  - [x] Remove Audit Tool from old repo
+  - [ ] Extract Common methods for T1 image release scripts
+    - [x] Catalog
+    - [x] Nexus
+    - [ ] Nucleus
 
 - [ ] Slack Bot
-    - [x] run on AWS
-    - [x] Try Demo Full Functions
-    - [ ] Basic Function
+  - [x] run on AWS
+  - [x] Try Demo Full Functions
+  - [ ] Basic Function
 
-## Additional Task 
+## Additional Task
+
 - [x] Deploy LBCP on STG from test branch
 - [x] Fix LBCP scripts to push image to AWS
 - [x] Ask Jen to help creating repositories for LBCP on AWS
