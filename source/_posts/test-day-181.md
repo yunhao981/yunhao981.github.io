@@ -1,12 +1,13 @@
 ---
-title: test-day-180
+title: test-day-181
 categories: test
 tags: test
 description: life as Test Contractor at EADP-C&I Test-Infra Team
 show: true
-date: 2022-08-08 10:37:10
+date: 2022-08-09 11:30:31
 ---
 ## Today's Task
+
 - [ ] Build Script User Friendly Changes
   - [x] Extract Common Methods for PCT jobs
   - [x] Remove Audit Tool from old repo
@@ -14,21 +15,25 @@ date: 2022-08-08 10:37:10
     - [x] Catalog
     - [x] Nexus
     - [ ] Nucleus
+  - [ ] Common methods for T3
+    - [ ] sloth
+    - [ ] vaquita
+    - [ ] cp
+  - [ ] Common methods for T2
 
 - [ ] Slack Bot
   - [x] run on AWS
   - [x] Try Demo Full Functions
   - [x] Basic Function
+  - [ ] New Features
 
 
 ## Additional Task 
-- [x] Fix LB team common methods
-- [x] Mcrouter image pipeline
+
+- [x] Health Code Support
 
 ## Thought
 
-nucleus 的 common function 提起来确实有点吃力
+录制了从 jenkins console log 里面找 image tag 的 Macro 绑定到鼠标侧键上
 
-尽量写得简单易懂吧
-
-后面如果需要动 build.sh 那一系列的 generate xxx 估计更加头疼
+下次 cm 应该会省力许多吧

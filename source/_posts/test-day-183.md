@@ -1,10 +1,10 @@
 ---
-title: test-day-180
+title: test-day-183
 categories: test
 tags: test
 description: life as Test Contractor at EADP-C&I Test-Infra Team
 show: true
-date: 2022-08-08 10:37:10
+date: 2022-08-11 10:56:21
 ---
 ## Today's Task
 - [ ] Build Script User Friendly Changes
@@ -14,21 +14,20 @@ date: 2022-08-08 10:37:10
     - [x] Catalog
     - [x] Nexus
     - [ ] Nucleus
+  - [ ] Common methods for T3
+    - [ ] sloth
+    - [ ] vaquita
+    - [ ] cp
+  - [ ] Common methods for T2
 
 - [ ] Slack Bot
   - [x] run on AWS
   - [x] Try Demo Full Functions
   - [x] Basic Function
-
+  - [x] Easter Eggs
+  - [ ] New Features
 
 ## Additional Task 
-- [x] Fix LB team common methods
-- [x] Mcrouter image pipeline
 
 ## Thought
 
-nucleus 的 common function 提起来确实有点吃力
-
-尽量写得简单易懂吧
-
-后面如果需要动 build.sh 那一系列的 generate xxx 估计更加头疼
