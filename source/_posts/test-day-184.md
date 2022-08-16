@@ -42,6 +42,7 @@ date: 2022-08-12 14:15:53
 - [x] fix release nexus pipeline - artifactory down
 - [x] catlaog stg down - config issue, asked dev to fix
 - [x] access, customizedlog stg down - pull image failed on aws, pushed manually
+- [x] deploy lockbox-cp to aws - test for Matt Shi
 
 ## Thought
 
