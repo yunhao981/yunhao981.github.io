@@ -17,7 +17,7 @@ date: 2023-01-10 14:23:51
 ### Audit
 
 - [ ] Fix Preference Center
-- [ ] Filter Out CICD Components
+- [x] Filter Out CICD Components
 
 ### Audit T3
 
@@ -27,4 +27,4 @@ date: 2023-01-10 14:23:51
 ### Image Scripts
 
 - [ ] Catalog liquibase image auto trigger
-- [ ] Saola Trigger All parameters
+- [x] Saola Trigger All parameters

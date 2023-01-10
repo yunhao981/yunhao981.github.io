@@ -12,7 +12,7 @@ date: 2023-01-10 11:13:38
 
 - [ ] T3 audit fix
 
-- [ ] Change hosts on gitlab runner to support mysql
+- [x] Change hosts on gitlab runner to support mysql
 
 - [x] Update Lockbox baseimage
 
@@ -29,6 +29,3 @@ shared lib db 跑 ut test 的正确打开方式是？
 有一台 eadp mysql 的 hosts 需要改
 
 改完之后好像还有台 oracle 连不上
-
-
-
