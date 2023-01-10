@@ -14,7 +14,11 @@ date: 2023-01-10 11:13:38
 
 - [x] Change hosts on gitlab runner to support mysql
 
+- [x] Fix Hosts for DB repo pipeline
+
 - [x] Update Lockbox baseimage
+
+- [x] Fix check artifactory token auto message
 
 ## Additional Task
 
