@@ -8,7 +8,6 @@ show: true
 ---
 ## Today's Task
 
-## Additional Task 
+## Additional Task
 
 ## Thought
-
