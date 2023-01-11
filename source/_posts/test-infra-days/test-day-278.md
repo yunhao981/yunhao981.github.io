@@ -18,7 +18,7 @@ date: 2023-01-10 11:13:38
 
 - [x] Update Lockbox baseimage
 
-- [x] Fix check artifactory token auto message
+- [x] Fix Check Artifactory Token Expiration Message
 
 ## Additional Task
 
