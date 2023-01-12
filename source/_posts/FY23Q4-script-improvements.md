@@ -11,8 +11,10 @@ date: 2023-01-10 14:23:51
 ### STG Deployment
 
 - [ ] Add retry when failed
-- [ ] less timeout
-- [ ] Skip WIP pods on AWS (billing, qahandler)
+- [x] less timeout (1000s -> 750s)
+- [x] Skip WIP pods on AWS (billing, qahandler)
+- [ ] Split message when deploy failure
+- [ ] Change message channel to public
 
 ### Audit
 
@@ -22,9 +24,17 @@ date: 2023-01-10 14:23:51
 ### Audit T3
 
 - [ ] Detect commits into release branch
-- [ ] Message Channel to Pulic
+- [x] Message Channel to Pulic
 
 ### Image Scripts
 
-- [ ] Catalog liquibase image auto trigger
+- [x] Catalog liquibase image auto trigger
 - [x] Saola Trigger All parameters
+- [x] Lockbox sloth, vaquita, cp common base image
+
+### Liquibase job
+
+- [x] Keymaster new config path support
+- [x] Fix 'null' prefix in description
+- [ ] Message for Liquibase Image
+- [ ] Message for Liquibase with Vault Support
