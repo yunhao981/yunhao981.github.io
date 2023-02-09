@@ -72,3 +72,38 @@ A: 用 `node:18-alpine`
 ### 2
 
 如果是前端项目，也许可以 build static files 然后用 nginx host
+
+## Call Jenkins with paramerters
+
+### parameters form data
+
+data: Map<String, String> or FormData, `Object.fromEntries(parameters)`
+
+`headers: { Content-Type: multipart/form-data }`
+
+### jenkins https support
+
+```typescript
+httpsAgent: new https.Agente({rejectUnauthorized: false})
+```
+
+### queue item 404 when postman testing
+
+jenkins queue item id 只会保留半分钟左右，
+
+queue item id -> build id -> build url
+
+### 
+
+```typescript
+import crypto from 'crypto';
+httpsAgent: new httpsAgent({
+    secureOptions: crypto.constants.SSL_OP_LEGACY_SERVER_CONNECT
+})
+```
+
+### FormData
+
+FormData 从 node 16 以后开始支持，早了认不出
+
+

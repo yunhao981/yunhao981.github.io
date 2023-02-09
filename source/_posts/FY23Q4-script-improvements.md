@@ -10,27 +10,32 @@ date: 2023-01-10 14:23:51
 
 ### STG Deployment
 
-- [ ] Add retry when failed
+- [x] Add retry when failed
 - [x] less timeout (1000s -> 750s)
 - [x] Skip WIP pods on AWS (billing, qahandler)
 - [ ] Split message when deploy failure
-- [ ] Change message channel to public
+- [ ] Fix Retry (gen parameters from failed pod log)
+- [x] Change message channel to public
 
 ### Audit
 
 - [ ] Fix Preference Center
+- [x] Filter out Billing_tools
 - [x] Filter Out CICD Components
+- [x] Fix Message parametes
 
 ### Audit T3
 
 - [ ] Detect commits into release branch
 - [x] Message Channel to Pulic
+- [x] Add Lockbox Legacy
 
 ### Image Scripts
 
 - [x] Catalog liquibase image auto trigger
 - [x] Saola Trigger All parameters
 - [x] Lockbox sloth, vaquita, cp common base image
+- [ ] Parameter Check to avoid image from retro branch merged to release (retro/xxx_MERGED)
 
 ### Liquibase job
 
@@ -38,3 +43,12 @@ date: 2023-01-10 14:23:51
 - [x] Fix 'null' prefix in description
 - [ ] Message for Liquibase Image
 - [ ] Message for Liquibase with Vault Support
+
+### Code Merge
+
+- [ ] Block Merge-cut and recut for retro branch
+
+### Data-Consistency Tool
+
+- [x] Fix Message when jenkins git plugin error
+
