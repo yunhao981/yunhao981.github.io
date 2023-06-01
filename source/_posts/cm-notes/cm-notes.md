@@ -122,17 +122,19 @@ Risk & Risk UI 最多 1 台 1box 跑
 
 ## 踩到过的坑
 
-Audit 缺 Component
+Audit 缺 Component -> Manual check
 
-起 regression 的时候忘记带上 Risk / Preferences Center / Value-Transfer / Customizedlog
+起 regression 的时候忘记带上 Risk / Preferences Center / Value-Transfer / Customizedlog -> trigger 完 regression 对着 wiki 再确认
 
-recut 更新页面的时候误删 image version
+recut 更新页面的时候误删 image version -> 划删除线代替退格删除
 
-公共账号邮箱登录失败
+公共账号邮箱登录失败 -> IT
 
-Sign off client 炸了并且没有备份
+Sign off client 炸了并且没有备份 -> 每次先起 local，跑完以后 keep 三台
 
-image 没推到 AWS Repo
+image 没推到 AWS Repo -> nova-utility 上去推一把，推完及时修 build script
+
+FR 上跑 local 的时候 HS 挂了 -> 及时反馈
 
 ## Reminders
 
