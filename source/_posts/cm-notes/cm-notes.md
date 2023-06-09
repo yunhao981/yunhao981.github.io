@@ -36,6 +36,8 @@ docker build 看情况, push failure 找 ops
 
 偶尔有 post step 里发 slack 消息发失败，不影响 image本身
 
+Kanas 如果需要 manual release 就用 precise release kanas
+
 ## Deploy STG
 
 更新 liquibase 以后再铺 STG
