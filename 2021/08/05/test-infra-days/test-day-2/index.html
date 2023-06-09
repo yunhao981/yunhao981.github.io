@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <title>test-day-2 | Yunhao Liu</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="life as Test Contractor at EADP-C&amp;I Test-Infra Team">
+<meta property="og:type" content="article">
+<meta property="og:title" content="test-day-2">
+<meta property="og:url" content="http://yunhao981.github.io/2021/08/05/test-infra-days/test-day-2/index.html">
+<meta property="og:site_name" content="Yunhao Liu">
+<meta property="og:description" content="life as Test Contractor at EADP-C&amp;I Test-Infra Team">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2021-08-04T16:37:11.000Z">
+<meta property="article:modified_time" content="2023-01-03T03:49:44.978Z">
+<meta property="article:author" content="Yunhao Liu">
+<meta property="article:tag" content="test">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="Yunhao Liu" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/favicon.png">
+  
+  
+    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/typeface-source-code-pro@0.0.71/index.min.css">
+
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+
+  
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Yunhao Liu</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">New Life #Life on Campus</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yunhao981.github.io"></form>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main"><article id="post-test-infra-days/test-day-2" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2021/08/05/test-infra-days/test-day-2/" class="article-date">
+  <time class="dt-published" datetime="2021-08-04T16:37:11.000Z" itemprop="datePublished">2021-08-05</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/test/">test</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="p-name article-title" itemprop="headline name">
+      test-day-2
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <p>第三天的心情稍微有点糟</p>
+<p>自己常用的机场流量超了，suspended</p>
+<p>wsl里的Ubuntu也无法访问启动目录</p>
+<p>linux下在网页端又无法加载出笔记列表（大概实在是太多了吧</p>
+<p>于是更新博客的计划自然而然也就没有做成功</p>
+<p>结果一整天下来还是搞不明白测试流程</p>
+<p>wiki文档和Jenkins Job报错信息倒是看了好久</p>
+<p>但是对于解决问题也没有什么额外的帮助</p>
+<p>因为一整天都很头疼，没有推进什么成果</p>
+<p>晚上Kyle来问进度的时候都支支吾吾的</p>
+<p>还是应该少浪费一些时间，如果看了一段时间也搞不明白的话，随时可以问其他人的</p>
+<p>想把四个jobs failed的原因都弄明白，还剩下三个</p>
+<p>component_audit失败的原因可能是和maven dumb-librarian 有关</p>
+<p>今天翻了翻文档，有可能是pom.xml里面的repository设置有点问题</p>
+<p>但我并不清楚具体是哪个目录下的pom.xml</p>
+<p>更加详细的具体原因并不清楚，问了Kyle等回复吧</p>
+<p>另外两个code_merge 和 code_recut 的原因并不清楚</p>
+<p>明天早上仔细整理一下问题详情，去问问他们吧</p>
+<p>除了挂掉的原因之外，还想知道如何判断迁移成功过来</p>
+<p>同样的参数设置为何会导致结果的差异</p>
+<p>另外我在Jenkins服务器上根本没法找到所有项目的源码</p>
+<p>新建测试分支是不知道在哪里做的</p>
+<p>测试流程方面，问了钟璐，原本先想知道一个宏观具体的测试流程，再一步步细化到我要做什么</p>
+<p>因为我真的不知道自己的job description到底是需要做啥</p>
+<p>功能测试？性能测试？自动化测试？</p>
+<p>先从玩明白了网页戳戳乐开始吧</p>
+<p>Jenkins上的这些job本身就是</p>
+<p>然后具体的操作演示极其快，实在太多太细，记不清楚</p>
+<p>而且我根本不知道为什么要这么做</p>
+<p>明天再问问吧，需要每一步都具体地理解清楚了</p>
+<p>看一遍和自己做一遍是完全不同的</p>
+<p>如果wiki上没有更具体的操作手册，也许我也可以自己再整理一份</p>
+<p>这样才能知道人工执行的部分，知道人工的部分之后才能继续自动化</p>
+<p>摸鱼的时候，看了看Fastrun portal的源码，顺手装了个node来npm install了一下</p>
+<p>里面写的好漂亮，我也想写出这样的代码，不知道还要修炼多久</p>
+<p>不过现在的本职毕竟还是测试，前端的东西晚上回家再学</p>
+<p>不知不觉晚上又坐到了快7点，好在今天到家精力比昨天更充沛一些</p>
+<p>回家之后在X470-RisingSun上简单配置了下开发环境，可以继续更新博客了</p>
+<p>文章非常、非常、非常少，以后会慢慢变多的吧</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yunhao981.github.io/2021/08/05/test-infra-days/test-day-2/" data-id="cliodcf4a00awhsqm8q6iaqtz" data-title="test-day-2" class="article-share-link">Share</a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/test/" rel="tag">test</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2021/08/06/test-infra-days/test-day-3/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          test-day-3
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2021/08/05/test-infra-days/test-day-0/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">test-day-0</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Categories</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Algorithm/">Algorithm</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Alogorithm/">Alogorithm</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/GitHub/">GitHub</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Java/">Java</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/JavaScript/">JavaScript</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Test-Infra-Manual/">Test Infra Manual</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/azpr/">azpr</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/csapp/">csapp</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/git/">git</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/hexo/">hexo</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/java/">java</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/pintos/">pintos</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/react/">react</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/slackbot/">slackbot</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/softskils/">softskils</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/test/">test</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/typescript/">typescript</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%9D%82%E4%B8%83%E6%9D%82%E5%85%AB/">杂七杂八</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/">读书笔记</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Algorithm/" rel="tag">Algorithm</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Books/" rel="tag">Books</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/GitHub/" rel="tag">GitHub</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Java/" rel="tag">Java</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/JavaScript/" rel="tag">JavaScript</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/OS/" rel="tag">OS</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Test-Infra-Manual/" rel="tag">Test Infra Manual</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Test-Infra-Manualtest/" rel="tag">Test Infra Manualtest</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/azpr/" rel="tag">azpr</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/csapp/" rel="tag">csapp</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/git/" rel="tag">git</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/" rel="tag">hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/java/" rel="tag">java</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/react/" rel="tag">react</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/slackbot-ts-js/" rel="tag">slackbot ts js</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/softskils/" rel="tag">softskils</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/test/" rel="tag">test</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/typescript/" rel="tag">typescript</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/vim/" rel="tag">vim</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%9D%82%E4%B8%83%E6%9D%82%E5%85%AB/" rel="tag">杂七杂八</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/Algorithm/" style="font-size: 14px;">Algorithm</a> <a href="/tags/Books/" style="font-size: 16px;">Books</a> <a href="/tags/GitHub/" style="font-size: 14px;">GitHub</a> <a href="/tags/Java/" style="font-size: 16px;">Java</a> <a href="/tags/JavaScript/" style="font-size: 16px;">JavaScript</a> <a href="/tags/OS/" style="font-size: 12px;">OS</a> <a href="/tags/Test-Infra-Manual/" style="font-size: 18px;">Test Infra Manual</a> <a href="/tags/Test-Infra-Manualtest/" style="font-size: 10px;">Test Infra Manualtest</a> <a href="/tags/azpr/" style="font-size: 12px;">azpr</a> <a href="/tags/csapp/" style="font-size: 14px;">csapp</a> <a href="/tags/git/" style="font-size: 10px;">git</a> <a href="/tags/hexo/" style="font-size: 10px;">hexo</a> <a href="/tags/java/" style="font-size: 10px;">java</a> <a href="/tags/react/" style="font-size: 12px;">react</a> <a href="/tags/slackbot-ts-js/" style="font-size: 10px;">slackbot ts js</a> <a href="/tags/softskils/" style="font-size: 10px;">softskils</a> <a href="/tags/test/" style="font-size: 20px;">test</a> <a href="/tags/typescript/" style="font-size: 10px;">typescript</a> <a href="/tags/vim/" style="font-size: 10px;">vim</a> <a href="/tags/%E6%9D%82%E4%B8%83%E6%9D%82%E5%85%AB/" style="font-size: 10px;">杂七杂八</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/06/">June 2023</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/05/">May 2023</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/03/">March 2023</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/01/">January 2023</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/12/">December 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/11/">November 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/10/">October 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/09/">September 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/08/">August 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/07/">July 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/06/">June 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/05/">May 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/04/">April 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/03/">March 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/02/">February 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/01/">January 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/12/">December 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/11/">November 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/10/">October 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/09/">September 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/08/">August 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/04/">April 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/11/">November 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/01/">January 2019</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2023/06/09/test-infra-days/test-day-382/">test-day-382</a>
+          </li>
+        
+          <li>
+            <a href="/2023/06/08/test-infra-days/test-day-381/">test-day-381</a>
+          </li>
+        
+          <li>
+            <a href="/2023/06/07/test-infra-days/test-day-380/">test-day-380</a>
+          </li>
+        
+          <li>
+            <a href="/2023/05/25/cm-notes/cm-notes/">CM-Notes</a>
+          </li>
+        
+          <li>
+            <a href="/2023/03/29/Productivity-Section-2/">Productivity-Section-2</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+      &copy; 2023 Yunhao Liu<br>
+      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+
+<script src="/js/jquery-3.4.1.min.js"></script>
+
+
+
+  
+<script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+
+  </div>
+</body>
+</html>

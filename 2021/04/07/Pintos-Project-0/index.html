@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <title>Pintos-Project-0 | Yunhao Liu</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="Get the things realI was too young &amp; too simple last year, thinking just install bochs via system default package manager will work. Make sure install the exact same version of bochs-2.6.2, and co">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Pintos-Project-0">
+<meta property="og:url" content="http://yunhao981.github.io/2021/04/07/Pintos-Project-0/index.html">
+<meta property="og:site_name" content="Yunhao Liu">
+<meta property="og:description" content="Get the things realI was too young &amp; too simple last year, thinking just install bochs via system default package manager will work. Make sure install the exact same version of bochs-2.6.2, and co">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2021-04-07T05:24:06.000Z">
+<meta property="article:modified_time" content="2021-08-09T03:55:29.036Z">
+<meta property="article:author" content="Yunhao Liu">
+<meta property="article:tag" content="OS">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="Yunhao Liu" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/favicon.png">
+  
+  
+    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/typeface-source-code-pro@0.0.71/index.min.css">
+
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+
+  
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Yunhao Liu</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">New Life #Life on Campus</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yunhao981.github.io"></form>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main"><article id="post-Pintos-Project-0" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2021/04/07/Pintos-Project-0/" class="article-date">
+  <time class="dt-published" datetime="2021-04-07T05:24:06.000Z" itemprop="datePublished">2021-04-07</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/pintos/">pintos</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="p-name article-title" itemprop="headline name">
+      Pintos-Project-0
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h1 id="Get-the-things-real"><a href="#Get-the-things-real" class="headerlink" title="Get the things real"></a>Get the things real</h1><p>I was too young &amp; too simple last year, thinking just install bochs via system default package manager will work.</p>
+<p>Make sure install the exact same version of bochs-2.6.2, and compile it from source code. </p>
+<p>Folowing the setup guides <a target="_blank" rel="noopener" href="https://cs.jhu.edu/~huang/cs318/fall17/project/setup.html">HERE</a> to compile bochs-2.6.2 with source code on SourceForge.</p>
+<p>On Fedora, packages such as <code>libX11-devel</code>, <code>libXrandr-devel</code> and <code>ncurses-devel</code> are needed.</p>
+<h1 id="PC-Bootstrap"><a href="#PC-Bootstrap" class="headerlink" title="PC Bootstrap"></a>PC Bootstrap</h1><p>bootstrapping: process of loading OS into MEM</p>
+<p>helpers:<br>    1. BIOS<br>    2. booloader</p>
+<p>power on -&gt; BIOS -&gt; BL -&gt; OS</p>
+<p>BIOS tests Hardware and finds bootable Devices</p>
+<p>IA32: fits within 512B in MEM for partition 436Bytes for MBR</p>
+<p>Low Memory: <code>0x00000000</code> to <code>0x000A0000</code>, 640KB</p>
+<p>VGA Display: <code>0x000A0000</code> to <code>0x000C0000</code>, 768KB</p>
+<p>16-bit devices: <code>0x000C0000</code> to <code>0x000F0000</code>, 960KB</p>
+<p>BIOS ROM: <code>0x000F0000</code> to <code>0x00100000</code>, 1MB</p>
+<p>Extended Memory &amp; 32-bit memory mapped devices: <code>0x00100000</code> to <code>0xFFFFFFFF</code>, 4GB</p>
+<h1 id="The-Boot-Loader"><a href="#The-Boot-Loader" class="headerlink" title="The Boot Loader"></a>The Boot Loader</h1><p>sector: the disk’s minimum transfer granularity for Read or Write operations</p>
+<p>boot sector: the first sector of a bootable disk</p>
+<p>BIOS finds a bootable HD</p>
+<p>-&gt; load 512B boot sector into MEM at <code>0x7c00</code> through <code>0x7dff</code></p>
+<p>-&gt; set CS:IP to <code>0000:7c00</code></p>
+<p>CS: Code Segment Register</p>
+<p>IP: Instructor Pointer</p>
+<p>SS: Stack Segment</p>
+<p>DS: Data Segent</p>
+<p>ES: moving data around</p>
+<p>IA32 Bootloaders runs in real-addressing mode</p>
+<p>CS are used to compute the addresses of memory accesses</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">address = 16 * segment + offset</span><br></pre></td></tr></table></figure>
+
+<p>Each segment is 64KB. </p>
+<p>The kernel is 512KB, 1024 sectors, must be loaded into memory starting at <code>0x20000</code>.</p>
+<p>The loader reads no more than 512KB. More data than this will cross into other regions for BIOS and Hardware.</p>
+<h1 id="The-Kernel"><a href="#The-Kernel" class="headerlink" title="The Kernel"></a>The Kernel</h1><p>The BL transfers contorl to the kernel’s entry point.</p>
+<p>The <code>start()</code> in <code>threads/start.S</code> switches the CPU from ‘legacy mode’ to ‘protected mode’.</p>
+<p>A20 line: the CPU’s address line numbered 20.<br>enable it to access more memory than the first 1MB.</p>
+<h1 id="Debugging"><a href="#Debugging" class="headerlink" title="Debugging"></a>Debugging</h1><h2 id="1-Use-GDB-to-trace-the-QEMU-BIOS"><a href="#1-Use-GDB-to-trace-the-QEMU-BIOS" class="headerlink" title="1. Use GDB to trace the QEMU BIOS"></a>1. Use GDB to trace the QEMU BIOS</h2><p>run pintos like:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pintos --gdb -- run mytest</span><br></pre></td></tr></table></figure>
+
+<p>then run this in another terminal:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pintos-gdb kernel.o</span><br></pre></td></tr></table></figure>
+
+<p>in Pintos-GDB, run this to connect it to the pintos running:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">target remote localhost:1234</span><br></pre></td></tr></table></figure>
+
+<p>use <code>c</code> to continue til the end, use <code>si</code> to run one step<br>use <code>b</code> to set breakpoints, like <code>b *0x7c00</code>.</p>
+<h3 id="1-1-What-is-the-first-instruction-that-gets-executed"><a href="#1-1-What-is-the-first-instruction-that-gets-executed" class="headerlink" title="1.1 What is the first instruction that gets executed?"></a>1.1 What is the first instruction that gets executed?</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[f000:fff0]    0xffff0:	ljmp   $0x3630,$0xf000e05b</span><br><span class="line">0x0000fff0 in ?? ()</span><br></pre></td></tr></table></figure>
+
+<p>ljmp: transfer execution control to a different point in the instruction stream.</p>
+<h3 id="1-2-At-which-physical-address-is-this-instruction-located"><a href="#1-2-At-which-physical-address-is-this-instruction-located" class="headerlink" title="1.2 At which physical address is this instruction located?"></a>1.2 At which physical address is this instruction located?</h3><p>This instruction is located in <code>0x0000fff0</code>.</p>
+<h3 id="1-3-Can-you-guess-why-the-first-instruction-is-like-this"><a href="#1-3-Can-you-guess-why-the-first-instruction-is-like-this" class="headerlink" title="1.3 Can you guess why the first instruction is like this?"></a>1.3 Can you guess why the first instruction is like this?</h3><p>Maybe it was trying to find the initial point for bootloader.</p>
+<h3 id="1-4-What-are-the-next-three-instructions"><a href="#1-4-What-are-the-next-three-instructions" class="headerlink" title="1.4 What are the next three instructions?"></a>1.4 What are the next three instructions?</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">[f000:e05b]    0xfe05b:	cmpw   $0xffc8,%cs:(%esi)</span><br><span class="line">0x0000e05b in ?? ()</span><br><span class="line"></span><br><span class="line">[f000:e062]    0xfe062:	jne    0xd241d08c</span><br><span class="line">0x0000e062 in ?? ()</span><br><span class="line"></span><br><span class="line">[f000:e066]    0xfe066:	xor    %edx,%edx</span><br><span class="line">0x0000e066 in ?? ()</span><br></pre></td></tr></table></figure>
+
+<h2 id="Tracing-Pintos-Bootloader"><a href="#Tracing-Pintos-Bootloader" class="headerlink" title="Tracing Pintos Bootloader"></a>Tracing Pintos Bootloader</h2><h3 id="2-1-How-does-the-bootloader-read-disk-sectors-In-particular-waht-BIOS-interrupt-is-used"><a href="#2-1-How-does-the-bootloader-read-disk-sectors-In-particular-waht-BIOS-interrupt-is-used" class="headerlink" title="2.1 How does the bootloader read disk sectors? In particular, waht BIOS interrupt is used?"></a>2.1 How does the bootloader read disk sectors? In particular, waht BIOS interrupt is used?</h3><h3 id="2-2-How-does-the-bootloader-decides-whether-it-finds-the-Pintos-kernel"><a href="#2-2-How-does-the-bootloader-decides-whether-it-finds-the-Pintos-kernel" class="headerlink" title="2.2 How does the bootloader decides whether it finds the Pintos kernel?"></a>2.2 How does the bootloader decides whether it finds the Pintos kernel?</h3><h3 id="2-3-What-happens-when-the-bootloader-could-not-find-the-Pintos-kernel"><a href="#2-3-What-happens-when-the-bootloader-could-not-find-the-Pintos-kernel" class="headerlink" title="2.3 What happens when the bootloader could not find the Pintos kernel?"></a>2.3 What happens when the bootloader could not find the Pintos kernel?</h3><h3 id="2-4-At-what-point-does-the-bootloader-transfer-control-to-the-Pintos-kernel"><a href="#2-4-At-what-point-does-the-bootloader-transfer-control-to-the-Pintos-kernel" class="headerlink" title="2.4 At what point does the bootloader transfer control to the Pintos kernel?"></a>2.4 At what point does the bootloader transfer control to the Pintos kernel?</h3>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yunhao981.github.io/2021/04/07/Pintos-Project-0/" data-id="ckv7wl6wo0004cct5ast8gfya" data-title="Pintos-Project-0" class="article-share-link">Share</a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/OS/" rel="tag">OS</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2021/08/04/test-infra-days/test-day-1/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          test-day-1
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2019/11/22/my-vim-setup/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">my-vim-setup</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Categories</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Algorithm/">Algorithm</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Alogorithm/">Alogorithm</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/GitHub/">GitHub</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Java/">Java</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/JavaScript/">JavaScript</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Test-Infra-Manual/">Test Infra Manual</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/azpr/">azpr</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/csapp/">csapp</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/git/">git</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/hexo/">hexo</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/java/">java</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/pintos/">pintos</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/react/">react</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/slackbot/">slackbot</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/softskils/">softskils</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/test/">test</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/typescript/">typescript</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%9D%82%E4%B8%83%E6%9D%82%E5%85%AB/">杂七杂八</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/">读书笔记</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Algorithm/" rel="tag">Algorithm</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Books/" rel="tag">Books</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/GitHub/" rel="tag">GitHub</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Java/" rel="tag">Java</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/JavaScript/" rel="tag">JavaScript</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/OS/" rel="tag">OS</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Test-Infra-Manual/" rel="tag">Test Infra Manual</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Test-Infra-Manualtest/" rel="tag">Test Infra Manualtest</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/azpr/" rel="tag">azpr</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/csapp/" rel="tag">csapp</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/git/" rel="tag">git</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/" rel="tag">hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/java/" rel="tag">java</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/react/" rel="tag">react</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/slackbot-ts-js/" rel="tag">slackbot ts js</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/softskils/" rel="tag">softskils</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/test/" rel="tag">test</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/typescript/" rel="tag">typescript</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/vim/" rel="tag">vim</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%9D%82%E4%B8%83%E6%9D%82%E5%85%AB/" rel="tag">杂七杂八</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/Algorithm/" style="font-size: 14px;">Algorithm</a> <a href="/tags/Books/" style="font-size: 16px;">Books</a> <a href="/tags/GitHub/" style="font-size: 14px;">GitHub</a> <a href="/tags/Java/" style="font-size: 16px;">Java</a> <a href="/tags/JavaScript/" style="font-size: 16px;">JavaScript</a> <a href="/tags/OS/" style="font-size: 12px;">OS</a> <a href="/tags/Test-Infra-Manual/" style="font-size: 18px;">Test Infra Manual</a> <a href="/tags/Test-Infra-Manualtest/" style="font-size: 10px;">Test Infra Manualtest</a> <a href="/tags/azpr/" style="font-size: 12px;">azpr</a> <a href="/tags/csapp/" style="font-size: 14px;">csapp</a> <a href="/tags/git/" style="font-size: 10px;">git</a> <a href="/tags/hexo/" style="font-size: 10px;">hexo</a> <a href="/tags/java/" style="font-size: 10px;">java</a> <a href="/tags/react/" style="font-size: 12px;">react</a> <a href="/tags/slackbot-ts-js/" style="font-size: 10px;">slackbot ts js</a> <a href="/tags/softskils/" style="font-size: 10px;">softskils</a> <a href="/tags/test/" style="font-size: 20px;">test</a> <a href="/tags/typescript/" style="font-size: 10px;">typescript</a> <a href="/tags/vim/" style="font-size: 10px;">vim</a> <a href="/tags/%E6%9D%82%E4%B8%83%E6%9D%82%E5%85%AB/" style="font-size: 10px;">杂七杂八</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/06/">June 2023</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/05/">May 2023</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/03/">March 2023</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/01/">January 2023</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/12/">December 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/11/">November 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/10/">October 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/09/">September 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/08/">August 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/07/">July 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/06/">June 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/05/">May 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/04/">April 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/03/">March 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/02/">February 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/01/">January 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/12/">December 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/11/">November 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/10/">October 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/09/">September 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/08/">August 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/04/">April 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/11/">November 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/01/">January 2019</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2023/06/09/test-infra-days/test-day-382/">test-day-382</a>
+          </li>
+        
+          <li>
+            <a href="/2023/06/08/test-infra-days/test-day-381/">test-day-381</a>
+          </li>
+        
+          <li>
+            <a href="/2023/06/07/test-infra-days/test-day-380/">test-day-380</a>
+          </li>
+        
+          <li>
+            <a href="/2023/05/25/cm-notes/cm-notes/">CM-Notes</a>
+          </li>
+        
+          <li>
+            <a href="/2023/03/29/Productivity-Section-2/">Productivity-Section-2</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+      &copy; 2023 Yunhao Liu<br>
+      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+
+<script src="/js/jquery-3.4.1.min.js"></script>
+
+
+
+  
+<script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+
+  </div>
+</body>
+</html>

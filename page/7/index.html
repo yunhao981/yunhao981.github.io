@@ -1,0 +1,908 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <title>Yunhao Liu</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="My personal blog including my learning progress.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Yunhao Liu">
+<meta property="og:url" content="http://yunhao981.github.io/page/7/index.html">
+<meta property="og:site_name" content="Yunhao Liu">
+<meta property="og:description" content="My personal blog including my learning progress.">
+<meta property="og:locale" content="en_US">
+<meta property="article:author" content="Yunhao Liu">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="Yunhao Liu" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/favicon.png">
+  
+  
+    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/typeface-source-code-pro@0.0.71/index.min.css">
+
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+
+  
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Yunhao Liu</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">New Life #Life on Campus</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yunhao981.github.io"></form>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main">
+  
+    <article id="post-java/java-spring-boot-3" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2022/07/17/java/java-spring-boot-3/" class="article-date">
+  <time class="dt-published" datetime="2022-07-17T08:55:00.000Z" itemprop="datePublished">2022-07-17</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Java/">Java</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2022/07/17/java/java-spring-boot-3/">java-spring-boot-3</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h2 id="validation-error"><a href="#validation-error" class="headerlink" title="validation error"></a>validation error</h2><p>import javax.validation.* 会失效，原因是 Spring Boot 在 2.3.0 以后就不再默认包含在 web-starter 里面了</p>
+<p>在 pom.xml 里加上了相关的依赖 = =</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.springframework.boot<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>spring-boot-starter-validation<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>javax.validation<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>validation-api<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.hibernate.validator<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>hibernate-validator<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>明天看下第四版里面 spel 表达式的部分</p>
+<p>稍微调整了下 IDEA 的 Run, Build 和 Terminal， 设置成窗口扔在另一块屏幕上，看起来舒服太多太多了</p>
+<p>Alt + 4 RUN Window</p>
+<p>Alt + F12 Terminal</p>
+<p>Shift + F10 Run xxx</p>
+<h2 id="WebMvcConfigurer-no-interface-expected-here"><a href="#WebMvcConfigurer-no-interface-expected-here" class="headerlink" title="WebMvcConfigurer no interface expected here"></a>WebMvcConfigurer no interface expected here</h2><p>java: method does not override or implement a method from a supertype</p>
+<p>一不小心把 implements 写成 extends 了……</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yunhao981.github.io/2022/07/17/java/java-spring-boot-3/" data-id="cliodcf2m003hhsqm56tphned" data-title="java-spring-boot-3" class="article-share-link">Share</a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Java/" rel="tag">Java</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-java/java-spring-3" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2022/07/15/java/java-spring-3/" class="article-date">
+  <time class="dt-published" datetime="2022-07-15T05:51:01.000Z" itemprop="datePublished">2022-07-15</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/">读书笔记</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2022/07/15/java/java-spring-3/">java-spring-3</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h1 id="4-面向切面的-Spring"><a href="#4-面向切面的-Spring" class="headerlink" title="4. 面向切面的 Spring"></a>4. 面向切面的 Spring</h1><ul>
+<li><p>面向切面编程的基本原理</p>
+</li>
+<li><p>通过 pagp创建切面</p>
+</li>
+<li><p>使用 @AspectJ 创建注解</p>
+</li>
+<li><p>为 @AspectJ 切面注入依赖</p>
+</li>
+</ul>
+<p>横切关注点 Cross cutting Concern: 散布于应用中多处的功能</p>
+<p>AOP想要解决的问题把这些横切关注点和业务逻辑相分离</p>
+<p>切面实现了跨多个应用对象逻辑的模块化</p>
+<h2 id="4-1-AOP-是啥"><a href="#4-1-AOP-是啥" class="headerlink" title="4.1 AOP 是啥"></a>4.1 AOP 是啥</h2><h3 id="通知-Advice"><a href="#通知-Advice" class="headerlink" title="通知 Advice"></a>通知 Advice</h3><p>切面的 What 和 When</p>
+<p>定义切面是什么，何时使用</p>
+<p>可以应用五种类型</p>
+<ul>
+<li>前置通知 before</li>
+</ul>
+<p>目标方法调用前通知</p>
+<ul>
+<li>后置通知 after</li>
+</ul>
+<p>目标方法完成之后，输出无所谓</p>
+<ul>
+<li>返回通知 After-returning</li>
+</ul>
+<p>目标方法成功执行之后，成功执行</p>
+<ul>
+<li>异常通知 After-throwing</li>
+</ul>
+<p>目标方法抛出异常之后</p>
+<ul>
+<li>环绕通知 Around</li>
+</ul>
+<p>通知包裹被通知方法，包起来，调用之前和调用之后执行自定义行为</p>
+<h3 id="切点-Pointcut"><a href="#切点-Pointcut" class="headerlink" title="切点 Pointcut"></a>切点 Pointcut</h3><p>切面的 Where</p>
+<h3 id="连接点-Joinpoint"><a href="#连接点-Joinpoint" class="headerlink" title="连接点 Joinpoint"></a>连接点 Joinpoint</h3><p>应用执行过程中插进切面的点</p>
+<h3 id="切面-Aspect"><a href="#切面-Aspect" class="headerlink" title="切面 Aspect"></a>切面 Aspect</h3><p> 通知 + 切点</p>
+<h3 id="引入-Introduction"><a href="#引入-Introduction" class="headerlink" title="引入 Introduction"></a>引入 Introduction</h3><p>朝现有的类添加新方法或者属性</p>
+<h3 id="织入-Weaving"><a href="#织入-Weaving" class="headerlink" title="织入 Weaving"></a>织入 Weaving</h3><p>把切面应用到目标对象，创建新的代理对象</p>
+<h2 id="AOP-支持"><a href="#AOP-支持" class="headerlink" title="AOP 支持"></a>AOP 支持</h2><p>Spring 提供了四种类型的 AOP 支持</p>
+<ul>
+<li><p>基于代理的经典 Spring AOP</p>
+</li>
+<li><p>纯 POJO 切面</p>
+</li>
+<li><p>@AspectJ 注解驱动的切面</p>
+</li>
+<li><p>注入式 AspectJ 切面</p>
+</li>
+</ul>
+<p>Spring 通知是 java 写的</p>
+<p>定义通知应用的切点通常可以用注解，或者在 Spring 配置文件里用 xml 写</p>
+<p>通过在代理类中包裹切面， Spring 在运行期把切面织入到 Spring 管理的 Bean 中</p>
+<p>Spring 只支持方法级别的连接点</p>
+<p>这些概念是一个字都没看懂 = =</p>
+<p>看看具体的示例代码可能心里就会有数了</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yunhao981.github.io/2022/07/15/java/java-spring-3/" data-id="cliodcf2k0035hsqmfwd1c471" data-title="java-spring-3" class="article-share-link">Share</a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Books/" rel="tag">Books</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-test-infra-days/test-day-164" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2022/07/15/test-infra-days/test-day-164/" class="article-date">
+  <time class="dt-published" datetime="2022-07-15T02:50:47.000Z" itemprop="datePublished">2022-07-15</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/test/">test</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2022/07/15/test-infra-days/test-day-164/">test-day-164</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h2 id="Today’s-Task"><a href="#Today’s-Task" class="headerlink" title="Today’s Task"></a>Today’s Task</h2><ul>
+<li><input checked="" disabled="" type="checkbox"> Docker remove local image script</li>
+<li><input disabled="" type="checkbox"> Adjust CTS release pipeline default version </li>
+</ul>
+<h2 id="Additional-Task"><a href="#Additional-Task" class="headerlink" title="Additional Task"></a>Additional Task</h2><ul>
+<li><input checked="" disabled="" type="checkbox"> CP image &amp; deploy</li>
+<li><input checked="" disabled="" type="checkbox"> nucleus, nexus, shadowbroker create branch for 8574</li>
+<li><input checked="" disabled="" type="checkbox"> tag yesterday afternoon’s cm regression &amp; wiki page update</li>
+</ul>
+<h2 id="Thought"><a href="#Thought" class="headerlink" title="Thought"></a>Thought</h2><p>昨天第三章看得属实云里雾里</p>
+<p>今天再仔细看下它想说些什么吧</p>
+<p>上周五清了 50 GB 的历史 image，因为需要确认安全，是手动 docker rmi -f 的……</p>
+<p>这回花10分钟撸了个 script 去通过关键词找 container id，然后直接对着找出来的列表循环删 image</p>
+<p>毋庸置疑，快多了</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yunhao981.github.io/2022/07/15/test-infra-days/test-day-164/" data-id="cliodcf3p008khsqm5vm86ni1" data-title="test-day-164" class="article-share-link">Share</a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/test/" rel="tag">test</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-test-infra-days/test-day-163" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2022/07/14/test-infra-days/test-day-163/" class="article-date">
+  <time class="dt-published" datetime="2022-07-14T07:29:09.000Z" itemprop="datePublished">2022-07-14</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/test/">test</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2022/07/14/test-infra-days/test-day-163/">test-day-163</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h2 id="Today’s-Task"><a href="#Today’s-Task" class="headerlink" title="Today’s Task"></a>Today’s Task</h2><ul>
+<li><input disabled="" type="checkbox"> Docker remove local image script</li>
+<li><input disabled="" type="checkbox"> Adjust CTS release pipeline default version </li>
+</ul>
+<h2 id="Additional-Task"><a href="#Additional-Task" class="headerlink" title="Additional Task"></a>Additional Task</h2><ul>
+<li><input checked="" disabled="" type="checkbox"> Recut nucleus</li>
+<li><input checked="" disabled="" type="checkbox"> new INT CM cut build, deploy &amp; regression </li>
+<li><input checked="" disabled="" type="checkbox"> cp, v5, build &amp; deploy from test branch </li>
+</ul>
+<h2 id="Thought"><a href="#Thought" class="headerlink" title="Thought"></a>Thought</h2><p>测的时候发现之前那十几个 repo 的 script 全都改炸了…</p>
+<p>每个问题都还不一样…</p>
+<p>有些是路径配的有问题，有些是尝试去删了一个莫名其妙的 Docker image id</p>
+<p>CP 有时候容易跑不起来或者 build 不过</p>
+<p>这个时候需要去 nova utility 上 mvn clean install 一趟 dodo </p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yunhao981.github.io/2022/07/14/test-infra-days/test-day-163/" data-id="cliodcf3o008ehsqm4k1u02a6" data-title="test-day-163" class="article-share-link">Share</a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/test/" rel="tag">test</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-java/java-spring-2" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2022/07/14/java/java-spring-2/" class="article-date">
+  <time class="dt-published" datetime="2022-07-14T05:13:43.000Z" itemprop="datePublished">2022-07-14</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/">读书笔记</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2022/07/14/java/java-spring-2/">java-spring-2</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h1 id="3-高级装配"><a href="#3-高级装配" class="headerlink" title="3. 高级装配"></a>3. 高级装配</h1><ul>
+<li><p>Spring profile</p>
+</li>
+<li><p>条件化 Bean 声明式</p>
+</li>
+<li><p>自动装配</p>
+</li>
+<li><p>Bean 作用域</p>
+</li>
+<li><p>Spring 表达式语言</p>
+</li>
+</ul>
+<h2 id="3-1-Spring-profile"><a href="#3-1-Spring-profile" class="headerlink" title="3.1 Spring profile"></a>3.1 Spring profile</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Configuration</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">DataSourceConfig</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Bean(destroyMethod=&quot;shutdown&quot;)</span></span><br><span class="line">    <span class="meta">@Profile(&quot;dev&quot;)</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> DataSource <span class="title">embeddedDataSource</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">new</span> EmbeddedDatabaseBuilder()</span><br><span class="line">            .setType(EmbeddedDataabaseType.H2)</span><br><span class="line">            .addScript(<span class="string">&quot;classpath:schema.sql&quot;</span>)</span><br><span class="line">            .addScript(<span class="string">&quot;classpath:test-data.sql&quot;</span>)</span><br><span class="line">            .build();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Bean</span></span><br><span class="line">    <span class="meta">@Profile(&quot;prod&quot;)</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> DataSource <span class="title">jndiDataSource</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        JndiObjectFactoryBean jndiObjectFactoryBean = <span class="keyword">new</span> JndiObjectFactoryBean();</span><br><span class="line">        jndiObjectFactoryBean.setJndiName(<span class="string">&quot;jdbc/myDS&quot;</span>);</span><br><span class="line">        jndiObjectFactoryBean.setResourceRef(<span class="keyword">true</span>);</span><br><span class="line">        jndiObjectFactoryBean.setProxyInterface(javax.sql.DataSource.class);</span><br><span class="line">        <span class="keyword">return</span> (DataSource) jndiObjectFactoryBean.getObject();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>不指定 profile 的 bean始终都会被创建</p>
+<p>激活 profile 依赖 <code>spring.profiles.active</code> 和 <code>spring.profiles.default</code> 属性</p>
+<p>有 active 的就用 active，没有的话用 default，两个都没有的话就没有激活的 profile</p>
+<p>设置方式：</p>
+<p>DispatherServlet 的初始化参数</p>
+<p>Web 应用的上下文参数</p>
+<p>JNDI 条目</p>
+<p>环境变量</p>
+<p>JVM 系统属性</p>
+<p>int 测试类上用 @ActiveProfiles 注解</p>
+<h2 id="3-2-条件配置-Bean"><a href="#3-2-条件配置-Bean" class="headerlink" title="3.2 条件配置 Bean"></a>3.2 条件配置 Bean</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Bean</span></span><br><span class="line"><span class="meta">@Conditional(MagicExistsCondition.class)</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> MagicBean <span class="title">magicBean</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">new</span> MagicBean();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">MagicExistsCondition</span> <span class="keyword">implements</span> <span class="title">Condition</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">matches</span><span class="params">(ConditionContext context, AnnotatedTypeMetadata metadata)</span> </span>&#123;</span><br><span class="line">        Environment env = context.getEnvironment();</span><br><span class="line">        <span class="keyword">return</span> env.containsProperty(<span class="string">&quot;magic&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="3-3-自动装配的歧义性"><a href="#3-3-自动装配的歧义性" class="headerlink" title="3.3 自动装配的歧义性"></a>3.3 自动装配的歧义性</h2><p>如果同时存在多个 Bean 匹配结果的话自动装配失效, NoUniqueBeanDefinitionException</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Autowired</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setDessert</span><span class="params">(Dessert dessert)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">this</span>.dessert = dessert;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Component</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Cake</span> <span class="keyword">implements</span> <span class="title">Dessert</span> </span>&#123; ... &#125;</span><br><span class="line"></span><br><span class="line"><span class="meta">@Component</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Cookies</span> <span class="keyword">implements</span> <span class="title">Dessert</span> </span>&#123; ... &#125;</span><br><span class="line"></span><br><span class="line"><span class="meta">@Component</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">IceCream</span> <span class="keyword">implements</span> <span class="title">Dessert</span> </span>&#123; ... &#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p>解决方式：primary bean， qualifier bean</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Component</span></span><br><span class="line"><span class="meta">@Primary</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">IceCream</span> <span class="keyword">implements</span> <span class="title">Dessert</span> </span>&#123; ... &#125;</span><br></pre></td></tr></table></figure>
+<p>primary 只能同时存在一个</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Autowired</span></span><br><span class="line"><span class="meta">@Qualifier(&quot;iceCream&quot;)</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setDessert</span><span class="params">(Dessert dessert)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">this</span>.dessert = dessert</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>限定符必须和要注入的 bean 名称紧耦合</p>
+<p>所有使用 @Component 声明的类都会创建为 Bean，并且 Bean ID 首字母变为小写的类名</p>
+<p>@Qualifier 也可以和 @Component 组合使用，自定义限定符</p>
+<p>也可以创建自定义注解</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="meta">@Target(&#123;ElementType.CONSTRUCTOR, ElementType.FIELD, ElementType.METHOD, ElementType.TYPE&#125;)</span></span><br><span class="line"><span class="meta">@Retention(RetentionPolicy.RUNTIME)</span></span><br><span class="line"><span class="meta">@Qualifier</span></span><br><span class="line"><span class="keyword">public</span> <span class="meta">@interface</span> Cold &#123; &#125;</span><br></pre></td></tr></table></figure>
+
+
+<h2 id="3-4-Bean-作用域"><a href="#3-4-Bean-作用域" class="headerlink" title="3.4 Bean 作用域"></a>3.4 Bean 作用域</h2><p>默认情况下 bean 是作为单例创建的，不管注入多少次都是同一个实例</p>
+<p>如果类里面会保持某些状态，单例重用会比较麻烦，容易污染对象</p>
+<p>作用域：</p>
+<ul>
+<li><p>单例 Singleton</p>
+</li>
+<li><p>原型 Prototype 每次注入或者通过 AC 获取的时候都会创建一个新的示例</p>
+</li>
+<li><p>会话 Session</p>
+</li>
+<li><p>请求 Request</p>
+</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Bean</span></span><br><span class="line"><span class="meta">@Scope(ConfigurableBeanFactory.SCOPE_PROTOTYPE)</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Notepad</span> </span>&#123; ... &#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="3-5-运行时值注入"><a href="#3-5-运行时值注入" class="headerlink" title="3.5 运行时值注入"></a>3.5 运行时值注入</h2><p>属性占位符 Property Placeholder</p>
+<p>SpEL </p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Configuration</span></span><br><span class="line"><span class="meta">@PropertySource(&quot;classpath:/com/soundsystem/app.properties&quot;)</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">ExpressiveConfig</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Autowired</span></span><br><span class="line">    Environment env;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Bean</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> BlankDisc <span class="title">disc</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">new</span> BlankDisc(</span><br><span class="line">            env.getProperty(<span class="string">&quot;disc.title&quot;</span>),</span><br><span class="line">            env.getProperty(<span class="string">&quot;disc.artist&quot;</span>)</span><br><span class="line">        )</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>getProperty 还可以用来在所需属性不存在的时候指定默认值</p>
+<p>如果需要属性一定存在的话可以用 getRequiredProperty</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">String getProperty(String key, String defaultValue)</span><br><span class="line"></span><br><span class="line">T getProperty(String key, Class&lt;T&gt; type, T defaultValue)</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yunhao981.github.io/2022/07/14/java/java-spring-2/" data-id="cliodcf2j0032hsqmboit8zp8" data-title="java-spring-2" class="article-share-link">Share</a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Books/" rel="tag">Books</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-java/java-spring-boot-2" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2022/07/14/java/java-spring-boot-2/" class="article-date">
+  <time class="dt-published" datetime="2022-07-13T16:59:50.000Z" itemprop="datePublished">2022-07-14</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Java/">Java</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2022/07/14/java/java-spring-boot-2/">java-spring-boot-2</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <p>解决了昨晚的 design 页无法渲染列表项，原因是忘了在它 Controller 里把列表项的内容塞进 model 里去</p>
+<h2 id="吐槽"><a href="#吐槽" class="headerlink" title="吐槽"></a>吐槽</h2><p>Thymeleaf 平时真的用得到吗……</p>
+<p>前后端的东西都混杂在一起，感觉像是在考古</p>
+<p>可以的话我喜欢把前端的部分拆开来用更现代一些的框架单独写…</p>
+<p>另外后端支持 Live Reload， 但是改了 thymeleaf 的 template 我不确定这个部分算是能不能 Reload ……</p>
+<p>反正赶紧把这个部分快速过掉，然后看一些后端那边的东西吧</p>
+<p>github 上扔了一大堆浅尝辄止的 Demo， 但没有一个方向是专精的</p>
+<p>这些其实也是以前遗憾执念的一部分</p>
+<p>这几年里这些遗憾积累得实在太多太多了，能补掉的就尽量一个个补过来吧</p>
+<p>写完这个要去大吃一顿 Taco Bell</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yunhao981.github.io/2022/07/14/java/java-spring-boot-2/" data-id="cliodcf2l003bhsqm1xfdb5zm" data-title="java-spring-boot-2" class="article-share-link">Share</a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Java/" rel="tag">Java</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-java/java-spring-1" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2022/07/13/java/java-spring-1/" class="article-date">
+  <time class="dt-published" datetime="2022-07-13T05:10:31.000Z" itemprop="datePublished">2022-07-13</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/">读书笔记</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2022/07/13/java/java-spring-1/">java-spring-1</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h1 id="2-装-配-B-ean"><a href="#2-装-配-B-ean" class="headerlink" title="2. (装)配 (B)ean"></a>2. (装)配 (B)ean</h1><p>声明 Bean</p>
+<p>构造器注入</p>
+<p>Setter 方法注入</p>
+<p>装配 bean</p>
+<p>控制 Bean 的创建和销毁</p>
+<p>装配 创建应用对象之间协作关系</p>
+<p>显式：xml 配置，java 配置</p>
+<p>隐式：自动装配机制</p>
+<h2 id="自动装配-Bean"><a href="#自动装配-Bean" class="headerlink" title="自动装配 Bean"></a>自动装配 Bean</h2><p>组件扫描 Component Scanning</p>
+<p>Spring 自动发现 AC 中创建的 Bean</p>
+<p>自动装配 Autowiring</p>
+<p>Spring 自动满足 Bean 之间的依赖</p>
+<h2 id="样例"><a href="#样例" class="headerlink" title="样例"></a>样例</h2><p>定义接口，降低耦合</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">interface</span> <span class="title">CompactDisc</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">play</span><span class="params">()</span></span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>提供一个接口的实现</p>
+<p><code>@Component</code> 注解，告知 Spring 为它创建 Bean</p>
+<p><code>@Component(&quot;lonelyHeartsClub&quot;)</code> 可以给 Bean 命名</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Component</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">SgtPeppers</span> <span class="keyword">implements</span> <span class="title">CompactDisc</span> </span>&#123;</span><br><span class="line">    <span class="keyword">private</span> String title = <span class="string">&quot;Sgt. Pepper&#x27;s Lonely Hearts CLub Band&quot;</span>;</span><br><span class="line">    <span class="keyword">private</span> String artist = <span class="string">&quot;The Beatles&quot;</span>;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">play</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;Playing &quot;</span> + title + <span class="string">&quot; by &quot;</span> + artist);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>用 <code>@Configuration</code> <code>@ComponentScan</code> 启用组件扫描</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Configuration</span></span><br><span class="line"><span class="meta">@ComponentScan</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">CDPlayerConfig</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>测一把</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@RunWith(SPringJunit4ClassRunner.class)</span></span><br><span class="line"><span class="meta">@ContextConfiguration(classes=CDPlayerConfig.class)</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">CDPlayerTest</span> </span>&#123;</span><br><span class="line">    <span class="meta">@Autowired</span></span><br><span class="line">    <span class="keyword">private</span> CompactDisc cd;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Test</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">cdShouldNotBeNull</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        assertNotNull(cd);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>@Autowired 可以用在构造器和 Setter 上</p>
+<p>当 Spring 创建另一个 Bean 的时候，会通过这个构造器实例化，传过去一个可以设置的 Bean</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yunhao981.github.io/2022/07/13/java/java-spring-1/" data-id="cliodcf2j002zhsqm6fqe2yxc" data-title="java-spring-1" class="article-share-link">Share</a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Books/" rel="tag">Books</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-test-infra-days/test-day-162" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2022/07/13/test-infra-days/test-day-162/" class="article-date">
+  <time class="dt-published" datetime="2022-07-13T05:02:49.000Z" itemprop="datePublished">2022-07-13</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/test/">test</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2022/07/13/test-infra-days/test-day-162/">test-day-162</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h2 id="Today’s-Task"><a href="#Today’s-Task" class="headerlink" title="Today’s Task"></a>Today’s Task</h2><ul>
+<li><input disabled="" type="checkbox"> Hadar CI Support</li>
+<li><input disabled="" type="checkbox"> Docker remove local image script</li>
+</ul>
+<h2 id="Additional-Task"><a href="#Additional-Task" class="headerlink" title="Additional Task"></a>Additional Task</h2><h2 id="Thought"><a href="#Thought" class="headerlink" title="Thought"></a>Thought</h2><p>看过的书记不住……</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yunhao981.github.io/2022/07/13/test-infra-days/test-day-162/" data-id="cliodcf3o008hhsqmhd9q92y4" data-title="test-day-162" class="article-share-link">Share</a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/test/" rel="tag">test</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-test-infra-days/test-day-161" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2022/07/12/test-infra-days/test-day-161/" class="article-date">
+  <time class="dt-published" datetime="2022-07-12T06:01:51.000Z" itemprop="datePublished">2022-07-12</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/test/">test</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2022/07/12/test-infra-days/test-day-161/">test-day-161</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h2 id="Today’s-Task"><a href="#Today’s-Task" class="headerlink" title="Today’s Task"></a>Today’s Task</h2><ul>
+<li><input checked="" disabled="" type="checkbox"> Hadar Jenkins Server Selector</li>
+<li><input disabled="" type="checkbox"> Hadar CI Support</li>
+<li><input disabled="" type="checkbox"> Docker remove local image script</li>
+</ul>
+<h2 id="Additional-Task"><a href="#Additional-Task" class="headerlink" title="Additional Task"></a>Additional Task</h2><h2 id="Thought"><a href="#Thought" class="headerlink" title="Thought"></a>Thought</h2><p>中午稍微看了会 Spring in actrion</p>
+<p>第四版确实比第五版多了好多基础概念的讲解……</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yunhao981.github.io/2022/07/12/test-infra-days/test-day-161/" data-id="cliodcf3m0088hsqm6g4jd0y2" data-title="test-day-161" class="article-share-link">Share</a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/test/" rel="tag">test</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-java/java-spring-0" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2022/07/12/java/java-spring-0/" class="article-date">
+  <time class="dt-published" datetime="2022-07-12T04:52:21.000Z" itemprop="datePublished">2022-07-12</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/">读书笔记</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2022/07/12/java/java-spring-0/">java-spring-0</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h1 id="Spring-in-Action-Ver-4"><a href="#Spring-in-Action-Ver-4" class="headerlink" title="Spring in Action Ver.4"></a>Spring in Action Ver.4</h1><p>目标：撸一个基础的传统 Spring 项目，也许大概花 2~3 周左右？一天一章</p>
+<p>4 和 5 对照着看可能会有更多收获</p>
+<p>4 有更多基础概念，但版本会老一些</p>
+<p>示例项目也并不同 (又可以水一个新项目了好耶</p>
+<p>Spring：简化开发的某个开源框架</p>
+<p>Bean: 约等于 POJO</p>
+<p>POJO: Plain Old Java Ojbect </p>
+<p>DI: Dependency Injection 依赖注入</p>
+<p>AOP: Aspect Oriented Programming 面向切面编程</p>
+<p>AC: Application Context 应用上下文</p>
+<h1 id="1-Spring-之旅"><a href="#1-Spring-之旅" class="headerlink" title="1 Spring 之旅"></a>1 Spring 之旅</h1><p>策略</p>
+<ol>
+<li>POJO， 轻量级，最小侵入性编程</li>
+<li>DI与面向接口，松耦合</li>
+<li>切面，惯例，声明式</li>
+<li>切面，模板，减少样板式代码</li>
+</ol>
+<h2 id="DI"><a href="#DI" class="headerlink" title="DI"></a>DI</h2><p>好处：松耦合</p>
+<p>如何实现？</p>
+<p>方式一: 构造器注入 Constructor Injection </p>
+<p>把对象塞进构造方法的参数里面传过去，而不是在构造器里创建一个新的对象</p>
+<p>装配：创建应用组件之间协作的行为</p>
+<p>可以通过 xml 或者 java 描述配置</p>
+<p>两者等价</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">beans</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">bean</span> <span class="attr">id</span>=<span class="string">&quot;knight&quot;</span> <span class="attr">class</span>=<span class="string">&quot;com.springinaction.knights.BraveKnight&quot;</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">constructor-arg</span> <span class="attr">ref</span>=<span class="string">&quot;quest&quot;</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">bean</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;<span class="name">bean</span> <span class="attr">id</span>=<span class="string">&quot;quest&quot;</span> <span class="attr">class</span>=<span class="string">&quot;com.springinaction.knights.SlayDragonQuest&quot;</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">constructor-arg</span> <span class="attr">value</span>=<span class="string">&quot;#&#123;T(System).out&#125;&quot;</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">bean</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">beans</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Configuration</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">KnightConfig</span> </span>&#123;</span><br><span class="line">    <span class="meta">@Bean</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> Knight <span class="title">knight</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">new</span> BraveKnight(quest());</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Bean</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> Quest <span class="title">quest</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">new</span> SlayDragonQuest(System.out);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>具体咋实现的还得去看八股文</p>
+<p>先会用再说</p>
+<p>有需要的话依赖注入可以详细去看 《Dependency Injection》 Dhanji R. Prasanna</p>
+<p>AC 用来负责对象的创建和组装</p>
+<h2 id="AOP"><a href="#AOP" class="headerlink" title="AOP"></a>AOP</h2><p>分离功能形成可重用组件</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">beans</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">aop:config</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">aop:aspect</span> <span class="attr">ref</span>=<span class="string">&quot;minstrel&quot;</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">aop:pointcut</span> <span class="attr">id</span>=<span class="string">&quot;embark&quot;</span></span></span><br><span class="line"><span class="tag">                <span class="attr">expression</span>=<span class="string">&quot;execution(* *.embarkOnQuest(..))&quot;</span> /&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">aop:before</span> <span class="attr">pointcut-ref</span>=<span class="string">&quot;embark&quot;</span></span></span><br><span class="line"><span class="tag">                <span class="attr">method</span>=<span class="string">&quot;singBeforeQuest&quot;</span> /&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">aop:after</span> <span class="attr">pointcut-ref</span>=<span class="string">&quot;embark&quot;</span></span></span><br><span class="line"><span class="tag">                <span class="attr">method</span>=<span class="string">&quot;singAfterQuest&quot;</span> /&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">aop:aspect</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">aop:config</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">beans</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="样板式代码"><a href="#样板式代码" class="headerlink" title="样板式代码"></a>样板式代码</h2><p>比如说 jdbc 那一堆创建链接，捕捉异常，打扫战场的一套</p>
+<h2 id="Bean"><a href="#Bean" class="headerlink" title="Bean"></a>Bean</h2><p>Spring Container： 创建对象，装配，配置，管理生命周期</p>
+<p>Spring 容器的实现：bean factory 或者 Applictaion Context</p>
+<p>常用的一些 AC </p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">AnnotationConfigApplicationContext</span><br><span class="line">AnnotationConfigWebApplicationContext</span><br><span class="line">ClassPathXmlApplicationContext</span><br><span class="line">FileSystemXmlApplicationContext</span><br><span class="line">XmlWebApplicationContext</span><br></pre></td></tr></table></figure>
+<h2 id="Bean-Lifecycle"><a href="#Bean-Lifecycle" class="headerlink" title="Bean Lifecycle"></a>Bean Lifecycle</h2><p>Spring bean 实例化</p>
+<p>填充属性</p>
+<p>BeanNameAware.setBeanName()</p>
+<p>BeanFactoryAware.setBeanFactory()</p>
+<p>AppplicationContextAware.setApplicationContext()</p>
+<p>BeanPostProcessor.postProcessBeforeInitialization()</p>
+<p>InitializingBean.afterPropertiesSet()</p>
+<p>BeanPostProcessor.postProcessAfterInitialization()</p>
+<p>准备就绪，可以用</p>
+<p>容器关闭</p>
+<p>DisposableBean.destroy()</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yunhao981.github.io/2022/07/12/java/java-spring-0/" data-id="cliodcf2i002whsqm12pqg6vz" data-title="java-spring-0" class="article-share-link">Share</a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Books/" rel="tag">Books</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+
+
+  <nav id="page-nav">
+    
+    <a class="extend prev" rel="prev" href="/page/6/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/5/">5</a><a class="page-number" href="/page/6/">6</a><span class="page-number current">7</span><a class="page-number" href="/page/8/">8</a><a class="page-number" href="/page/9/">9</a><span class="space">&hellip;</span><a class="page-number" href="/page/26/">26</a><a class="extend next" rel="next" href="/page/8/">Next &raquo;</a>
+  </nav>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Categories</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Algorithm/">Algorithm</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Alogorithm/">Alogorithm</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/GitHub/">GitHub</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Java/">Java</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/JavaScript/">JavaScript</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Test-Infra-Manual/">Test Infra Manual</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/azpr/">azpr</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/csapp/">csapp</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/git/">git</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/hexo/">hexo</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/java/">java</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/pintos/">pintos</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/react/">react</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/slackbot/">slackbot</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/softskils/">softskils</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/test/">test</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/typescript/">typescript</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%9D%82%E4%B8%83%E6%9D%82%E5%85%AB/">杂七杂八</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/">读书笔记</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Algorithm/" rel="tag">Algorithm</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Books/" rel="tag">Books</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/GitHub/" rel="tag">GitHub</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Java/" rel="tag">Java</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/JavaScript/" rel="tag">JavaScript</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/OS/" rel="tag">OS</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Test-Infra-Manual/" rel="tag">Test Infra Manual</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Test-Infra-Manualtest/" rel="tag">Test Infra Manualtest</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/azpr/" rel="tag">azpr</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/csapp/" rel="tag">csapp</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/git/" rel="tag">git</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/" rel="tag">hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/java/" rel="tag">java</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/react/" rel="tag">react</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/slackbot-ts-js/" rel="tag">slackbot ts js</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/softskils/" rel="tag">softskils</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/test/" rel="tag">test</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/typescript/" rel="tag">typescript</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/vim/" rel="tag">vim</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%9D%82%E4%B8%83%E6%9D%82%E5%85%AB/" rel="tag">杂七杂八</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/Algorithm/" style="font-size: 14px;">Algorithm</a> <a href="/tags/Books/" style="font-size: 16px;">Books</a> <a href="/tags/GitHub/" style="font-size: 14px;">GitHub</a> <a href="/tags/Java/" style="font-size: 16px;">Java</a> <a href="/tags/JavaScript/" style="font-size: 16px;">JavaScript</a> <a href="/tags/OS/" style="font-size: 12px;">OS</a> <a href="/tags/Test-Infra-Manual/" style="font-size: 18px;">Test Infra Manual</a> <a href="/tags/Test-Infra-Manualtest/" style="font-size: 10px;">Test Infra Manualtest</a> <a href="/tags/azpr/" style="font-size: 12px;">azpr</a> <a href="/tags/csapp/" style="font-size: 14px;">csapp</a> <a href="/tags/git/" style="font-size: 10px;">git</a> <a href="/tags/hexo/" style="font-size: 10px;">hexo</a> <a href="/tags/java/" style="font-size: 10px;">java</a> <a href="/tags/react/" style="font-size: 12px;">react</a> <a href="/tags/slackbot-ts-js/" style="font-size: 10px;">slackbot ts js</a> <a href="/tags/softskils/" style="font-size: 10px;">softskils</a> <a href="/tags/test/" style="font-size: 20px;">test</a> <a href="/tags/typescript/" style="font-size: 10px;">typescript</a> <a href="/tags/vim/" style="font-size: 10px;">vim</a> <a href="/tags/%E6%9D%82%E4%B8%83%E6%9D%82%E5%85%AB/" style="font-size: 10px;">杂七杂八</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/06/">June 2023</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/05/">May 2023</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/03/">March 2023</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/01/">January 2023</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/12/">December 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/11/">November 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/10/">October 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/09/">September 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/08/">August 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/07/">July 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/06/">June 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/05/">May 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/04/">April 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/03/">March 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/02/">February 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/01/">January 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/12/">December 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/11/">November 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/10/">October 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/09/">September 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/08/">August 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/04/">April 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/11/">November 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/01/">January 2019</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2023/06/09/test-infra-days/test-day-382/">test-day-382</a>
+          </li>
+        
+          <li>
+            <a href="/2023/06/08/test-infra-days/test-day-381/">test-day-381</a>
+          </li>
+        
+          <li>
+            <a href="/2023/06/07/test-infra-days/test-day-380/">test-day-380</a>
+          </li>
+        
+          <li>
+            <a href="/2023/05/25/cm-notes/cm-notes/">CM-Notes</a>
+          </li>
+        
+          <li>
+            <a href="/2023/03/29/Productivity-Section-2/">Productivity-Section-2</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+      &copy; 2023 Yunhao Liu<br>
+      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+
+<script src="/js/jquery-3.4.1.min.js"></script>
+
+
+
+  
+<script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+
+  </div>
+</body>
+</html>

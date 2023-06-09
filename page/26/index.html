@@ -1,0 +1,814 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <title>Yunhao Liu</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="My personal blog including my learning progress.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Yunhao Liu">
+<meta property="og:url" content="http://yunhao981.github.io/page/26/index.html">
+<meta property="og:site_name" content="Yunhao Liu">
+<meta property="og:description" content="My personal blog including my learning progress.">
+<meta property="og:locale" content="en_US">
+<meta property="article:author" content="Yunhao Liu">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="Yunhao Liu" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/favicon.png">
+  
+  
+    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/typeface-source-code-pro@0.0.71/index.min.css">
+
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+
+  
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Yunhao Liu</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">New Life #Life on Campus</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yunhao981.github.io"></form>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main">
+  
+    <article id="post-test-infra-days/test-day-1" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2021/08/04/test-infra-days/test-day-1/" class="article-date">
+  <time class="dt-published" datetime="2021-08-03T16:37:09.000Z" itemprop="datePublished">2021-08-04</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/test/">test</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2021/08/04/test-infra-days/test-day-1/">test-day-1</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <p>每天总有一种事情做不完的感觉</p>
+<p>今天刚来先配置了下One Box</p>
+<p>VM设置好了，后面还需要提交一个merge request再进行下一步</p>
+<p>和钟璐一起check了下运行的情况和版本号记录</p>
+<p>摸了摸jenkins的pipeline迁移</p>
+<p>把p4上的四个item，根据Configuration照葫芦画瓢在test-infra的Jenkins上分别创建了对应的item</p>
+<p>Build failed两个</p>
+<p>Audit_tools是因为测试用的git版本号并不存在对应的分支，</p>
+<p>另一个component_audit是因为我事先并不知情某个目录名的设置需要更改</p>
+<p>顺便就复习了下git和eci的分支命名规范</p>
+<p>明天再和她确认下具体流程 尤其是release部分 Kyle说过要特别关注</p>
+<p>还想看Fastrun的前端源码</p>
+<p>下午和James Qian一起创建了Fastrun Daily，用于记录fastrun上一些随机的bug，目的是为了改善fastrun</p>
+<p>需要关注非develop标注的运行错误，打开debug开关，根据报错的信息追踪Jenkins上的console log</p>
+<p>如果是timeout就不用特别关注，permission denied应该也不必吧</p>
+<p>如果是test failed也不用特别详细去看，记录下test即可</p>
+<p>如果是maven build failure也不用，大概率是代码本身的问题</p>
+<p>error要看最早的那个，并不一定会有“ERROR”字样的提示</p>
+<p>先熟悉工作的流程</p>
+<p>然后想办法搞个自动化</p>
+<p>今晚想要继续更新自己的博客</p>
+<p>到家的精力倒是比昨天好一些</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yunhao981.github.io/2021/08/04/test-infra-days/test-day-1/" data-id="cliodcf2q003whsqmgm8x4dob" data-title="test-day-1" class="article-share-link">Share</a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/test/" rel="tag">test</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-Pintos-Project-0" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2021/04/07/Pintos-Project-0/" class="article-date">
+  <time class="dt-published" datetime="2021-04-07T05:24:06.000Z" itemprop="datePublished">2021-04-07</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/pintos/">pintos</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2021/04/07/Pintos-Project-0/">Pintos-Project-0</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h1 id="Get-the-things-real"><a href="#Get-the-things-real" class="headerlink" title="Get the things real"></a>Get the things real</h1><p>I was too young &amp; too simple last year, thinking just install bochs via system default package manager will work.</p>
+<p>Make sure install the exact same version of bochs-2.6.2, and compile it from source code. </p>
+<p>Folowing the setup guides <a target="_blank" rel="noopener" href="https://cs.jhu.edu/~huang/cs318/fall17/project/setup.html">HERE</a> to compile bochs-2.6.2 with source code on SourceForge.</p>
+<p>On Fedora, packages such as <code>libX11-devel</code>, <code>libXrandr-devel</code> and <code>ncurses-devel</code> are needed.</p>
+<h1 id="PC-Bootstrap"><a href="#PC-Bootstrap" class="headerlink" title="PC Bootstrap"></a>PC Bootstrap</h1><p>bootstrapping: process of loading OS into MEM</p>
+<p>helpers:<br>    1. BIOS<br>    2. booloader</p>
+<p>power on -&gt; BIOS -&gt; BL -&gt; OS</p>
+<p>BIOS tests Hardware and finds bootable Devices</p>
+<p>IA32: fits within 512B in MEM for partition 436Bytes for MBR</p>
+<p>Low Memory: <code>0x00000000</code> to <code>0x000A0000</code>, 640KB</p>
+<p>VGA Display: <code>0x000A0000</code> to <code>0x000C0000</code>, 768KB</p>
+<p>16-bit devices: <code>0x000C0000</code> to <code>0x000F0000</code>, 960KB</p>
+<p>BIOS ROM: <code>0x000F0000</code> to <code>0x00100000</code>, 1MB</p>
+<p>Extended Memory &amp; 32-bit memory mapped devices: <code>0x00100000</code> to <code>0xFFFFFFFF</code>, 4GB</p>
+<h1 id="The-Boot-Loader"><a href="#The-Boot-Loader" class="headerlink" title="The Boot Loader"></a>The Boot Loader</h1><p>sector: the disk’s minimum transfer granularity for Read or Write operations</p>
+<p>boot sector: the first sector of a bootable disk</p>
+<p>BIOS finds a bootable HD</p>
+<p>-&gt; load 512B boot sector into MEM at <code>0x7c00</code> through <code>0x7dff</code></p>
+<p>-&gt; set CS:IP to <code>0000:7c00</code></p>
+<p>CS: Code Segment Register</p>
+<p>IP: Instructor Pointer</p>
+<p>SS: Stack Segment</p>
+<p>DS: Data Segent</p>
+<p>ES: moving data around</p>
+<p>IA32 Bootloaders runs in real-addressing mode</p>
+<p>CS are used to compute the addresses of memory accesses</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">address = 16 * segment + offset</span><br></pre></td></tr></table></figure>
+
+<p>Each segment is 64KB. </p>
+<p>The kernel is 512KB, 1024 sectors, must be loaded into memory starting at <code>0x20000</code>.</p>
+<p>The loader reads no more than 512KB. More data than this will cross into other regions for BIOS and Hardware.</p>
+<h1 id="The-Kernel"><a href="#The-Kernel" class="headerlink" title="The Kernel"></a>The Kernel</h1><p>The BL transfers contorl to the kernel’s entry point.</p>
+<p>The <code>start()</code> in <code>threads/start.S</code> switches the CPU from ‘legacy mode’ to ‘protected mode’.</p>
+<p>A20 line: the CPU’s address line numbered 20.<br>enable it to access more memory than the first 1MB.</p>
+<h1 id="Debugging"><a href="#Debugging" class="headerlink" title="Debugging"></a>Debugging</h1><h2 id="1-Use-GDB-to-trace-the-QEMU-BIOS"><a href="#1-Use-GDB-to-trace-the-QEMU-BIOS" class="headerlink" title="1. Use GDB to trace the QEMU BIOS"></a>1. Use GDB to trace the QEMU BIOS</h2><p>run pintos like:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pintos --gdb -- run mytest</span><br></pre></td></tr></table></figure>
+
+<p>then run this in another terminal:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pintos-gdb kernel.o</span><br></pre></td></tr></table></figure>
+
+<p>in Pintos-GDB, run this to connect it to the pintos running:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">target remote localhost:1234</span><br></pre></td></tr></table></figure>
+
+<p>use <code>c</code> to continue til the end, use <code>si</code> to run one step<br>use <code>b</code> to set breakpoints, like <code>b *0x7c00</code>.</p>
+<h3 id="1-1-What-is-the-first-instruction-that-gets-executed"><a href="#1-1-What-is-the-first-instruction-that-gets-executed" class="headerlink" title="1.1 What is the first instruction that gets executed?"></a>1.1 What is the first instruction that gets executed?</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[f000:fff0]    0xffff0:	ljmp   $0x3630,$0xf000e05b</span><br><span class="line">0x0000fff0 in ?? ()</span><br></pre></td></tr></table></figure>
+
+<p>ljmp: transfer execution control to a different point in the instruction stream.</p>
+<h3 id="1-2-At-which-physical-address-is-this-instruction-located"><a href="#1-2-At-which-physical-address-is-this-instruction-located" class="headerlink" title="1.2 At which physical address is this instruction located?"></a>1.2 At which physical address is this instruction located?</h3><p>This instruction is located in <code>0x0000fff0</code>.</p>
+<h3 id="1-3-Can-you-guess-why-the-first-instruction-is-like-this"><a href="#1-3-Can-you-guess-why-the-first-instruction-is-like-this" class="headerlink" title="1.3 Can you guess why the first instruction is like this?"></a>1.3 Can you guess why the first instruction is like this?</h3><p>Maybe it was trying to find the initial point for bootloader.</p>
+<h3 id="1-4-What-are-the-next-three-instructions"><a href="#1-4-What-are-the-next-three-instructions" class="headerlink" title="1.4 What are the next three instructions?"></a>1.4 What are the next three instructions?</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">[f000:e05b]    0xfe05b:	cmpw   $0xffc8,%cs:(%esi)</span><br><span class="line">0x0000e05b in ?? ()</span><br><span class="line"></span><br><span class="line">[f000:e062]    0xfe062:	jne    0xd241d08c</span><br><span class="line">0x0000e062 in ?? ()</span><br><span class="line"></span><br><span class="line">[f000:e066]    0xfe066:	xor    %edx,%edx</span><br><span class="line">0x0000e066 in ?? ()</span><br></pre></td></tr></table></figure>
+
+<h2 id="Tracing-Pintos-Bootloader"><a href="#Tracing-Pintos-Bootloader" class="headerlink" title="Tracing Pintos Bootloader"></a>Tracing Pintos Bootloader</h2><h3 id="2-1-How-does-the-bootloader-read-disk-sectors-In-particular-waht-BIOS-interrupt-is-used"><a href="#2-1-How-does-the-bootloader-read-disk-sectors-In-particular-waht-BIOS-interrupt-is-used" class="headerlink" title="2.1 How does the bootloader read disk sectors? In particular, waht BIOS interrupt is used?"></a>2.1 How does the bootloader read disk sectors? In particular, waht BIOS interrupt is used?</h3><h3 id="2-2-How-does-the-bootloader-decides-whether-it-finds-the-Pintos-kernel"><a href="#2-2-How-does-the-bootloader-decides-whether-it-finds-the-Pintos-kernel" class="headerlink" title="2.2 How does the bootloader decides whether it finds the Pintos kernel?"></a>2.2 How does the bootloader decides whether it finds the Pintos kernel?</h3><h3 id="2-3-What-happens-when-the-bootloader-could-not-find-the-Pintos-kernel"><a href="#2-3-What-happens-when-the-bootloader-could-not-find-the-Pintos-kernel" class="headerlink" title="2.3 What happens when the bootloader could not find the Pintos kernel?"></a>2.3 What happens when the bootloader could not find the Pintos kernel?</h3><h3 id="2-4-At-what-point-does-the-bootloader-transfer-control-to-the-Pintos-kernel"><a href="#2-4-At-what-point-does-the-bootloader-transfer-control-to-the-Pintos-kernel" class="headerlink" title="2.4 At what point does the bootloader transfer control to the Pintos kernel?"></a>2.4 At what point does the bootloader transfer control to the Pintos kernel?</h3>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yunhao981.github.io/2021/04/07/Pintos-Project-0/" data-id="ckv7wl6wo0004cct5ast8gfya" data-title="Pintos-Project-0" class="article-share-link">Share</a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/OS/" rel="tag">OS</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-my-vim-setup" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2019/11/22/my-vim-setup/" class="article-date">
+  <time class="dt-published" datetime="2019-11-22T08:57:56.000Z" itemprop="datePublished">2019-11-22</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/%E6%9D%82%E4%B8%83%E6%9D%82%E5%85%AB/">杂七杂八</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2019/11/22/my-vim-setup/">my-vim-setup</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h1 id="简单的设置"><a href="#简单的设置" class="headerlink" title="简单的设置"></a>简单的设置</h1><p>  set nu<br>  syntax on<br>  set showmode<br>  set showcmd<br>  set expandtab<br>  set softtabstop=2<br>  set tabstop=2</p>
+<h1 id="插件"><a href="#插件" class="headerlink" title="插件"></a>插件</h1><p>  Vundle<br>  CScope<br>  NERDTree</p>
+<h1 id="如何注释？"><a href="#如何注释？" class="headerlink" title="如何注释？"></a>如何注释？</h1><p>  <code>CTRL-V</code> 进入 Visual Block 模式</p>
+<p>  选中代码块，<code>I</code></p>
+<p>  插入注释符号，<code>//</code> or <code>#</code> etc.</p>
+<p>  <code>ESC</code></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yunhao981.github.io/2019/11/22/my-vim-setup/" data-id="ckv7wl6xf001acct5f3ey3mj8" data-title="my-vim-setup" class="article-share-link">Share</a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/vim/" rel="tag">vim</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-Algorithm/Algorithm-Assignment2-Deque-RandomizedQueue" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2019/11/14/Algorithm/Algorithm-Assignment2-Deque-RandomizedQueue/" class="article-date">
+  <time class="dt-published" datetime="2019-11-14T12:19:19.000Z" itemprop="datePublished">2019-11-14</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Alogorithm/">Alogorithm</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2019/11/14/Algorithm/Algorithm-Assignment2-Deque-RandomizedQueue/">Algorithm-Assignment2-Deque&amp;RandomizedQueue</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <p><a target="_blank" rel="noopener" href="https://coursera.cs.princeton.edu/algs4/assignments/queues/specification.php">Specification</a></p>
+<p>The concept was easy. </p>
+<p>Deque: Queue with support for Adding/Removing items from either the front or the end.</p>
+<p>Randomized Queue: Pop random item when Deque.</p>
+<p>Deque.java</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> edu.princeton.cs.algs4.StdOut;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.util.Iterator;</span><br><span class="line"><span class="keyword">import</span> java.util.NoSuchElementException;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Deque</span>&lt;<span class="title">Item</span>&gt; <span class="keyword">implements</span> <span class="title">Iterable</span>&lt;<span class="title">Item</span>&gt; </span>&#123;</span><br><span class="line">    <span class="keyword">private</span> Node first;</span><br><span class="line">    <span class="keyword">private</span> Node last;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">int</span> size;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> <span class="class"><span class="keyword">class</span> <span class="title">Node</span> </span>&#123;</span><br><span class="line">        Item item;</span><br><span class="line">        Node previous;</span><br><span class="line">        Node next;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">Deque</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        first = <span class="keyword">null</span>;</span><br><span class="line">        last = <span class="keyword">null</span>;</span><br><span class="line">        size = <span class="number">0</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">isEmpty</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> (first == <span class="keyword">null</span> &amp;&amp; last == <span class="keyword">null</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">size</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">this</span>.size;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">addFirst</span><span class="params">(Item item)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (item == <span class="keyword">null</span>)</span><br><span class="line">            <span class="keyword">throw</span> <span class="keyword">new</span> IllegalArgumentException();</span><br><span class="line">        Node oldFirst = first;</span><br><span class="line">        first = <span class="keyword">new</span> Node();</span><br><span class="line">        first.item = item;</span><br><span class="line">        first.previous = <span class="keyword">null</span>;</span><br><span class="line">        first.next = oldFirst;</span><br><span class="line">        <span class="keyword">if</span> (oldFirst == <span class="keyword">null</span> &amp;&amp; last == <span class="keyword">null</span>) last = first;</span><br><span class="line">        <span class="keyword">else</span> &#123;</span><br><span class="line">            oldFirst.previous = first;</span><br><span class="line">        &#125;</span><br><span class="line">        size++;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">addLast</span><span class="params">(Item item)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (item == <span class="keyword">null</span>)</span><br><span class="line">            <span class="keyword">throw</span> <span class="keyword">new</span> IllegalArgumentException();</span><br><span class="line">        Node oldLast = last;</span><br><span class="line">        last = <span class="keyword">new</span> Node();</span><br><span class="line">        last.item = item;</span><br><span class="line">        last.next = <span class="keyword">null</span>;</span><br><span class="line">        <span class="keyword">if</span> (first == <span class="keyword">null</span> &amp;&amp; oldLast == <span class="keyword">null</span>) first = last;</span><br><span class="line">        <span class="keyword">else</span> &#123;</span><br><span class="line">            oldLast.next = last;</span><br><span class="line">            last.previous = oldLast;</span><br><span class="line">        &#125;</span><br><span class="line">        size++;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> Item <span class="title">removeFirst</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (first == <span class="keyword">null</span>)</span><br><span class="line">            <span class="keyword">throw</span> <span class="keyword">new</span> NoSuchElementException();</span><br><span class="line">        Item item = first.item;</span><br><span class="line">        first = first.next;</span><br><span class="line">        <span class="keyword">if</span> (first == <span class="keyword">null</span>) last = <span class="keyword">null</span>;</span><br><span class="line">        <span class="keyword">else</span> &#123;</span><br><span class="line">            first.previous = <span class="keyword">null</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        size--;</span><br><span class="line">        <span class="keyword">return</span> item;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> Item <span class="title">removeLast</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (last == <span class="keyword">null</span>)</span><br><span class="line">            <span class="keyword">throw</span> <span class="keyword">new</span> NoSuchElementException();</span><br><span class="line">        Item item = last.item;</span><br><span class="line">        last = last.previous;</span><br><span class="line">        <span class="keyword">if</span> (last == <span class="keyword">null</span>) first = <span class="keyword">null</span>;</span><br><span class="line">        <span class="keyword">else</span> last.next = <span class="keyword">null</span>;</span><br><span class="line">        <span class="keyword">if</span> (isEmpty()) first = <span class="keyword">null</span>;</span><br><span class="line">        size--;</span><br><span class="line">        <span class="keyword">return</span> item;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> Iterator&lt;Item&gt; <span class="title">iterator</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">new</span> DequeIterator();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> <span class="class"><span class="keyword">class</span> <span class="title">DequeIterator</span> <span class="keyword">implements</span> <span class="title">Iterator</span>&lt;<span class="title">Item</span>&gt; </span>&#123;</span><br><span class="line">        <span class="keyword">private</span> Node current = first;</span><br><span class="line"></span><br><span class="line">        <span class="meta">@Override</span></span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">hasNext</span><span class="params">()</span> </span>&#123;</span><br><span class="line">            <span class="keyword">return</span> current != <span class="keyword">null</span>;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="meta">@Override</span></span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">remove</span><span class="params">()</span> </span>&#123;</span><br><span class="line">            <span class="keyword">throw</span> <span class="keyword">new</span> UnsupportedOperationException();</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="meta">@Override</span></span><br><span class="line">        <span class="function"><span class="keyword">public</span> Item <span class="title">next</span><span class="params">()</span> </span>&#123;</span><br><span class="line">            <span class="keyword">if</span> (current == <span class="keyword">null</span>) &#123;</span><br><span class="line">                <span class="keyword">throw</span> <span class="keyword">new</span> NoSuchElementException();</span><br><span class="line">            &#125;</span><br><span class="line">            Item item = current.item;</span><br><span class="line">            current = current.next;</span><br><span class="line">            <span class="keyword">return</span> item;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        Deque&lt;Integer&gt; deque = <span class="keyword">new</span> Deque&lt;&gt;();</span><br><span class="line">        StdOut.println(<span class="string">&quot;DequeIsEmpty: &quot;</span> + deque.isEmpty());</span><br><span class="line">        StdOut.println(<span class="string">&quot;Deque&#x27;s Size: &quot;</span> + deque.size());</span><br><span class="line"></span><br><span class="line">        Integer a = <span class="number">1</span>;</span><br><span class="line">        deque.addFirst(<span class="number">1</span>);</span><br><span class="line">        deque.addFirst(<span class="number">2</span>);</span><br><span class="line">        deque.removeFirst();</span><br><span class="line"></span><br><span class="line">        deque.addLast(<span class="number">1</span>);</span><br><span class="line">        deque.addLast(<span class="number">2</span>);</span><br><span class="line">        deque.removeFirst();</span><br><span class="line"></span><br><span class="line">        deque.addFirst(<span class="number">1</span>);</span><br><span class="line">        deque.removeFirst();</span><br><span class="line"></span><br><span class="line">        deque.addLast(<span class="number">1</span>);</span><br><span class="line">        deque.addFirst(a);</span><br><span class="line">        a++;</span><br><span class="line">        deque.addLast(a);</span><br><span class="line">        <span class="keyword">for</span> (Integer i = <span class="number">1</span>; i &lt; <span class="number">10</span>; i++) &#123;</span><br><span class="line">            deque.addFirst(i);</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        Iterator&lt;Integer&gt; it = deque.iterator();</span><br><span class="line">        <span class="keyword">while</span> (it.hasNext()) &#123;</span><br><span class="line">            Integer i = it.next();</span><br><span class="line">            StdOut.println(<span class="string">&quot;it: &quot;</span> + i);</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        StdOut.println(<span class="string">&quot;Size: &quot;</span> + deque.size());</span><br><span class="line">        StdOut.println(<span class="string">&quot;Remove First: &quot;</span> + deque.removeFirst());</span><br><span class="line">        StdOut.println(<span class="string">&quot;Remove Last: &quot;</span> + deque.removeLast());</span><br><span class="line">        StdOut.println(<span class="string">&quot;Size: &quot;</span> + deque.size());</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>RandomizedQueue.java</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br><span class="line">155</span><br><span class="line">156</span><br><span class="line">157</span><br><span class="line">158</span><br><span class="line">159</span><br><span class="line">160</span><br><span class="line">161</span><br><span class="line">162</span><br><span class="line">163</span><br><span class="line">164</span><br><span class="line">165</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> edu.princeton.cs.algs4.StdOut;</span><br><span class="line"><span class="keyword">import</span> edu.princeton.cs.algs4.StdRandom;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.util.Iterator;</span><br><span class="line"><span class="keyword">import</span> java.util.NoSuchElementException;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">RandomizedQueue</span>&lt;<span class="title">Item</span>&gt; <span class="keyword">implements</span> <span class="title">Iterable</span>&lt;<span class="title">Item</span>&gt; </span>&#123;</span><br><span class="line">    <span class="keyword">private</span> Node first;</span><br><span class="line">    <span class="keyword">private</span> Node last;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">int</span> size;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// construct an empty randomized queue</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">RandomizedQueue</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        first = <span class="keyword">null</span>;</span><br><span class="line">        last = <span class="keyword">null</span>;</span><br><span class="line">        size = <span class="number">0</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> <span class="class"><span class="keyword">class</span> <span class="title">Node</span> </span>&#123;</span><br><span class="line">        Item item;</span><br><span class="line">        Node prev;</span><br><span class="line">        Node next;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">// is the randomized queue empty?</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">isEmpty</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> (first == <span class="keyword">null</span> &amp;&amp; last == <span class="keyword">null</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// return the number of items on the randomized queue</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">size</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">this</span>.size;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// add the item</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">enqueue</span><span class="params">(Item item)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (item == <span class="keyword">null</span>) &#123;</span><br><span class="line">            <span class="keyword">throw</span> <span class="keyword">new</span> IllegalArgumentException();</span><br><span class="line">        &#125;</span><br><span class="line">        Node oldLast = last;</span><br><span class="line">        last = <span class="keyword">new</span> Node();</span><br><span class="line">        last.item = item;</span><br><span class="line">        last.next = <span class="keyword">null</span>;</span><br><span class="line">        <span class="keyword">if</span> (first == <span class="keyword">null</span> &amp;&amp; oldLast == <span class="keyword">null</span>) first = last;</span><br><span class="line">        <span class="keyword">else</span> &#123;</span><br><span class="line">            oldLast.next = last;</span><br><span class="line">            last.prev = oldLast;</span><br><span class="line">        &#125;</span><br><span class="line">        size++;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// remove and return a random item</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> Item <span class="title">dequeue</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        Item item;</span><br><span class="line">        <span class="keyword">int</span> id = StdRandom.uniform(size);</span><br><span class="line">        Node current = first;</span><br><span class="line">        <span class="keyword">if</span> (current == <span class="keyword">null</span>) &#123;</span><br><span class="line">            <span class="keyword">throw</span> <span class="keyword">new</span> NoSuchElementException();</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; id; i++) &#123;</span><br><span class="line">            <span class="keyword">if</span> (current.next != <span class="keyword">null</span>)</span><br><span class="line">                current = current.next;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        item = current.item;</span><br><span class="line">        <span class="comment">// Remove current</span></span><br><span class="line"></span><br><span class="line">        Node toDelete = current;</span><br><span class="line">        <span class="keyword">if</span> (current == first &amp;&amp; first.next == <span class="keyword">null</span>) &#123;</span><br><span class="line">            first = <span class="keyword">null</span>;</span><br><span class="line">            last = <span class="keyword">null</span>;</span><br><span class="line">        &#125; <span class="keyword">else</span> <span class="keyword">if</span> (current == first) &#123;</span><br><span class="line">            current = current.next;</span><br><span class="line">            first = first.next;</span><br><span class="line">            first.prev = <span class="keyword">null</span>;</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            current = current.prev;</span><br><span class="line">            <span class="keyword">if</span> (toDelete.next == <span class="keyword">null</span>) &#123;</span><br><span class="line">                current.next = <span class="keyword">null</span>;</span><br><span class="line">            &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                current.next = toDelete.next;</span><br><span class="line">                current.next.prev = toDelete.prev;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        size--;</span><br><span class="line">        <span class="keyword">return</span> item;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// return a random item (but do not remove it)</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> Item <span class="title">sample</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        Item item;</span><br><span class="line">        <span class="keyword">int</span> id = StdRandom.uniform(size);</span><br><span class="line">        Node current = first;</span><br><span class="line">        <span class="keyword">if</span> (current == <span class="keyword">null</span>) &#123;</span><br><span class="line">            <span class="keyword">throw</span> <span class="keyword">new</span> NoSuchElementException();</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; id; i++) &#123;</span><br><span class="line">            current = current.next;</span><br><span class="line">        &#125;</span><br><span class="line">        item = current.item;</span><br><span class="line">        <span class="keyword">return</span> item;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// return an independent iterator over items in random order</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> Iterator&lt;Item&gt; <span class="title">iterator</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">new</span> RandomizedQueueIterator();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> <span class="class"><span class="keyword">class</span> <span class="title">RandomizedQueueIterator</span> <span class="keyword">implements</span> <span class="title">Iterator</span>&lt;<span class="title">Item</span>&gt; </span>&#123;</span><br><span class="line">        <span class="keyword">private</span> Node current = first;</span><br><span class="line"></span><br><span class="line">        <span class="meta">@Override</span></span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">hasNext</span><span class="params">()</span> </span>&#123;</span><br><span class="line">            <span class="keyword">return</span> current != <span class="keyword">null</span>;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="meta">@Override</span></span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">remove</span><span class="params">()</span> </span>&#123;</span><br><span class="line">            <span class="keyword">throw</span> <span class="keyword">new</span> UnsupportedOperationException();</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="meta">@Override</span></span><br><span class="line">        <span class="function"><span class="keyword">public</span> Item <span class="title">next</span><span class="params">()</span> </span>&#123;</span><br><span class="line">            <span class="keyword">if</span> (current == <span class="keyword">null</span>) &#123;</span><br><span class="line">                <span class="keyword">throw</span> <span class="keyword">new</span> NoSuchElementException();</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">            Item item = current.item;</span><br><span class="line">            current = current.next;</span><br><span class="line">            <span class="keyword">return</span> item;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">// unit testing (required)</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        RandomizedQueue&lt;Integer&gt; rq = <span class="keyword">new</span> RandomizedQueue&lt;&gt;();</span><br><span class="line">        StdOut.println(<span class="string">&quot;RandomizedQueue is Empty: &quot;</span> + rq.isEmpty());</span><br><span class="line">        StdOut.println(<span class="string">&quot;size: &quot;</span> + rq.size());</span><br><span class="line"></span><br><span class="line">        rq.enqueue(<span class="number">283</span>);</span><br><span class="line">        StdOut.println(rq.sample());</span><br><span class="line"></span><br><span class="line">        rq.enqueue(<span class="number">119</span>);</span><br><span class="line"></span><br><span class="line">        StdOut.println(rq.dequeue());</span><br><span class="line">        StdOut.println(rq.dequeue());</span><br><span class="line"></span><br><span class="line">        <span class="keyword">for</span> (Integer i = <span class="number">0</span>; i &lt; <span class="number">5</span>; i++)&#123;</span><br><span class="line">            rq.enqueue(i);</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        StdOut.println(<span class="string">&quot;size after enqueue: &quot;</span> + rq.size());</span><br><span class="line">        StdOut.println(<span class="string">&quot;Deque: &quot;</span> + rq.dequeue());</span><br><span class="line">        StdOut.println(<span class="string">&quot;Sample: &quot;</span> + rq.sample());</span><br><span class="line"></span><br><span class="line">        Iterator&lt;Integer&gt; jt = rq.iterator();</span><br><span class="line">        <span class="keyword">while</span> (jt.hasNext()) &#123;</span><br><span class="line">            Integer i = jt.next();</span><br><span class="line">            StdOut.println(<span class="string">&quot;it: &quot;</span> + i);</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yunhao981.github.io/2019/11/14/Algorithm/Algorithm-Assignment2-Deque-RandomizedQueue/" data-id="cliodcf2b001zhsqmhbp9553b" data-title="Algorithm-Assignment2-Deque&amp;RandomizedQueue" class="article-share-link">Share</a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Algorithm/" rel="tag">Algorithm</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-Algorithm/Algorithm-Assignment1-Percolation" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2019/11/13/Algorithm/Algorithm-Assignment1-Percolation/" class="article-date">
+  <time class="dt-published" datetime="2019-11-13T06:10:50.000Z" itemprop="datePublished">2019-11-13</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Algorithm/">Algorithm</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2019/11/13/Algorithm/Algorithm-Assignment1-Percolation/">Algorithm-Assignment1-Percolation</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <p><a target="_blank" rel="noopener" href="https://coursera.cs.princeton.edu/algs4/assignments/percolation/specification.php">Specification</a></p>
+<p>Trying to do Algortihm Course Assignments.<br>Finished it long time ago.<br>So I don’t remember too much about the details.</p>
+<p>Percolation.java</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> edu.princeton.cs.algs4.WeightedQuickUnionUF;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Percolation</span> </span>&#123;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">boolean</span>[] open;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">int</span> openSites;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">final</span> <span class="keyword">int</span> size;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">final</span> WeightedQuickUnionUF wquf;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// create n-by-n grid, with all sites blocked</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">Percolation</span><span class="params">(<span class="keyword">int</span> n)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (n &lt;= <span class="number">0</span>)<span class="keyword">throw</span> <span class="keyword">new</span> java.lang.IllegalArgumentException();</span><br><span class="line">        <span class="keyword">this</span>.size = n;</span><br><span class="line">        <span class="keyword">this</span>.openSites = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">this</span>.open = <span class="keyword">new</span> <span class="keyword">boolean</span>[n*n];</span><br><span class="line">        <span class="keyword">this</span>.wquf = <span class="keyword">new</span> WeightedQuickUnionUF(n*n + <span class="number">2</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="keyword">int</span> <span class="title">map2dTo1d</span><span class="params">(<span class="keyword">int</span> row, <span class="keyword">int</span> col)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> (row - <span class="number">1</span>) * size + col;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="keyword">boolean</span> <span class="title">indicesValid</span><span class="params">(<span class="keyword">int</span> row, <span class="keyword">int</span> col)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> (row &gt; <span class="number">0</span> &amp;&amp; row &lt;= size &amp;&amp; col &gt; <span class="number">0</span> &amp;&amp; col &lt;= size);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// open site (row, col) if it is not open already</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">open</span><span class="params">(<span class="keyword">int</span> row, <span class="keyword">int</span> col)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (!indicesValid(row, col)) <span class="keyword">throw</span> <span class="keyword">new</span> java.lang.IllegalArgumentException();</span><br><span class="line">        <span class="keyword">int</span> index = map2dTo1d(row, col);</span><br><span class="line">        <span class="keyword">if</span> (row == <span class="number">1</span>) &#123;</span><br><span class="line">            wquf.union(<span class="number">0</span>, index);</span><br><span class="line">            open[index-<span class="number">1</span>] = <span class="keyword">true</span>;</span><br><span class="line">        &#125; <span class="keyword">else</span> <span class="keyword">if</span> (row == size) &#123;</span><br><span class="line">            wquf.union(size * size + <span class="number">1</span>, index);</span><br><span class="line">            open[index-<span class="number">1</span>] = <span class="keyword">true</span>;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">int</span> left = col-<span class="number">1</span>;</span><br><span class="line">        <span class="keyword">int</span> right = col+<span class="number">1</span>;</span><br><span class="line">        <span class="keyword">int</span> up = row-<span class="number">1</span>;</span><br><span class="line">        <span class="keyword">int</span> down = row+<span class="number">1</span>;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span> (indicesValid(row, left) &amp;&amp;  isOpen(row, left)) &#123;</span><br><span class="line">            wquf.union(index - <span class="number">1</span>, index);</span><br><span class="line">            open[index-<span class="number">1</span>] = <span class="keyword">true</span>;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span> (indicesValid(row, right) &amp;&amp; isOpen(row, right)) &#123;</span><br><span class="line">            wquf.union(index + <span class="number">1</span>, index);</span><br><span class="line">            open[index-<span class="number">1</span>] = <span class="keyword">true</span>;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span> (indicesValid(up, col) &amp;&amp; isOpen(up, col)) &#123;</span><br><span class="line">            wquf.union(index - size, index);</span><br><span class="line">            open[index-<span class="number">1</span>] = <span class="keyword">true</span>;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span> (indicesValid(down, col) &amp;&amp; isOpen(down, col)) &#123;</span><br><span class="line">            wquf.union(index + size, index);</span><br><span class="line">            open[index-<span class="number">1</span>] = <span class="keyword">true</span>;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span> (indicesValid(row, col)) &#123;</span><br><span class="line">            open[index-<span class="number">1</span>] = <span class="keyword">true</span>;</span><br><span class="line">            openSites++;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// is site (row, col) open?</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">isOpen</span><span class="params">(<span class="keyword">int</span> row, <span class="keyword">int</span> col)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (!indicesValid(row, col))</span><br><span class="line">            <span class="keyword">throw</span> <span class="keyword">new</span> java.lang.IllegalArgumentException();</span><br><span class="line">        <span class="keyword">return</span> open[(row - <span class="number">1</span>) * size + col -<span class="number">1</span>];</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// is site (row, col) full?</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">isFull</span><span class="params">(<span class="keyword">int</span> row, <span class="keyword">int</span> col)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (!indicesValid(row, col))</span><br><span class="line">            <span class="keyword">throw</span> <span class="keyword">new</span> java.lang.IllegalArgumentException();</span><br><span class="line">        <span class="keyword">return</span> wquf.connected((row - <span class="number">1</span>) * size + col, <span class="number">0</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// number of open sites</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">numberOfOpenSites</span><span class="params">()</span> </span>&#123;</span><br><span class="line">       <span class="keyword">return</span> openSites;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// does the system percolate?</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">percolates</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> wquf.connected(<span class="number">0</span>, size * size + <span class="number">1</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// test client (optional)</span></span><br><span class="line">    <span class="comment">// public static void main(String[] args) &#123;</span></span><br><span class="line">    <span class="comment">//</span></span><br><span class="line">    <span class="comment">// &#125;</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+<p>PercolationStats.java</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="keyword">import</span> edu.princeton.cs.algs4.StdOut;</span><br><span class="line"><span class="keyword">import</span> edu.princeton.cs.algs4.StdRandom;</span><br><span class="line"><span class="keyword">import</span> edu.princeton.cs.algs4.StdStats;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">PercolationStats</span> </span>&#123;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> <span class="keyword">double</span> CONFIDENCE_95 = <span class="number">1.96</span>;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">final</span> <span class="keyword">int</span> trials;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">final</span> <span class="keyword">double</span> mean;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">final</span> <span class="keyword">double</span> stddev;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">PercolationStats</span><span class="params">(<span class="keyword">int</span> n, <span class="keyword">int</span> trials)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (n &lt;= <span class="number">0</span> || trials &lt;= <span class="number">0</span>)<span class="keyword">throw</span> <span class="keyword">new</span> java.lang.IllegalArgumentException();</span><br><span class="line">        <span class="keyword">this</span>.trials = trials;</span><br><span class="line">        <span class="keyword">double</span>[] results = <span class="keyword">new</span> <span class="keyword">double</span>[trials];</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; trials; i++) &#123;</span><br><span class="line">            Percolation p = <span class="keyword">new</span> Percolation(n);</span><br><span class="line">            <span class="keyword">double</span> count = <span class="number">0</span>;</span><br><span class="line">            <span class="keyword">while</span> (!p.percolates()) &#123;</span><br><span class="line">                count++;</span><br><span class="line">                <span class="keyword">int</span> row = StdRandom.uniform(<span class="number">1</span>, n + <span class="number">1</span>);</span><br><span class="line">                <span class="keyword">int</span> col = StdRandom.uniform(<span class="number">1</span>, n + <span class="number">1</span>);</span><br><span class="line">                <span class="keyword">while</span> (p.isOpen(row, col)) &#123;</span><br><span class="line">                    row = StdRandom.uniform(<span class="number">1</span>, n + <span class="number">1</span>);</span><br><span class="line">                    col = StdRandom.uniform(<span class="number">1</span>, n + <span class="number">1</span>);</span><br><span class="line">                &#125;</span><br><span class="line">                p.open(row, col);</span><br><span class="line">            &#125;</span><br><span class="line">            results[i] = count / (n * n);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">this</span>.mean = StdStats.mean(results);</span><br><span class="line">        <span class="keyword">this</span>.stddev = StdStats.stddev(results);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">double</span> <span class="title">mean</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">this</span>.mean;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">double</span> <span class="title">stddev</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">this</span>.stddev;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">double</span> <span class="title">confidenceLo</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> mean() - CONFIDENCE_95 * stddev() / Math.sqrt(trials);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">double</span> <span class="title">confidenceHi</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> mean() + CONFIDENCE_95 * stddev() / Math.sqrt(trials);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> n = Integer.parseInt(args[<span class="number">0</span>]);</span><br><span class="line">        <span class="keyword">int</span> t = Integer.parseInt(args[<span class="number">1</span>]);</span><br><span class="line">        PercolationStats ps = <span class="keyword">new</span> PercolationStats(n, t);</span><br><span class="line">        <span class="comment">// StdOut.print(ps.mean());</span></span><br><span class="line">        <span class="comment">// StdOut.print(ps.stddev());</span></span><br><span class="line">        <span class="comment">// StdOut.print(ps.confidenceLo());</span></span><br><span class="line">        <span class="comment">// StdOut.print(ps.confidenceHi());</span></span><br><span class="line">        StdOut.println(<span class="string">&quot;mean                    = &quot;</span> + ps.mean());</span><br><span class="line">        StdOut.println(<span class="string">&quot;stddev                  = &quot;</span> + ps.stddev());</span><br><span class="line">        StdOut.println(<span class="string">&quot;95% confidence interval = [&quot;</span> + ps.confidenceLo() + <span class="string">&quot;, &quot;</span> + ps.confidenceHi() + <span class="string">&quot;]&quot;</span>);</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yunhao981.github.io/2019/11/13/Algorithm/Algorithm-Assignment1-Percolation/" data-id="cliodcf2a001whsqmenl5cmab" data-title="Algorithm-Assignment1-Percolation" class="article-share-link">Share</a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Algorithm/" rel="tag">Algorithm</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-pintos初探" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2019/11/07/pintos%E5%88%9D%E6%8E%A2/" class="article-date">
+  <time class="dt-published" datetime="2019-11-07T06:07:01.000Z" itemprop="datePublished">2019-11-07</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/pintos/">pintos</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2019/11/07/pintos%E5%88%9D%E6%8E%A2/">pintos初探</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h1 id="Installation"><a href="#Installation" class="headerlink" title="Installation"></a>Installation</h1><p><a target="_blank" rel="noopener" href="https://web.stanford.edu/class/cs140/projects/pintos/pintos_1.html">Official Instruction</a></p>
+<h1 id="Install-Dependencies"><a href="#Install-Dependencies" class="headerlink" title="Install Dependencies"></a>Install Dependencies</h1><p>Check this <a target="_blank" rel="noopener" href="https://web.stanford.edu/class/cs140/projects/pintos/pintos_12.html">Installing Pintos</a>.</p>
+<p>We don’t want to install Bochs.</p>
+<p>We are going to run pintos with QEMU.</p>
+<h1 id="Fix-undefined-reference-to-‘floor’"><a href="#Fix-undefined-reference-to-‘floor’" class="headerlink" title="Fix undefined reference to ‘floor’"></a>Fix undefined reference to ‘floor’</h1><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">setitimer-helper.o: In function `main&#x27;:</span><br><span class="line">setitimer-helper.c:(.text+0xcb): undefined refernce to `floor&#x27;</span><br><span class="line">collect2: error: ld returned 1 exit status</span><br><span class="line">&lt;builtin&gt;: recipe for target &#x27;setitimer-helper&#x27; failed</span><br><span class="line">make *** [setitimer-helper] Error 1</span><br></pre></td></tr></table></figure>
+<h2 id="utils-Makefile"><a href="#utils-Makefile" class="headerlink" title="utils/Makefile"></a>utils/Makefile</h2><p>Line 5: </p>
+<figure class="highlight perl"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">LDFLAGS = -lm</span><br></pre></td></tr></table></figure>
+<p>Change <code>LDFLAGS</code> to <code>LDLIBS</code></p>
+<h1 id="Fix-V-problem"><a href="#Fix-V-problem" class="headerlink" title="Fix $^V problem"></a>Fix $^V problem</h1><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Unrecognized character \x16; marked by &lt;-- HERE after if ($&lt;-- HERE near column 7 at ~/code/pintos/src/utils/pintos line 911.</span><br></pre></td></tr></table></figure>
+<h2 id="utils-pintos"><a href="#utils-pintos" class="headerlink" title="utils/pintos"></a>utils/pintos</h2><p>Line 911: </p>
+<figure class="highlight perl"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> ($^V ge <span class="number">5.8</span>.<span class="number">0</span>)</span><br></pre></td></tr></table></figure>
+<p>Delete <code>$^V</code> and type it again.</p>
+<h1 id="Fix-SIGVTALRM-problem"><a href="#Fix-SIGVTALRM-problem" class="headerlink" title="Fix SIGVTALRM problem"></a>Fix SIGVTALRM problem</h1><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Prototype mismatch: sub main::SIGVTALRM () vs none at /usr/bin/pintos line 949.</span><br><span class="line"></span><br><span class="line">Constant subroutine SIGVTALRM redefined at /usr/bin/pintos line 941.</span><br></pre></td></tr></table></figure>
+<h2 id="utils-pintos-1"><a href="#utils-pintos-1" class="headerlink" title="utils/pintos"></a>utils/pintos</h2><p>Line 930:</p>
+<p>Comment out the whole SIGVTALRM function.</p>
+<h1 id="Modifing-files-to-run-with-QEMU"><a href="#Modifing-files-to-run-with-QEMU" class="headerlink" title="Modifing files to run with QEMU"></a>Modifing files to run with QEMU</h1><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">squish-pty bochs -q</span><br><span class="line">exec: No such file or directory</span><br></pre></td></tr></table></figure>
+
+
+<h2 id="threads-Make-vars"><a href="#threads-Make-vars" class="headerlink" title="threads/Make.vars"></a>threads/Make.vars</h2><p>Line 7:</p>
+<figure class="highlight perl"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">SIMULATOR = --bochs</span><br></pre></td></tr></table></figure>
+
+<p>Change <code>bochs</code> to <code>qemu</code></p>
+<h2 id="utils-pintos-2"><a href="#utils-pintos-2" class="headerlink" title="utils/pintos"></a>utils/pintos</h2><p>Line 103: </p>
+<figure class="highlight perl"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$sim = <span class="string">&quot;bochs&quot;</span> <span class="keyword">if</span> !<span class="keyword">defined</span> $sim;</span><br></pre></td></tr></table></figure>
+<p>Change <code>bochs</code> to <code>qemu</code></p>
+<p>Line 259:</p>
+<figure class="highlight perl"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">my</span> $name = find_file (<span class="string">&#x27;kernel.bin&#x27;</span>);</span><br></pre></td></tr></table></figure>
+<p>Change <code>kernel.bin</code> to the explicit location of kernel.bin in <code>$ProjectFolder/threads/build/</code></p>
+<p>e.g. <code>/home/parallels/Project/pintos/src/threads/build/kernel.bin</code></p>
+<h2 id="utils-Pintos-pm"><a href="#utils-Pintos-pm" class="headerlink" title="utils/Pintos.pm"></a>utils/Pintos.pm</h2><p>Line 362:</p>
+<figure class="highlight perl"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$name = find_file (<span class="string">&quot;loader.bin&quot;</span>) <span class="keyword">if</span> !<span class="keyword">defined</span> $name;</span><br></pre></td></tr></table></figure>
+
+<p>Change <code>loader.bin</code> to the explicit location of loader.bin in <code>$ProjectFolder/threads/build/</code></p>
+<p>e.g. <code>/home/parallels/Project/pintos/src/threads/build/loader.bin</code></p>
+<h1 id="BOOTLOOP"><a href="#BOOTLOOP" class="headerlink" title="BOOTLOOP"></a>BOOTLOOP</h1><p>cannot find memory?</p>
+<p>cannot print init_ram_page in init.c</p>
+<p>finnally find it impossible to work on PD with qemu due to PD’s lack of vmx support</p>
+<p>so either changing to bochs or running ubuntu in VMware</p>
+<p>damn fuck</p>
+<p>why not trying to run pintos simulator on macOS ?</p>
+<p>Unix-like with VT-x support</p>
+<p>maybe i should just follow the guide provided by JHU or SJTU ?</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yunhao981.github.io/2019/11/07/pintos%E5%88%9D%E6%8E%A2/" data-id="ckv7wl6xg001fcct531vi00sf" data-title="pintos初探" class="article-share-link">Share</a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/OS/" rel="tag">OS</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-git/git-clone-太慢了" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2019/11/04/git/git-clone-%E5%A4%AA%E6%85%A2%E4%BA%86/" class="article-date">
+  <time class="dt-published" datetime="2019-11-03T18:46:38.000Z" itemprop="datePublished">2019-11-04</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/GitHub/">GitHub</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2019/11/04/git/git-clone-%E5%A4%AA%E6%85%A2%E4%BA%86/">git clone 太慢了</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <p>git clone 实在是太慢了</p>
+<p>均速 10 KiB/s 龟速拖仓库</p>
+<p>保证本地配备了超音速机场，可以让他乘✈️</p>
+<p>机场设置 socks5 代理，会得到本地监听地址和端口,这里本地地址 127.0.0.1， 端口1086</p>
+<p>~/.bashrc 中加入</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">alias</span> <span class="built_in">fg</span>=<span class="string">&quot;git config --global http.proxy &#x27;socks5://127.0.0.1:1086&#x27; &amp;&amp; git config --global https.proxy &#x27;socks5://127.0.0.1:1086&#x27;&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">alias</span> ufg=<span class="string">&quot;git config --global --unset http.proxy &amp;&amp; git config --global --unset https.proxy&quot;</span></span><br></pre></td></tr></table></figure>
+<p>然后 </p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">source ~/.bashrc</span><br></pre></td></tr></table></figure>
+<p>就可以在通过 fg 设定 git 代理，使用 https 拖仓库的时候乘飞机了。但 ssh 方式拖的时候是没办法加速的，需要给ssh设置代理。</p>
+<p>ufg 是取消设置代理。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yunhao981.github.io/2019/11/04/git/git-clone-%E5%A4%AA%E6%85%A2%E4%BA%86/" data-id="cliodcf2a001thsqmbsnv2gqw" data-title="git clone 太慢了" class="article-share-link">Share</a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/GitHub/" rel="tag">GitHub</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-博客源码又丢失了一次" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2019/11/04/%E5%8D%9A%E5%AE%A2%E6%BA%90%E7%A0%81%E5%8F%88%E4%B8%A2%E5%A4%B1%E4%BA%86%E4%B8%80%E6%AC%A1/" class="article-date">
+  <time class="dt-published" datetime="2019-11-03T18:10:43.000Z" itemprop="datePublished">2019-11-04</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/GitHub/">GitHub</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2019/11/04/%E5%8D%9A%E5%AE%A2%E6%BA%90%E7%A0%81%E5%8F%88%E4%B8%A2%E5%A4%B1%E4%BA%86%E4%B8%80%E6%AC%A1/">博客源码又丢失了一次</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <p>我的博客源码又双叒叕丢失了</p>
+<p>究其原因是断断续续的更新，咕咕咕</p>
+<blockquote>
+<p>雄关漫道真如铁</p>
+<p>而今迈步从头越</p>
+<p>从头越，苍山如海，残阳如血</p>
+</blockquote>
+<p>这次我又做了什么……</p>
+<p>把原来的 master 分支和 dev 分支 clone 下来到 zip </p>
+<p>然后直接把压缩包丢上 OneDrive / iCloud （大概率再也不管了）</p>
+<p>本地新建一个 Blog 文件夹，用来当博客根目录</p>
+<p>GitHub 删库，重开一个新的远程仓库，名字继续叫 yunhao981.github.io</p>
+<p>跟着提示把本地文件夹连上远程仓库，顺便糊 README.md</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">npm install -g hexo</span><br><span class="line">hexo init</span><br><span class="line">npm install hexo-deployer-git</span><br><span class="line"><span class="built_in">echo</span> <span class="string">&quot;# yunhao981.github.io&quot;</span> &gt;&gt; README.md</span><br><span class="line">git init</span><br><span class="line">git add README.md</span><br><span class="line">git remote add origin https://github.com/yunhao981/yunhao981.github.io.git</span><br><span class="line">git commit -m <span class="string">&quot;first commit&quot;</span></span><br><span class="line">git push -u origin master</span><br></pre></td></tr></table></figure>
+<p>修改 _config.yml, 重点是 deply 部分，branch 一定是 master</p>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">deploy:</span></span><br><span class="line">  <span class="attr">type:</span> <span class="string">git</span></span><br><span class="line">  <span class="attr">repo:</span> <span class="string">https://github.com/yunhao981/yunhao981.github.io.git</span></span><br><span class="line">  <span class="attr">branch:</span> <span class="string">master</span></span><br></pre></td></tr></table></figure>
+
+<p>新建一个 source 分支，用来同步源码至仓库</p>
+<p>建完分支之后，确保 .gitignore 下排除了不要的文件</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">.DS_Store</span><br><span class="line">Thumbs.db</span><br><span class="line">db.json</span><br><span class="line">*.log</span><br><span class="line">node_modules/</span><br><span class="line">public/</span><br><span class="line">.deploy*/</span><br></pre></td></tr></table></figure>
+
+
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">git branch <span class="built_in">source</span></span><br><span class="line">git push origin <span class="built_in">source</span></span><br><span class="line">git checkout <span class="built_in">source</span></span><br><span class="line">git add .</span><br><span class="line">git commit -m <span class="string">&quot;hexo source post&quot;</span></span><br><span class="line">git push origin <span class="built_in">source</span></span><br></pre></td></tr></table></figure>
+<p>然后在网页上把 source 分支设置为默认</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Settings -&gt; Branches -&gt; Default branch</span><br></pre></td></tr></table></figure>
+
+<p>最后可以继续写了……</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">hexo new 博客源码又丢失了一次</span><br><span class="line">git add .</span><br><span class="line">git commit -m <span class="string">&quot;更新了咕&quot;</span></span><br><span class="line">git push origin <span class="built_in">source</span></span><br><span class="line">hexo g -d</span><br></pre></td></tr></table></figure>
+
+<h1 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h1><p><a target="_blank" rel="noopener" href="https://shiningdan.github.io/2017/01/10/Github%E4%B8%8AHexo%E9%A1%B9%E7%9B%AE%E6%BA%90%E7%A0%81%E4%BB%A5%E5%8F%8A%E5%8F%91%E5%B8%83%E7%89%88%E7%AE%A1%E7%90%86/">ShingingDan - Github上Hexo项目源码以及发布版管理</a></p>
+<p><a target="_blank" rel="noopener" href="http://www.yangbing.club/2019/06/29/save-hexo-source-post-with-git-branch/">sherlockyb - 使用git分支保存hexo博客源码到github</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yunhao981.github.io/2019/11/04/%E5%8D%9A%E5%AE%A2%E6%BA%90%E7%A0%81%E5%8F%88%E4%B8%A2%E5%A4%B1%E4%BA%86%E4%B8%80%E6%AC%A1/" data-id="ckv7wl6zz007ccct5774v8e7t" data-title="博客源码又丢失了一次" class="article-share-link">Share</a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/GitHub/" rel="tag">GitHub</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-博客源码丢失之后" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2019/01/20/%E5%8D%9A%E5%AE%A2%E6%BA%90%E7%A0%81%E4%B8%A2%E5%A4%B1%E4%B9%8B%E5%90%8E/" class="article-date">
+  <time class="dt-published" datetime="2019-01-19T17:06:25.000Z" itemprop="datePublished">2019-01-20</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/GitHub/">GitHub</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2019/01/20/%E5%8D%9A%E5%AE%A2%E6%BA%90%E7%A0%81%E4%B8%A2%E5%A4%B1%E4%B9%8B%E5%90%8E/">博客源码丢失之后</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <p>把丢失页面的 html 手动塞进 public 或是 .deploy_git 下都会在下一次 generate 的时候被覆盖</p>
+<p>没法恢复了，就当是散佚了吧</p>
+<p>上一次手动塞进public 的时候一不小心误操作塞错了</p>
+<p>所以什么都没有</p>
+<p>好像又恢复回来了，但是新的文章又不见了……</p>
+<p>mac 在 2018 年末重装了系统，因为 beta 版 Mojave bug 频出的缘故。</p>
+<p>bug 表现为无法唤醒，开机黑屏，显示屏不亮的那种。</p>
+<p>现在是正式版的 10.14.2, 然而每天晚上都会发生一次不定期的自动重启，还有偶发性的蓝牙不可用。</p>
+<p>重装之后，博客文章的源码就丢失了大部分。好在移动硬盘里有一份 5 月的备份。</p>
+<p>也是因为自己拖延啦，一直没有正经地备份源码到 GitHub 上。</p>
+<p>所以从那之后的所有文章，都只能看不能改了。</p>
+<p>现在是这样子的：</p>
+<pre><code>/Blog 
+本地仓库，
+分支有且仅有 dev，
+忽略.deploy_git, node_modules, public
+这个仓库里放源码，同步到 GitHub 仓库的 dev 分支下
+
+/Blog/.deploy_git 
+另一个仓库，
+分支有且仅有 master
+这个仓库里是生成的页面文件，同步到 GitHub 仓库的 master 分支</code></pre><p>那么以后更新博客可能就要这么做:</p>
+<pre><code>hexo new 新文章标题
+hexo g d
+git add .
+git commit -m &quot;commit message&quot;
+git push origin dev:dev</code></pre><p>有点麻烦的……</p>
+<p>另外 VS Code 里的 git 插件好像应付不来这种 repo 套 repo 的情况？</p>
+<p>总是提醒我有一大堆需要 commit</p>
+<p>但我在命令行下是已经 commit 了……</p>
+<p>暂时就还是换用 2570p 做主力机。</p>
+<p>WSL 下有 git 有 node 还有 gcc gdb 这些暂时都够了。</p>
+<p>毕竟 mac 现在到网页上打个麻将都会风扇全开 hold 不住的程度。</p>
+<p>另外，日记啥的就还是写在 OneNote 里吧。</p>
+<p>这里就更新读书笔记和技术学习笔记。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yunhao981.github.io/2019/01/20/%E5%8D%9A%E5%AE%A2%E6%BA%90%E7%A0%81%E4%B8%A2%E5%A4%B1%E4%B9%8B%E5%90%8E/" data-id="ckv7wl6zy007acct58em83xoy" data-title="博客源码丢失之后" class="article-share-link">Share</a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/GitHub/" rel="tag">GitHub</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+
+
+  <nav id="page-nav">
+    
+    <a class="extend prev" rel="prev" href="/page/25/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/24/">24</a><a class="page-number" href="/page/25/">25</a><span class="page-number current">26</span>
+  </nav>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Categories</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Algorithm/">Algorithm</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Alogorithm/">Alogorithm</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/GitHub/">GitHub</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Java/">Java</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/JavaScript/">JavaScript</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Test-Infra-Manual/">Test Infra Manual</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/azpr/">azpr</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/csapp/">csapp</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/git/">git</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/hexo/">hexo</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/java/">java</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/pintos/">pintos</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/react/">react</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/slackbot/">slackbot</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/softskils/">softskils</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/test/">test</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/typescript/">typescript</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%9D%82%E4%B8%83%E6%9D%82%E5%85%AB/">杂七杂八</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/">读书笔记</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Algorithm/" rel="tag">Algorithm</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Books/" rel="tag">Books</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/GitHub/" rel="tag">GitHub</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Java/" rel="tag">Java</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/JavaScript/" rel="tag">JavaScript</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/OS/" rel="tag">OS</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Test-Infra-Manual/" rel="tag">Test Infra Manual</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Test-Infra-Manualtest/" rel="tag">Test Infra Manualtest</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/azpr/" rel="tag">azpr</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/csapp/" rel="tag">csapp</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/git/" rel="tag">git</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/" rel="tag">hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/java/" rel="tag">java</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/react/" rel="tag">react</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/slackbot-ts-js/" rel="tag">slackbot ts js</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/softskils/" rel="tag">softskils</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/test/" rel="tag">test</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/typescript/" rel="tag">typescript</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/vim/" rel="tag">vim</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%9D%82%E4%B8%83%E6%9D%82%E5%85%AB/" rel="tag">杂七杂八</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/Algorithm/" style="font-size: 14px;">Algorithm</a> <a href="/tags/Books/" style="font-size: 16px;">Books</a> <a href="/tags/GitHub/" style="font-size: 14px;">GitHub</a> <a href="/tags/Java/" style="font-size: 16px;">Java</a> <a href="/tags/JavaScript/" style="font-size: 16px;">JavaScript</a> <a href="/tags/OS/" style="font-size: 12px;">OS</a> <a href="/tags/Test-Infra-Manual/" style="font-size: 18px;">Test Infra Manual</a> <a href="/tags/Test-Infra-Manualtest/" style="font-size: 10px;">Test Infra Manualtest</a> <a href="/tags/azpr/" style="font-size: 12px;">azpr</a> <a href="/tags/csapp/" style="font-size: 14px;">csapp</a> <a href="/tags/git/" style="font-size: 10px;">git</a> <a href="/tags/hexo/" style="font-size: 10px;">hexo</a> <a href="/tags/java/" style="font-size: 10px;">java</a> <a href="/tags/react/" style="font-size: 12px;">react</a> <a href="/tags/slackbot-ts-js/" style="font-size: 10px;">slackbot ts js</a> <a href="/tags/softskils/" style="font-size: 10px;">softskils</a> <a href="/tags/test/" style="font-size: 20px;">test</a> <a href="/tags/typescript/" style="font-size: 10px;">typescript</a> <a href="/tags/vim/" style="font-size: 10px;">vim</a> <a href="/tags/%E6%9D%82%E4%B8%83%E6%9D%82%E5%85%AB/" style="font-size: 10px;">杂七杂八</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/06/">June 2023</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/05/">May 2023</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/03/">March 2023</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/01/">January 2023</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/12/">December 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/11/">November 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/10/">October 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/09/">September 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/08/">August 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/07/">July 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/06/">June 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/05/">May 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/04/">April 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/03/">March 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/02/">February 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/01/">January 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/12/">December 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/11/">November 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/10/">October 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/09/">September 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/08/">August 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/04/">April 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/11/">November 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/01/">January 2019</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2023/06/09/test-infra-days/test-day-382/">test-day-382</a>
+          </li>
+        
+          <li>
+            <a href="/2023/06/08/test-infra-days/test-day-381/">test-day-381</a>
+          </li>
+        
+          <li>
+            <a href="/2023/06/07/test-infra-days/test-day-380/">test-day-380</a>
+          </li>
+        
+          <li>
+            <a href="/2023/05/25/cm-notes/cm-notes/">CM-Notes</a>
+          </li>
+        
+          <li>
+            <a href="/2023/03/29/Productivity-Section-2/">Productivity-Section-2</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+      &copy; 2023 Yunhao Liu<br>
+      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+
+<script src="/js/jquery-3.4.1.min.js"></script>
+
+
+
+  
+<script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+
+  </div>
+</body>
+</html>

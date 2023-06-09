@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <title>release-me-tips | Yunhao Liu</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="life as Test Contractor at EADP-C&amp;I Test-Infra Team">
+<meta property="og:type" content="article">
+<meta property="og:title" content="release-me-tips">
+<meta property="og:url" content="http://yunhao981.github.io/2021/11/10/cm-notes/release-me-tips/index.html">
+<meta property="og:site_name" content="Yunhao Liu">
+<meta property="og:description" content="life as Test Contractor at EADP-C&amp;I Test-Infra Team">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2021-11-10T09:47:35.000Z">
+<meta property="article:modified_time" content="2021-12-15T09:22:18.688Z">
+<meta property="article:author" content="Yunhao Liu">
+<meta property="article:tag" content="Test Infra Manual">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="Yunhao Liu" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/favicon.png">
+  
+  
+    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/typeface-source-code-pro@0.0.71/index.min.css">
+
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+
+  
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Yunhao Liu</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">New Life #Life on Campus</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yunhao981.github.io"></form>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main"><article id="post-cm-notes/release-me-tips" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2021/11/10/cm-notes/release-me-tips/" class="article-date">
+  <time class="dt-published" datetime="2021-11-10T09:47:35.000Z" itemprop="datePublished">2021-11-10</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Test-Infra-Manual/">Test Infra Manual</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="p-name article-title" itemprop="headline name">
+      release-me-tips
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h1 id="在配置-releaseme-跑起来的时候遇到的坑"><a href="#在配置-releaseme-跑起来的时候遇到的坑" class="headerlink" title="在配置 releaseme 跑起来的时候遇到的坑"></a>在配置 releaseme 跑起来的时候遇到的坑</h1><h2 id="frontend"><a href="#frontend" class="headerlink" title="frontend"></a>frontend</h2><h3 id="1-TS2339"><a href="#1-TS2339" class="headerlink" title="1. TS2339"></a>1. TS2339</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">$ npm run build</span><br><span class="line"></span><br><span class="line">&gt; release_me@0.1.0 build</span><br><span class="line">&gt; node prebuild.js &amp;&amp; react-scripts build</span><br><span class="line"></span><br><span class="line">Creating an optimized production build...</span><br><span class="line">Failed to compile.</span><br><span class="line"></span><br><span class="line">C:/Users/yunhaoliu/Projects/releaseme/frontend/src/Model/BackendMapper.ts</span><br><span class="line">TypeScript error in C:/Users/yunhaoliu/Projects/releaseme/frontend/src/Model/BackendMapper.ts(20,55):</span><br><span class="line">Property &#x27;releaseme&#x27; does not exist on type &#x27;string&#x27;.  TS2339</span><br><span class="line"></span><br><span class="line">    18 |         &quot;Firstpartynucleus&quot;: &quot;FirstPartyNucleus&quot;</span><br><span class="line">    19 |     &#125;</span><br><span class="line">  &gt; 20 |     static originDeployMapper: DeployMapper = backend.releaseme.flow.deployMapper as DeployMapper</span><br><span class="line">       |                                                       ^</span><br><span class="line">    21 |     static imageKeyTranslation: Record&lt;string, string&gt; = &#123;&#125;;</span><br><span class="line">    22 |     static Component: Record&lt;string, string&gt; = &#123;&#125;;</span><br><span class="line">    23 |</span><br></pre></td></tr></table></figure>
+<p>复制一份 Backend 里的 Application.yml 到 Frontend 里覆盖</p>
+<p>如果开了 win10 的 Developer Mode,</p>
+<p>git win 会在 Clone 的时候把软连接变成 Symbol link</p>
+<p>如果不在就摆烂</p>
+<h3 id="2-localhost-启动"><a href="#2-localhost-启动" class="headerlink" title="2. localhost 启动"></a>2. localhost 启动</h3><p>猛击 F12，Application -&gt; Storage -&gt; Local Storage 里面有个 token</p>
+<p>Chrome 的快捷方式里，加上 <code>--disable-web-security</code></p>
+<p>开个新的窗口，在转圈圈的时候眼疾手快，猛击 STOP</p>
+<p>F12, 同样的位置加入自己的 Token</p>
+<h3 id="3-localhost-直接启动了-PROD"><a href="#3-localhost-直接启动了-PROD" class="headerlink" title="3. localhost 直接启动了 PROD"></a>3. localhost 直接启动了 PROD</h3><p>本地 npm run build 了前端</p>
+<p>后端的部分部署在了 linux 上</p>
+<p>直接 serve -s build 的话，直接打开了 PROD</p>
+<p>在相同域名下不同端口，依然会触发跨域</p>
+<p>真正需要做的事情是，</p>
+<p>要在 <code>src/Model/Request.tsx</code> 里加上 endpoint，是 <code>application.yml</code> 的后缀</p>
+<figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">static</span> endpoints: Record&lt;<span class="built_in">string</span>, <span class="built_in">string</span>&gt; = &#123;</span><br><span class="line">    <span class="string">&quot;development&quot;</span>: <span class="string">&quot;https://releaseme.citools.ea.com&quot;</span>,</span><br><span class="line">    <span class="string">&quot;local&quot;</span>:       <span class="string">&quot;http://local-releaseme.citools.ea.com:8080&quot;</span>,</span><br><span class="line">    <span class="string">&quot;lyh&quot;</span>:       <span class="string">&quot;http://localhost:8080&quot;</span>,</span><br><span class="line">    <span class="string">&quot;alpha&quot;</span>:       <span class="string">&quot;http://alpha-releaseme.citools.ea.com&quot;</span>,</span><br><span class="line">    <span class="string">&quot;production&quot;</span>:  <span class="string">&quot;https://releaseme.citools.ea.com&quot;</span></span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<p>还有 <code>App.tsx</code> 里去掉 token 为空时的判断</p>
+<figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="title">render</span>(<span class="params"></span>)</span> &#123;</span><br><span class="line">    <span class="comment">// if (Request.token)</span></span><br><span class="line">    <span class="comment">//     return &lt;MainPage /&gt;</span></span><br><span class="line">    <span class="comment">// else</span></span><br><span class="line">    <span class="comment">//     return &lt;RedirectPage /&gt;</span></span><br><span class="line">    <span class="keyword">return</span> <span class="xml"><span class="tag">&lt;<span class="name">MainPage</span> /&gt;</span></span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>然后最后才是 </p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">npm install</span><br><span class="line">REACT_APP_NODE_ENV=local npm run-script build</span><br></pre></td></tr></table></figure>
+
+<p>这里 local 是 application-env 的 env</p>
+<h3 id="4-prod-上发的请求-401-Unothorized"><a href="#4-prod-上发的请求-401-Unothorized" class="headerlink" title="4. prod 上发的请求 401 Unothorized"></a>4. prod 上发的请求 401 Unothorized</h3><p>期望的 status 是 409 或者 200</p>
+<p>在 Requests.tsx 里如果直接用 fetch，默认是不带 token 的</p>
+<p>用 this.releaseMeFetch 的话，会把 409 当作异常抛出来</p>
+<p>同时拿到的 response 是个 json 而不是我要的 status 和 text</p>
+<p>所以我需要自己在 header 里加上 token 发出去</p>
+<h2 id="backend"><a href="#backend" class="headerlink" title="backend"></a>backend</h2><h3 id="1-ENC-的密码设定"><a href="#1-ENC-的密码设定" class="headerlink" title="1. ENC 的密码设定"></a>1. ENC 的密码设定</h3><p>必须指定 <code>-DJASYPT_ENCRYPTOR_PASSWORD</code>, application.yml 里所有的 ENC 都必须 match</p>
+<p>本地测的时候就不要这么麻烦了，直接在自己的 yml 里写明文</p>
+<p>另外，密码给个简单的就好，别给自己找麻烦</p>
+<h3 id="2-application-yml"><a href="#2-application-yml" class="headerlink" title="2. application.yml"></a>2. application.yml</h3><p>同一个目录下，<code>application-xxx.yml</code> 里面的内容会覆盖 application.yml 的</p>
+<p>需要指定 ENV_NAME</p>
+<p>里面 localhost ，想要在其他机器上跑的话就需要替换成它的 ip</p>
+<h3 id="3-mysql-docker"><a href="#3-mysql-docker" class="headerlink" title="3. mysql docker"></a>3. mysql docker</h3><p>VM 分的磁盘太小了，docker 起不来</p>
+<p>检查 log 就能知道原因</p>
+<p>虚拟机，是存在极限的</p>
+<p>所以我不用虚拟机了！！！</p>
+<p>捡了台退役服务器装了 linux</p>
+<p>ssh上去简单弄了下 docker</p>
+<h3 id="4-insert-dummy-data"><a href="#4-insert-dummy-data" class="headerlink" title="4. insert dummy data"></a>4. insert dummy data</h3><p>测试用的假数据不知道怎么插进去…</p>
+<p>它用了 webhook 去探 gitlab 上的新改动</p>
+<p>而且 label 是一定要包含 releaseme 的</p>
+<p>component 也必须要在列表里</p>
+<p>直接往数据库里插表是不行的</p>
+<h3 id="5-Okta-Auth"><a href="#5-Okta-Auth" class="headerlink" title="5. Okta Auth"></a>5. Okta Auth</h3><p>本地测的时候一般是设置成 false 的</p>
+<p>为了避免奇奇怪怪的麻烦</p>
+<p>远古开发者【超哥】写的时候在本地是自己搭了一套独立的 Okta</p>
+<p>所以会出现 client-id 和 client—secret 的设定</p>
+<p>还是 ENC 加密过的</p>
+<p>如果我这里要开着测试的话，需要在前端设置一下重新登录</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yunhao981.github.io/2021/11/10/cm-notes/release-me-tips/" data-id="cliodcf26001bhsqm9s3b0x5k" data-title="release-me-tips" class="article-share-link">Share</a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Test-Infra-Manual/" rel="tag">Test Infra Manual</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2021/11/10/transfer-lockbox-jobs-tips/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          transfer-lockbox-jobs-tips
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2021/11/10/test-infra-days/test-day-64/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">test-day-64</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Categories</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Algorithm/">Algorithm</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Alogorithm/">Alogorithm</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/GitHub/">GitHub</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Java/">Java</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/JavaScript/">JavaScript</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Test-Infra-Manual/">Test Infra Manual</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/azpr/">azpr</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/csapp/">csapp</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/git/">git</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/hexo/">hexo</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/java/">java</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/pintos/">pintos</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/react/">react</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/slackbot/">slackbot</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/softskils/">softskils</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/test/">test</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/typescript/">typescript</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%9D%82%E4%B8%83%E6%9D%82%E5%85%AB/">杂七杂八</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/">读书笔记</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Algorithm/" rel="tag">Algorithm</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Books/" rel="tag">Books</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/GitHub/" rel="tag">GitHub</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Java/" rel="tag">Java</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/JavaScript/" rel="tag">JavaScript</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/OS/" rel="tag">OS</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Test-Infra-Manual/" rel="tag">Test Infra Manual</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Test-Infra-Manualtest/" rel="tag">Test Infra Manualtest</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/azpr/" rel="tag">azpr</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/csapp/" rel="tag">csapp</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/git/" rel="tag">git</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/" rel="tag">hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/java/" rel="tag">java</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/react/" rel="tag">react</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/slackbot-ts-js/" rel="tag">slackbot ts js</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/softskils/" rel="tag">softskils</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/test/" rel="tag">test</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/typescript/" rel="tag">typescript</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/vim/" rel="tag">vim</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%9D%82%E4%B8%83%E6%9D%82%E5%85%AB/" rel="tag">杂七杂八</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/Algorithm/" style="font-size: 14px;">Algorithm</a> <a href="/tags/Books/" style="font-size: 16px;">Books</a> <a href="/tags/GitHub/" style="font-size: 14px;">GitHub</a> <a href="/tags/Java/" style="font-size: 16px;">Java</a> <a href="/tags/JavaScript/" style="font-size: 16px;">JavaScript</a> <a href="/tags/OS/" style="font-size: 12px;">OS</a> <a href="/tags/Test-Infra-Manual/" style="font-size: 18px;">Test Infra Manual</a> <a href="/tags/Test-Infra-Manualtest/" style="font-size: 10px;">Test Infra Manualtest</a> <a href="/tags/azpr/" style="font-size: 12px;">azpr</a> <a href="/tags/csapp/" style="font-size: 14px;">csapp</a> <a href="/tags/git/" style="font-size: 10px;">git</a> <a href="/tags/hexo/" style="font-size: 10px;">hexo</a> <a href="/tags/java/" style="font-size: 10px;">java</a> <a href="/tags/react/" style="font-size: 12px;">react</a> <a href="/tags/slackbot-ts-js/" style="font-size: 10px;">slackbot ts js</a> <a href="/tags/softskils/" style="font-size: 10px;">softskils</a> <a href="/tags/test/" style="font-size: 20px;">test</a> <a href="/tags/typescript/" style="font-size: 10px;">typescript</a> <a href="/tags/vim/" style="font-size: 10px;">vim</a> <a href="/tags/%E6%9D%82%E4%B8%83%E6%9D%82%E5%85%AB/" style="font-size: 10px;">杂七杂八</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/06/">June 2023</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/05/">May 2023</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/03/">March 2023</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/01/">January 2023</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/12/">December 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/11/">November 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/10/">October 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/09/">September 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/08/">August 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/07/">July 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/06/">June 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/05/">May 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/04/">April 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/03/">March 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/02/">February 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/01/">January 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/12/">December 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/11/">November 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/10/">October 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/09/">September 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/08/">August 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/04/">April 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/11/">November 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/01/">January 2019</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2023/06/09/test-infra-days/test-day-382/">test-day-382</a>
+          </li>
+        
+          <li>
+            <a href="/2023/06/08/test-infra-days/test-day-381/">test-day-381</a>
+          </li>
+        
+          <li>
+            <a href="/2023/06/07/test-infra-days/test-day-380/">test-day-380</a>
+          </li>
+        
+          <li>
+            <a href="/2023/05/25/cm-notes/cm-notes/">CM-Notes</a>
+          </li>
+        
+          <li>
+            <a href="/2023/03/29/Productivity-Section-2/">Productivity-Section-2</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+      &copy; 2023 Yunhao Liu<br>
+      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+
+<script src="/js/jquery-3.4.1.min.js"></script>
+
+
+
+  
+<script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+
+  </div>
+</body>
+</html>

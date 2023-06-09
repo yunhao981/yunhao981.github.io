@@ -1,0 +1,947 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <title>Yunhao Liu</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="My personal blog including my learning progress.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Yunhao Liu">
+<meta property="og:url" content="http://yunhao981.github.io/page/11/index.html">
+<meta property="og:site_name" content="Yunhao Liu">
+<meta property="og:description" content="My personal blog including my learning progress.">
+<meta property="og:locale" content="en_US">
+<meta property="article:author" content="Yunhao Liu">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="Yunhao Liu" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/favicon.png">
+  
+  
+    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/typeface-source-code-pro@0.0.71/index.min.css">
+
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+
+  
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Yunhao Liu</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">New Life #Life on Campus</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yunhao981.github.io"></form>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main">
+  
+    <article id="post-test-infra-days/test-day-122" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2022/02/18/test-infra-days/test-day-122/" class="article-date">
+  <time class="dt-published" datetime="2022-02-18T02:24:35.000Z" itemprop="datePublished">2022-02-18</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/test/">test</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2022/02/18/test-infra-days/test-day-122/">test-day-122</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h2 id="Today’s-Task"><a href="#Today’s-Task" class="headerlink" title="Today’s Task"></a>Today’s Task</h2><ul>
+<li><input checked="" disabled="" type="checkbox"> Property Page<ul>
+<li><input checked="" disabled="" type="checkbox"> Fix Issues after review</li>
+</ul>
+</li>
+</ul>
+<h2 id="Additional-Task"><a href="#Additional-Task" class="headerlink" title="Additional Task"></a>Additional Task</h2><h2 id="Thought"><a href="#Thought" class="headerlink" title="Thought"></a>Thought</h2><h3 id="1"><a href="#1" class="headerlink" title="1"></a>1</h3><p>竟有如此离谱</p>
+<p>JB 的 Ktor Http Api 示例代码，在家跑能起来</p>
+<p>但跑测试的表现是请求 8080 端口 404</p>
+<p>同一份代码直接 clone 下来在办公室机器上就通了……</p>
+<p>回去看看这个端口开了没，是不是被占用了</p>
+<h3 id="2"><a href="#2" class="headerlink" title="2"></a>2</h3><p>说起来经常会有 8080 被占用，但 idea 上跑着的所有项目都停掉了</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">netstat -ano | grep :8080</span><br></pre></td></tr></table></figure>
+
+<p>win 下可以用:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">taskkill /PID $&#123;PID of process using 8080&#125; /F</span><br></pre></td></tr></table></figure>
+
+<h2 id="Code-Review"><a href="#Code-Review" class="headerlink" title="Code Review:"></a>Code Review:</h2><h3 id="1-为啥我老是喜欢用-forEach-捏"><a href="#1-为啥我老是喜欢用-forEach-捏" class="headerlink" title="1. 为啥我老是喜欢用 forEach 捏"></a>1. 为啥我老是喜欢用 forEach 捏</h3><p>哦拜托这样真的超罗嗦的</p>
+<p>forEach() 返回的是 undefined，map 至少会给个数组</p>
+<p>所以这里在 forEach() 里面试图塞进数组的行为显得相当机车</p>
+<p>而且这里 properties 永远不会 === null，它是初值个 {} ，而 {} != {} 且 {} !== {}</p>
+<figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="title">renderOptions</span>(<span class="params">properties: &#123;[key: <span class="built_in">string</span>]: <span class="built_in">string</span>&#125;</span>)</span> &#123;</span><br><span class="line">    <span class="keyword">let</span> options: &#123;<span class="attr">value</span>: <span class="built_in">string</span>, <span class="attr">label</span>: JSX.Element&#125;[] = [];</span><br><span class="line">    <span class="keyword">if</span> (properties !== <span class="literal">null</span>) &#123;</span><br><span class="line">        <span class="built_in">Object</span>.keys(properties)?.forEach(<span class="function">(<span class="params">key</span>) =&gt;</span> options.push(<span class="built_in">this</span>.renderOptionItem(key, properties[key])))</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> options;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>Emmmm that looks better </p>
+<figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="title">renderOptions</span>(<span class="params">properties: &#123;[key: <span class="built_in">string</span>]: <span class="built_in">string</span>&#125;</span>)</span> &#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="built_in">Object</span>.keys(properties)?.map(<span class="function">(<span class="params">key</span>) =&gt;</span> <span class="built_in">this</span>.renderOptionItem(key, properties[key]));</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="2-map-到底返回了个啥？"><a href="#2-map-到底返回了个啥？" class="headerlink" title="2. map 到底返回了个啥？"></a>2. map 到底返回了个啥？</h3><figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> tableItem: JSX.Element[] = [];</span><br><span class="line"><span class="keyword">if</span> (dataSource !== <span class="literal">null</span>) &#123;</span><br><span class="line">    <span class="built_in">Object</span>.keys(dataSource)?.map( <span class="function"><span class="params">key</span> =&gt;</span> &#123;</span><br><span class="line">        tableItem.push(</span><br><span class="line">            <span class="xml"><span class="tag">&lt;<span class="name">tr</span> <span class="attr">key</span>=<span class="string">&#123;key&#125;</span>&gt;</span></span></span><br><span class="line"><span class="xml">                <span class="tag">&lt;<span class="name">td</span>&gt;</span>&#123;key&#125;<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span></span><br><span class="line"><span class="xml">                <span class="tag">&lt;<span class="name">td</span>&gt;</span>&#123;dataSource[key]&#125;<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span></span><br><span class="line"><span class="xml">            <span class="tag">&lt;/<span class="name">tr</span>&gt;</span></span></span><br><span class="line">        )</span><br><span class="line">    &#125;)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>map 本身返回的就是个数组，就不用再特地开个新的去存进去</p>
+<figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    <span class="built_in">Object</span>.keys(dataSource)?.map( <span class="function">(<span class="params">key</span>) =&gt;</span> (</span><br><span class="line">        <span class="xml"><span class="tag">&lt;<span class="name">tr</span> <span class="attr">key</span>=<span class="string">&#123;key&#125;</span>&gt;</span></span></span><br><span class="line"><span class="xml">            <span class="tag">&lt;<span class="name">td</span>&gt;</span>&#123;key&#125;<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span></span><br><span class="line"><span class="xml">            <span class="tag">&lt;<span class="name">td</span>&gt;</span>&#123;dataSource[key]&#125;<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span></span><br><span class="line"><span class="xml">        <span class="tag">&lt;/<span class="name">tr</span>&gt;</span></span></span><br><span class="line">    ))</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="3-展开运算符"><a href="#3-展开运算符" class="headerlink" title="3. 展开运算符"></a>3. 展开运算符</h3><figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> history = <span class="built_in">this</span>.state.searchHistory;</span><br><span class="line">    <span class="keyword">if</span> (history != <span class="literal">null</span>) &#123;</span><br><span class="line">        history[property] = <span class="built_in">this</span>.state.property;</span><br><span class="line">    &#125;</span><br><span class="line"><span class="built_in">this</span>.setState( &#123;<span class="attr">searchHistory</span>: history&#125;);</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> history = &#123; [property]: <span class="built_in">this</span>.state.property &#125;;</span><br><span class="line"><span class="keyword">let</span> mergedHistory = &#123; ...this.state.searchHistory, ...history &#125;</span><br><span class="line"><span class="built_in">this</span>.setState( &#123;<span class="attr">searchHistory</span>: mergedHistory&#125;);</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yunhao981.github.io/2022/02/18/test-infra-days/test-day-122/" data-id="cliodcf360062hsqm3o6s9str" data-title="test-day-122" class="article-share-link">Share</a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/test/" rel="tag">test</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-test-infra-days/test-day-121" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2022/02/17/test-infra-days/test-day-121/" class="article-date">
+  <time class="dt-published" datetime="2022-02-17T02:23:40.000Z" itemprop="datePublished">2022-02-17</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/test/">test</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2022/02/17/test-infra-days/test-day-121/">test-day-121</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h2 id="Today’s-Task"><a href="#Today’s-Task" class="headerlink" title="Today’s Task"></a>Today’s Task</h2><ul>
+<li><input disabled="" type="checkbox"> Property Page<ul>
+<li><input checked="" disabled="" type="checkbox"> Search History in Local Storage</li>
+<li><input checked="" disabled="" type="checkbox"> Two Tables</li>
+<li><input disabled="" type="checkbox"> Rewrite it to be more pretty</li>
+</ul>
+</li>
+</ul>
+<h2 id="Additional-Task"><a href="#Additional-Task" class="headerlink" title="Additional Task"></a>Additional Task</h2><h2 id="Thought"><a href="#Thought" class="headerlink" title="Thought"></a>Thought</h2><h3 id="1"><a href="#1" class="headerlink" title="1"></a>1</h3><p><code>2&gt;&amp;1</code></p>
+<p>2: stderr</p>
+<p>1: stdour</p>
+<p>&amp;: 跟在后面的是文件描述符，而不是文件名</p>
+<h3 id="2"><a href="#2" class="headerlink" title="2"></a>2</h3><h4 id="peer-dependency-conflict"><a href="#peer-dependency-conflict" class="headerlink" title="peer dependency conflict"></a>peer dependency conflict</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">15:08:39  + npm install</span><br><span class="line">15:08:45  npm ERR! code ERESOLVE</span><br><span class="line">15:08:45  npm ERR! ERESOLVE unable to resolve dependency tree</span><br><span class="line">15:08:45  npm ERR! </span><br><span class="line">15:08:45  npm ERR! While resolving: release_me@0.1.0</span><br><span class="line">15:08:45  npm ERR! Found: react@16.14.0</span><br><span class="line">15:08:45  npm ERR! node_modules/react</span><br><span class="line">15:08:45  npm ERR!   react@&quot;^16.13.2&quot; from the root project</span><br><span class="line">15:08:45  npm ERR! </span><br><span class="line">15:08:45  npm ERR! Could not resolve dependency:</span><br><span class="line">15:08:45  npm ERR! peer react@&quot;^17.0.0&quot; from react-mde@11.5.0</span><br><span class="line">15:08:45  npm ERR! node_modules/react-mde</span><br><span class="line">15:08:45  npm ERR!   react-mde@&quot;^11.5.0&quot; from the root project</span><br><span class="line">15:08:45  npm ERR! </span><br><span class="line">15:08:45  npm ERR! Fix the upstream dependency conflict, or retry</span><br><span class="line">15:08:45  npm ERR! this command with --force, or --legacy-peer-deps</span><br><span class="line">15:08:45  npm ERR! to accept an incorrect (and potentially broken) dependency resolution.</span><br><span class="line">15:08:45  npm ERR! </span><br><span class="line">15:08:45  npm ERR! See /root/.npm/eresolve-report.txt for a full report.</span><br></pre></td></tr></table></figure>
+
+<p>npm 7 以后会去看 Peer Dependencies 是不是和项目依赖冲突，如果冲突的话就会给 Error</p>
+<p>–legacy-peer-deps 可以暂时不去管它，但终究是需要解决冲突的</p>
+<h3 id="3"><a href="#3" class="headerlink" title="3"></a>3</h3><p>我每天究竟在做些什么……</p>
+<p>为什么在一个对 WLB 极度友善的环境下，我可以每天晚上熬到凌晨……</p>
+<p>但也只是像以往一样，对着文档搭积木，同时又记不住太多细节</p>
+<p>短期记忆几乎报废，只能抓住瞬间记录下来才不至于彻底忘掉</p>
+<p>甚至思维的速度与深度都极度受限，希望这仅仅是岁月的侵蚀而不是劫后余生</p>
+<p>最近甚至连对气味都不敏感了，大抵是对于未来的焦虑与不安吧</p>
+<p>唯一的安慰是，看到 IDEA 的 Dracula 主题还能闻到紫菜蛋汤的味道</p>
+<p>淡黄色的部分自然是蛋液高温变性后的颜色，橙色的部分是胡萝卜和南瓜</p>
+<p>而我又经常会为了解决当下心理上的困扰，去忽视现实中存在的更为迫切的问题</p>
+<p>比如说现在凌晨三点为了理清楚思绪情愿不睡觉也要朝 github 上继续灌水</p>
+<p>即便这些东西深埋在南极的冰川下，有朝一日终究会灌进水</p>
+<p>也许这么干可以让我联通一小会四年前的自己和七年前的自己吧，听听他们是如何骂我的</p>
+<p>工作至今半年有余，维护了半年的 Bash 和 Groovy，把他们移来移去，</p>
+<p>却依然会在 git 同步仓库这件简单的事情上弄不清楚应当如何优雅完成</p>
+<p>回过神来，想要写点东西都磕磕绊绊的了</p>
+<p>四年前写过那么几个 commit 的 TS + Vue，甚至已经认不出那些青涩的 commit message </p>
+<p>只有在 clone 当年那个仓库的时候，看到一缕日出的 HDR</p>
+<p>而我又在焦虑些什么，心中最深处的忧虑又从何而来</p>
+<p>我的底气从何而来，应当如何重新构建内心的安宁？</p>
+<p>太久不读书，自己照照镜子都会觉得面目可憎，几近失去对复杂信息的处理能力</p>
+<p>肉体上的质量倒是猛增了 10 kg，全围在腰上了</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yunhao981.github.io/2022/02/17/test-infra-days/test-day-121/" data-id="cliodcf34005whsqm8czwcwli" data-title="test-day-121" class="article-share-link">Share</a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/test/" rel="tag">test</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-test-infra-days/test-day-120" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2022/02/16/test-infra-days/test-day-120/" class="article-date">
+  <time class="dt-published" datetime="2022-02-16T03:49:41.000Z" itemprop="datePublished">2022-02-16</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/test/">test</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2022/02/16/test-infra-days/test-day-120/">test-day-120</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h2 id="Today’s-Task"><a href="#Today’s-Task" class="headerlink" title="Today’s Task"></a>Today’s Task</h2><ul>
+<li><input disabled="" type="checkbox"> Property Page<ul>
+<li><input checked="" disabled="" type="checkbox"> Search History in Local Storage</li>
+<li><input disabled="" type="checkbox"> Two Tables</li>
+</ul>
+</li>
+</ul>
+<h2 id="Additional-Task"><a href="#Additional-Task" class="headerlink" title="Additional Task"></a>Additional Task</h2><h2 id="Afterwork-Task"><a href="#Afterwork-Task" class="headerlink" title="Afterwork Task"></a>Afterwork Task</h2><ul>
+<li><input checked="" disabled="" type="checkbox"> Try Ktor HTTP API Demo</li>
+<li><input checked="" disabled="" type="checkbox"> Read about Kotlin Coroutines</li>
+</ul>
+<h2 id="Thought"><a href="#Thought" class="headerlink" title="Thought"></a>Thought</h2><h3 id="1"><a href="#1" class="headerlink" title="1"></a>1</h3><p>CKLT:</p>
+<ul>
+<li><input checked="" disabled="" type="checkbox"> access</li>
+<li><input checked="" disabled="" type="checkbox"> catalog</li>
+<li><input checked="" disabled="" type="checkbox"> crypto</li>
+<li><input checked="" disabled="" type="checkbox"> customerportal</li>
+<li><input checked="" disabled="" type="checkbox"> dynamic-config-ui //need nucleus</li>
+<li><input checked="" disabled="" type="checkbox"> hyas</li>
+<li><input checked="" disabled="" type="checkbox"> kakapo</li>
+<li><input checked="" disabled="" type="checkbox"> keymaster</li>
+<li><input checked="" disabled="" type="checkbox"> nam</li>
+<li><input checked="" disabled="" type="checkbox"> nexus</li>
+<li><input checked="" disabled="" type="checkbox"> nucleus  //17GB source code</li>
+<li><input checked="" disabled="" type="checkbox"> nucleussolr  //need nucleus</li>
+<li><input checked="" disabled="" type="checkbox"> playercard</li>
+<li><input checked="" disabled="" type="checkbox"> playerownership-cassandra</li>
+<li><input checked="" disabled="" type="checkbox"> playerownership</li>
+<li><input checked="" disabled="" type="checkbox"> porpoise</li>
+<li><input checked="" disabled="" type="checkbox"> saola</li>
+<li><input checked="" disabled="" type="checkbox"> sloth</li>
+<li><input checked="" disabled="" type="checkbox"> tos</li>
+<li><input checked="" disabled="" type="checkbox"> vaquita</li>
+</ul>
+<h3 id="2"><a href="#2" class="headerlink" title="2"></a>2</h3><p>git Q&amp;A</p>
+<h4 id="1-每次同步打出-commit-的目的"><a href="#1-每次同步打出-commit-的目的" class="headerlink" title="1. 每次同步打出 commit 的目的"></a>1. 每次同步打出 commit 的目的</h4><p>同一个 branch 会有不同的 commit</p>
+<p>需要具体的 commit id 来确认改动</p>
+<p>同一个 branch 在同一时刻指向的 commit 是确定的，一定是当时的 top commit</p>
+<p>但是在之后如果有新的 commit 进去了，就不能确认这时候的 branch 里面是不是多了不需要的 commit</p>
+<h4 id="2-带上-tag-的好处"><a href="#2-带上-tag-的好处" class="headerlink" title="2. 带上 tag 的好处"></a>2. 带上 tag 的好处</h4><p>tag 用来标记某个 commit</p>
+<p>对于 Jenkins 来说有点奇怪</p>
+<p>但对于人类可以更加直观</p>
+<p>可以知道在某个确切的 commit 的时刻，当时这个 branch 里的内容是什么，而不是当时做了什么</p>
+<p>branch 总是指向 top commit，而 tag 不会变</p>
+<h4 id="3-pull-和-fetch-的区别"><a href="#3-pull-和-fetch-的区别" class="headerlink" title="3. pull 和 fetch 的区别"></a>3. pull 和 fetch 的区别</h4><p>git fetch 会去拿新的改动 metadata，然后也会下下来改动的文件</p>
+<p>fetch 不会动到自己的 branch，</p>
+<p>pull 会把 origin 同名的分支合到本地分支</p>
+<p>如果 origin 没有同名分支或者冲突的话，行为就不知道了</p>
+<h4 id="4-只用-git-checkout-branch-的问题"><a href="#4-只用-git-checkout-branch-的问题" class="headerlink" title="4. 只用 git checkout ${branch} 的问题"></a>4. 只用 git checkout ${branch} 的问题</h4><p>同名的 branch 如果本地也存在，它就不会去同步 origin 的更新</p>
+<p>比起 checkout 完了再去 merge origin/${branch}</p>
+<p>更好的办法是 </p>
+<p>checkout -f 强制切换到目标 branch，丢掉当前 local change</p>
+<h4 id="5-git-fetch-的问题"><a href="#5-git-fetch-的问题" class="headerlink" title="5. git fetch 的问题"></a>5. git fetch 的问题</h4><p>remote branch 如果删掉了，本地指向这个 branch 的 refs 也需要处理掉</p>
+<p>所以需要再去 prune 一次</p>
+<p><code>git fetch --prune</code></p>
+<p>相当于</p>
+<p><code>git fetch --all &amp;&amp; git remote prune</code></p>
+<p>会在 prune 之前，从 remote 拿一下最新的状态</p>
+<h4 id="6-git-push-–force-with-lease"><a href="#6-git-push-–force-with-lease" class="headerlink" title="6. git push –force-with-lease"></a>6. git push –force-with-lease</h4><p>force 强行把本地分支推上远端覆盖掉</p>
+<p>force-with-lease 不会覆盖远端分支里面别人加进去的 commit</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yunhao981.github.io/2022/02/16/test-infra-days/test-day-120/" data-id="cliodcf34005thsqmc60bbeoc" data-title="test-day-120" class="article-share-link">Share</a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/test/" rel="tag">test</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-test-infra-days/test-day-119" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2022/02/15/test-infra-days/test-day-119/" class="article-date">
+  <time class="dt-published" datetime="2022-02-15T07:53:55.000Z" itemprop="datePublished">2022-02-15</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/test/">test</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2022/02/15/test-infra-days/test-day-119/">test-day-119</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h2 id="Today’s-Task"><a href="#Today’s-Task" class="headerlink" title="Today’s Task"></a>Today’s Task</h2><ul>
+<li><input disabled="" type="checkbox"> <p>Property Page</p>
+<ul>
+<li><input disabled="" type="checkbox"> Search History in Local Storage</li>
+</ul>
+</li>
+<li><input checked="" disabled="" type="checkbox"> <p>Release Support</p>
+</li>
+</ul>
+<h2 id="Additional-Task"><a href="#Additional-Task" class="headerlink" title="Additional Task"></a>Additional Task</h2><ul>
+<li><input checked="" disabled="" type="checkbox"> Check Hyas Image Script</li>
+<li><input checked="" disabled="" type="checkbox"> Deploy Citadel to STG AWS</li>
+<li><input checked="" disabled="" type="checkbox"> nucleus liquibase &amp; cassandra deploy</li>
+</ul>
+<h2 id="Afterwork"><a href="#Afterwork" class="headerlink" title="Afterwork"></a>Afterwork</h2><ul>
+<li><input checked="" disabled="" type="checkbox"> Read git source code to get general ideas</li>
+<li><input checked="" disabled="" type="checkbox"> Try HTTP API Demos with Spring Boot</li>
+</ul>
+<h2 id="Thought"><a href="#Thought" class="headerlink" title="Thought"></a>Thought</h2><h3 id="1"><a href="#1" class="headerlink" title="1"></a>1</h3><p>抄了一段写了再改的 git 同步代码</p>
+<p>结果写得非常非常烂</p>
+<p>才发现我其实对 git 真的一丁点都不熟悉……</p>
+<p>回去要去翻源码</p>
+<p>最最起码要去看 Git Repo 里的 Document </p>
+<p>真的有被自己菜到</p>
+<p>如果有疑问，必须立刻满足自己的求知欲</p>
+<p>千万不要憋着</p>
+<p>Value Transfer 是做什么的？</p>
+<p>每个项目分别都是做什么事情的？</p>
+<p>它们是如何撑起全球所有玩家的同时访问的？</p>
+<p>开始担心自己的时间不够用</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yunhao981.github.io/2022/02/15/test-infra-days/test-day-119/" data-id="cliodcf33005qhsqm22ixcpzu" data-title="test-day-119" class="article-share-link">Share</a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/test/" rel="tag">test</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-test-infra-days/test-day-118" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2022/02/14/test-infra-days/test-day-118/" class="article-date">
+  <time class="dt-published" datetime="2022-02-14T02:32:28.000Z" itemprop="datePublished">2022-02-14</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/test/">test</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2022/02/14/test-infra-days/test-day-118/">test-day-118</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h2 id="Today’s-Task"><a href="#Today’s-Task" class="headerlink" title="Today’s Task"></a>Today’s Task</h2><ul>
+<li><input disabled="" type="checkbox"> Property Page</li>
+<li><input checked="" disabled="" type="checkbox"> Oracle Password Rotation q4-22 PRD</li>
+<li><input checked="" disabled="" type="checkbox"> Release Scripts Port</li>
+</ul>
+<h2 id="Additional-Task"><a href="#Additional-Task" class="headerlink" title="Additional Task"></a>Additional Task</h2><h2 id="Thought"><a href="#Thought" class="headerlink" title="Thought"></a>Thought</h2><h3 id="1"><a href="#1" class="headerlink" title="1"></a>1</h3><p>深夜的时候看了好久 Kotlin</p>
+<p>结果发现台式机没装 JB 全家桶</p>
+<p>花了好长时间在 linux 下搭环境……</p>
+<p>终究没看多少就只好去睡觉了</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yunhao981.github.io/2022/02/14/test-infra-days/test-day-118/" data-id="cliodcf32005khsqm5itke5aj" data-title="test-day-118" class="article-share-link">Share</a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/test/" rel="tag">test</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-test-infra-days/test-day-117" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2022/02/11/test-infra-days/test-day-117/" class="article-date">
+  <time class="dt-published" datetime="2022-02-11T08:19:35.000Z" itemprop="datePublished">2022-02-11</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/test/">test</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2022/02/11/test-infra-days/test-day-117/">test-day-117</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h2 id="Today’s-Task"><a href="#Today’s-Task" class="headerlink" title="Today’s Task"></a>Today’s Task</h2><ul>
+<li><input checked="" disabled="" type="checkbox"> Release Support</li>
+<li><input checked="" disabled="" type="checkbox"> Script Port</li>
+</ul>
+<h2 id="Additional-Task"><a href="#Additional-Task" class="headerlink" title="Additional Task"></a>Additional Task</h2><h2 id="Thought"><a href="#Thought" class="headerlink" title="Thought"></a>Thought</h2><h3 id="1"><a href="#1" class="headerlink" title="1"></a>1</h3><p>中午看了会 Kotlin Koans</p>
+<p>感觉相当有趣</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yunhao981.github.io/2022/02/11/test-infra-days/test-day-117/" data-id="cliodcf31005hhsqm3agafu16" data-title="test-day-117" class="article-share-link">Share</a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/test/" rel="tag">test</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-test-infra-days/test-day-116" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2022/02/10/test-infra-days/test-day-116/" class="article-date">
+  <time class="dt-published" datetime="2022-02-10T02:21:36.000Z" itemprop="datePublished">2022-02-10</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/test/">test</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2022/02/10/test-infra-days/test-day-116/">test-day-116</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h2 id="Today’s-Task"><a href="#Today’s-Task" class="headerlink" title="Today’s Task"></a>Today’s Task</h2><ul>
+<li><input disabled="" type="checkbox"> [ASAP] Property Page<ul>
+<li><input disabled="" type="checkbox"> Cookie &amp; Clear</li>
+</ul>
+</li>
+<li><input disabled="" type="checkbox"> Extrack Common Functions of release scripts</li>
+</ul>
+<h2 id="Additional-Task"><a href="#Additional-Task" class="headerlink" title="Additional Task"></a>Additional Task</h2><h2 id="Thought"><a href="#Thought" class="headerlink" title="Thought"></a>Thought</h2><h3 id="1"><a href="#1" class="headerlink" title="1"></a>1</h3><p>Web Storage</p>
+<h4 id="localStorage"><a href="#localStorage" class="headerlink" title="localStorage"></a>localStorage</h4><p>一般是 5MB, </p>
+<p><code>window.localStorage</code> 和 <code>window.sessionStorage</code></p>
+<p>用之前需要判断兼容性，IE（</p>
+<p>localStorage 会一直在， sessionStorage 在当前 session 结束之后就会自动清空</p>
+<p>localStorage 无法跨域，子域名也拿不到父域名的 localStorage</p>
+<p>Cookie</p>
+<p>IndexDB</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yunhao981.github.io/2022/02/10/test-infra-days/test-day-116/" data-id="cliodcf31005ehsqmfwza3v8x" data-title="test-day-116" class="article-share-link">Share</a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/test/" rel="tag">test</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-test-infra-days/test-day-115" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2022/02/09/test-infra-days/test-day-115/" class="article-date">
+  <time class="dt-published" datetime="2022-02-09T02:28:04.000Z" itemprop="datePublished">2022-02-09</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/test/">test</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2022/02/09/test-infra-days/test-day-115/">test-day-115</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h2 id="Today’s-Task"><a href="#Today’s-Task" class="headerlink" title="Today’s Task"></a>Today’s Task</h2><ul>
+<li><input disabled="" type="checkbox"> [ASAP] Property Page<ul>
+<li><input checked="" disabled="" type="checkbox"> Dropdown</li>
+<li><input checked="" disabled="" type="checkbox"> CSS</li>
+<li><input disabled="" type="checkbox"> Cookie &amp; Clear</li>
+</ul>
+</li>
+</ul>
+<h2 id="Additional-Task"><a href="#Additional-Task" class="headerlink" title="Additional Task"></a>Additional Task</h2><h2 id="Thought"><a href="#Thought" class="headerlink" title="Thought"></a>Thought</h2><h3 id="1"><a href="#1" class="headerlink" title="1"></a>1</h3><p>Ant Design 的 AutoComplete 查询模式-确定类目是不能调整高度的…</p>
+<p>它在实现滚动条的时候也许用了非常多的 trick</p>
+<p>使得调样式弄起来极其 tricky</p>
+<h3 id="2"><a href="#2" class="headerlink" title="2"></a>2</h3><p>想用 kotlin 和 ktor 写点什么东西</p>
+<p>弄个什么本科大作业级别的 CRUD 熟悉下 api 也好呀</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yunhao981.github.io/2022/02/09/test-infra-days/test-day-115/" data-id="cliodcf30005bhsqm1v60h71t" data-title="test-day-115" class="article-share-link">Share</a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/test/" rel="tag">test</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-test-infra-days/test-day-114" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2022/02/08/test-infra-days/test-day-114/" class="article-date">
+  <time class="dt-published" datetime="2022-02-08T07:13:39.000Z" itemprop="datePublished">2022-02-08</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/test/">test</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2022/02/08/test-infra-days/test-day-114/">test-day-114</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h2 id="Today’s-Task"><a href="#Today’s-Task" class="headerlink" title="Today’s Task"></a>Today’s Task</h2><ul>
+<li><input disabled="" type="checkbox"> [ASAP] Property Page<ul>
+<li><input checked="" disabled="" type="checkbox"> Dropdown</li>
+<li><input disabled="" type="checkbox"> CSS</li>
+</ul>
+</li>
+</ul>
+<h2 id="Additional-Task"><a href="#Additional-Task" class="headerlink" title="Additional Task"></a>Additional Task</h2><h2 id="Thought"><a href="#Thought" class="headerlink" title="Thought"></a>Thought</h2><h3 id="1"><a href="#1" class="headerlink" title="1"></a>1</h3><p>[] is an Array,</p>
+<p>{} is an Object</p>
+<p>An Object is not a Map</p>
+<h3 id="2"><a href="#2" class="headerlink" title="2"></a>2</h3><p>IDEA 鼠标悬浮，可以直接看见对象类型可太友好了</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yunhao981.github.io/2022/02/08/test-infra-days/test-day-114/" data-id="cliodcf300058hsqm2ty73hqp" data-title="test-day-114" class="article-share-link">Share</a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/test/" rel="tag">test</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-test-infra-days/test-day-113" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2022/02/07/test-infra-days/test-day-113/" class="article-date">
+  <time class="dt-published" datetime="2022-02-07T02:06:26.000Z" itemprop="datePublished">2022-02-07</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/test/">test</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2022/02/07/test-infra-days/test-day-113/">test-day-113</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h2 id="Today’s-Task"><a href="#Today’s-Task" class="headerlink" title="Today’s Task"></a>Today’s Task</h2><ul>
+<li><input disabled="" type="checkbox"> [ASAP] Property Page</li>
+</ul>
+<h2 id="Additional-Task"><a href="#Additional-Task" class="headerlink" title="Additional Task"></a>Additional Task</h2><h2 id="Thought"><a href="#Thought" class="headerlink" title="Thought"></a>Thought</h2><h3 id="1"><a href="#1" class="headerlink" title="1"></a>1</h3><p>Oracle Password Rotation:</p>
+<ol>
+<li>去 Google doc 找到新一轮 Password</li>
+<li>看历史 MR 去改对应的文件</li>
+<li>注释掉当前的用户名密码，取消注释先前的那份</li>
+<li>但两个用户的密码都要换</li>
+</ol>
+<h3 id="2"><a href="#2" class="headerlink" title="2"></a>2</h3><p>一到春天就想玩 JRPG</p>
+<table>
+<thead>
+<tr>
+<th>Game</th>
+<th>Estimated Time</th>
+<th>Price</th>
+<th>Platform</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>FF7</td>
+<td>70h+</td>
+<td>150 HKD</td>
+<td>PS4</td>
+</tr>
+<tr>
+<td>FF10</td>
+<td>50h+</td>
+<td>20 RMB for PS2</td>
+<td>PS2, PS4</td>
+</tr>
+<tr>
+<td>FF15</td>
+<td>40h+ / 全是男人，doge 都不玩</td>
+<td>PSN IGC</td>
+<td>PS4, PC</td>
+</tr>
+<tr>
+<td>FF7re</td>
+<td>35h+</td>
+<td>390 HKD</td>
+<td>PS5</td>
+</tr>
+<tr>
+<td>P5</td>
+<td>90h+</td>
+<td>120 HKD / PSN IGC</td>
+<td>PS5</td>
+</tr>
+<tr>
+<td>A22</td>
+<td>90h</td>
+<td>500 HKD</td>
+<td>switch, PS4</td>
+</tr>
+<tr>
+<td>A23</td>
+<td>90h+ ?</td>
+<td>500 HKD</td>
+<td>switch, PS4</td>
+</tr>
+</tbody></table>
+<p>一天一个小时的话，今年是不愁游戏荒了…</p>
+<h3 id="3"><a href="#3" class="headerlink" title="3"></a>3</h3><p>CKLT:</p>
+<p>crypto, keymaster, nam, playerownership, tos</p>
+<ul>
+<li><input checked="" disabled="" type="checkbox"> access</li>
+<li><input checked="" disabled="" type="checkbox"> catalog</li>
+<li><input checked="" disabled="" type="checkbox"> crypto</li>
+<li><input checked="" disabled="" type="checkbox"> customerportal</li>
+<li><input disabled="" type="checkbox"> dynamic-config-ui //need nucleus</li>
+<li><input checked="" disabled="" type="checkbox"> hyas</li>
+<li><input checked="" disabled="" type="checkbox"> kakapo</li>
+<li><input checked="" disabled="" type="checkbox"> keymaster</li>
+<li><input disabled="" type="checkbox"> liquibase-deploy  //need nucleus</li>
+<li><input checked="" disabled="" type="checkbox"> nam</li>
+<li><input disabled="" type="checkbox"> nexus</li>
+<li><input disabled="" type="checkbox"> nucleus  //17GB source code</li>
+<li><input disabled="" type="checkbox"> nucleussolr  //need nucleus</li>
+<li><input disabled="" type="checkbox"> playercard</li>
+<li><input disabled="" type="checkbox"> playerownership-cassandra</li>
+<li><input checked="" disabled="" type="checkbox"> playerownership</li>
+<li><input checked="" disabled="" type="checkbox"> porpoise</li>
+<li><input checked="" disabled="" type="checkbox"> saola</li>
+<li><input checked="" disabled="" type="checkbox"> sloth</li>
+<li><input checked="" disabled="" type="checkbox"> tos</li>
+<li><input checked="" disabled="" type="checkbox"> vaquita</li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yunhao981.github.io/2022/02/07/test-infra-days/test-day-113/" data-id="cliodcf2y0052hsqmbe2s8f27" data-title="test-day-113" class="article-share-link">Share</a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/test/" rel="tag">test</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+
+
+  <nav id="page-nav">
+    
+    <a class="extend prev" rel="prev" href="/page/10/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/9/">9</a><a class="page-number" href="/page/10/">10</a><span class="page-number current">11</span><a class="page-number" href="/page/12/">12</a><a class="page-number" href="/page/13/">13</a><span class="space">&hellip;</span><a class="page-number" href="/page/26/">26</a><a class="extend next" rel="next" href="/page/12/">Next &raquo;</a>
+  </nav>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Categories</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Algorithm/">Algorithm</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Alogorithm/">Alogorithm</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/GitHub/">GitHub</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Java/">Java</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/JavaScript/">JavaScript</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Test-Infra-Manual/">Test Infra Manual</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/azpr/">azpr</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/csapp/">csapp</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/git/">git</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/hexo/">hexo</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/java/">java</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/pintos/">pintos</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/react/">react</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/slackbot/">slackbot</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/softskils/">softskils</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/test/">test</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/typescript/">typescript</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%9D%82%E4%B8%83%E6%9D%82%E5%85%AB/">杂七杂八</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/">读书笔记</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Algorithm/" rel="tag">Algorithm</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Books/" rel="tag">Books</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/GitHub/" rel="tag">GitHub</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Java/" rel="tag">Java</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/JavaScript/" rel="tag">JavaScript</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/OS/" rel="tag">OS</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Test-Infra-Manual/" rel="tag">Test Infra Manual</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Test-Infra-Manualtest/" rel="tag">Test Infra Manualtest</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/azpr/" rel="tag">azpr</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/csapp/" rel="tag">csapp</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/git/" rel="tag">git</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/" rel="tag">hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/java/" rel="tag">java</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/react/" rel="tag">react</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/slackbot-ts-js/" rel="tag">slackbot ts js</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/softskils/" rel="tag">softskils</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/test/" rel="tag">test</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/typescript/" rel="tag">typescript</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/vim/" rel="tag">vim</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%9D%82%E4%B8%83%E6%9D%82%E5%85%AB/" rel="tag">杂七杂八</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/Algorithm/" style="font-size: 14px;">Algorithm</a> <a href="/tags/Books/" style="font-size: 16px;">Books</a> <a href="/tags/GitHub/" style="font-size: 14px;">GitHub</a> <a href="/tags/Java/" style="font-size: 16px;">Java</a> <a href="/tags/JavaScript/" style="font-size: 16px;">JavaScript</a> <a href="/tags/OS/" style="font-size: 12px;">OS</a> <a href="/tags/Test-Infra-Manual/" style="font-size: 18px;">Test Infra Manual</a> <a href="/tags/Test-Infra-Manualtest/" style="font-size: 10px;">Test Infra Manualtest</a> <a href="/tags/azpr/" style="font-size: 12px;">azpr</a> <a href="/tags/csapp/" style="font-size: 14px;">csapp</a> <a href="/tags/git/" style="font-size: 10px;">git</a> <a href="/tags/hexo/" style="font-size: 10px;">hexo</a> <a href="/tags/java/" style="font-size: 10px;">java</a> <a href="/tags/react/" style="font-size: 12px;">react</a> <a href="/tags/slackbot-ts-js/" style="font-size: 10px;">slackbot ts js</a> <a href="/tags/softskils/" style="font-size: 10px;">softskils</a> <a href="/tags/test/" style="font-size: 20px;">test</a> <a href="/tags/typescript/" style="font-size: 10px;">typescript</a> <a href="/tags/vim/" style="font-size: 10px;">vim</a> <a href="/tags/%E6%9D%82%E4%B8%83%E6%9D%82%E5%85%AB/" style="font-size: 10px;">杂七杂八</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/06/">June 2023</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/05/">May 2023</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/03/">March 2023</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/01/">January 2023</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/12/">December 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/11/">November 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/10/">October 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/09/">September 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/08/">August 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/07/">July 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/06/">June 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/05/">May 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/04/">April 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/03/">March 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/02/">February 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/01/">January 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/12/">December 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/11/">November 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/10/">October 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/09/">September 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/08/">August 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/04/">April 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/11/">November 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/01/">January 2019</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2023/06/09/test-infra-days/test-day-382/">test-day-382</a>
+          </li>
+        
+          <li>
+            <a href="/2023/06/08/test-infra-days/test-day-381/">test-day-381</a>
+          </li>
+        
+          <li>
+            <a href="/2023/06/07/test-infra-days/test-day-380/">test-day-380</a>
+          </li>
+        
+          <li>
+            <a href="/2023/05/25/cm-notes/cm-notes/">CM-Notes</a>
+          </li>
+        
+          <li>
+            <a href="/2023/03/29/Productivity-Section-2/">Productivity-Section-2</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+      &copy; 2023 Yunhao Liu<br>
+      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+
+<script src="/js/jquery-3.4.1.min.js"></script>
+
+
+
+  
+<script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+
+  </div>
+</body>
+</html>

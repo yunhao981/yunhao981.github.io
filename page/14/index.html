@@ -1,0 +1,936 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <title>Yunhao Liu</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="My personal blog including my learning progress.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Yunhao Liu">
+<meta property="og:url" content="http://yunhao981.github.io/page/14/index.html">
+<meta property="og:site_name" content="Yunhao Liu">
+<meta property="og:description" content="My personal blog including my learning progress.">
+<meta property="og:locale" content="en_US">
+<meta property="article:author" content="Yunhao Liu">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="Yunhao Liu" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/favicon.png">
+  
+  
+    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/typeface-source-code-pro@0.0.71/index.min.css">
+
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+
+  
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Yunhao Liu</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">New Life #Life on Campus</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yunhao981.github.io"></form>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main">
+  
+    <article id="post-test-infra-days/test-day-94" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2021/12/22/test-infra-days/test-day-94/" class="article-date">
+  <time class="dt-published" datetime="2021-12-22T02:31:37.000Z" itemprop="datePublished">2021-12-22</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/test/">test</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2021/12/22/test-infra-days/test-day-94/">test-day-94</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h2 id="Today’s-Task"><a href="#Today’s-Task" class="headerlink" title="Today’s Task"></a>Today’s Task</h2><ul>
+<li><input checked="" disabled="" type="checkbox"> Onebox-setup vmIP<ul>
+<li><input checked="" disabled="" type="checkbox"> try to fetch ip during docker build</li>
+<li><input checked="" disabled="" type="checkbox"> pass host ip via docker run -e </li>
+<li><input checked="" disabled="" type="checkbox"> show ip on page</li>
+</ul>
+</li>
+<li><input disabled="" type="checkbox"> Add comment time to ReleaseMe</li>
+<li><input disabled="" type="checkbox"> Add a page to search properties on ReleaseMe<ul>
+<li><input disabled="" type="checkbox"> Router without React Router</li>
+</ul>
+</li>
+<li><input disabled="" type="checkbox"> Transfer Jenkins Jobs<ul>
+<li><input checked="" disabled="" type="checkbox"> Check One Case</li>
+<li><input checked="" disabled="" type="checkbox"> Migrated BVT but test all failed </li>
+</ul>
+</li>
+<li><input disabled="" type="checkbox"> Add all components to Create-emergency-branch</li>
+<li><input disabled="" type="checkbox"> Split CheckSTG</li>
+</ul>
+<h2 id="Additional-Task"><a href="#Additional-Task" class="headerlink" title="Additional Task"></a>Additional Task</h2><h2 id="Thought"><a href="#Thought" class="headerlink" title="Thought"></a>Thought</h2><h3 id="1"><a href="#1" class="headerlink" title="1"></a>1</h3><p>稍微设置了下 tmux</p>
+<p>居然有 mouse support ！</p>
+<p>还可以自定义按键</p>
+<p>属实打开新世界</p>
+<p>虽然开的有点晚</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">bind r source-file ~/.tmux.conf</span><br><span class="line"></span><br><span class="line">set -g mouse on</span><br><span class="line"></span><br><span class="line">bind -n M-Left select-pane -L</span><br><span class="line">bind -n M-Right select-pane -R</span><br><span class="line">bind -n M-Up select-pane -U</span><br><span class="line">bind -n M-Down select-pane -D</span><br><span class="line"></span><br><span class="line">set-window-option -g mode-keys vi</span><br></pre></td></tr></table></figure>
+
+<h3 id="2"><a href="#2" class="headerlink" title="2"></a>2</h3><p>对客观世界构建的感知能力</p>
+<p>对人生随机性的处理</p>
+<p>对个人情绪的控制</p>
+<p>今天晚上吃什么</p>
+<p>明天早饭吃什么</p>
+<h3 id="3"><a href="#3" class="headerlink" title="3"></a>3</h3><p>写代码必须在头势清爽的时候</p>
+<p>必须想清楚哪些事情只存在于开发机上</p>
+<p>哪些事情发生在 onebox 上</p>
+<p>哪些事情发生在浏览器上</p>
+<h3 id="4"><a href="#4" class="headerlink" title="4"></a>4</h3><p>听到组里大神在聊 Kotlin</p>
+<p>DNA 动了</p>
+<p>这就回去写个小 demo </p>
+<h3 id="5"><a href="#5" class="headerlink" title="5"></a>5</h3><p>最近一直在脑内无限循环</p>
+<p>But you don’t have to cut me off</p>
+<p>揪心</p>
+<h3 id="6"><a href="#6" class="headerlink" title="6"></a>6</h3><p>被吐槽说一直在看同一个 tmux 和同一个页面</p>
+<p>然后今天终于把拖了三个月的做出来了！！！！</p>
+<p>MR 也提交了</p>
+<p>四舍五入是没有拖到了明年</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yunhao981.github.io/2021/12/22/test-infra-days/test-day-94/" data-id="cliodcf6d00jqhsqmceu89wva" data-title="test-day-94" class="article-share-link">Share</a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/test/" rel="tag">test</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-test-infra-days/test-day-93" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2021/12/21/test-infra-days/test-day-93/" class="article-date">
+  <time class="dt-published" datetime="2021-12-21T03:15:33.000Z" itemprop="datePublished">2021-12-21</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/test/">test</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2021/12/21/test-infra-days/test-day-93/">test-day-93</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h2 id="Today’s-Task"><a href="#Today’s-Task" class="headerlink" title="Today’s Task"></a>Today’s Task</h2><ul>
+<li><input checked="" disabled="" type="checkbox"> Risk-UI &amp; Nexus-UI Sanity Check</li>
+<li><input checked="" disabled="" type="checkbox"> Send Emails of Failure Tracking</li>
+<li><input checked="" disabled="" type="checkbox"> Push Sign off of CHG0158808</li>
+<li><input checked="" disabled="" type="checkbox"> Transfer CP BVT</li>
+</ul>
+<h2 id="Additional-Task"><a href="#Additional-Task" class="headerlink" title="Additional Task"></a>Additional Task</h2><h2 id="Thought"><a href="#Thought" class="headerlink" title="Thought"></a>Thought</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">4 wheels move the body, 2 wheels move the soul</span><br></pre></td></tr></table></figure>
+<h3 id="1"><a href="#1" class="headerlink" title="1"></a>1</h3><p>昨晚做完所有事情之后就一点了</p>
+<p>这还是没有做模型的情况下</p>
+<p>要怎么样才能再挤出一个小时的时间呢</p>
+<p>在这样的困境之下</p>
+<p>才知道前面四年</p>
+<p>可以自由安排时间的珍贵</p>
+<h3 id="2"><a href="#2" class="headerlink" title="2"></a>2</h3><p>每天灌水</p>
+<p>博客里全是水贴……</p>
+<p>想试试看能不能分文件夹放源文件了</p>
+<h3 id="3"><a href="#3" class="headerlink" title="3"></a>3</h3><p>昨天下午睫毛卡进了眼睛里</p>
+<p>起初是发现它在下边睫毛附近横着</p>
+<p>为了避免它卡进去</p>
+<p>弄着弄着推进去了</p>
+<p>卡在了眼角侧面深处</p>
+<p>一晚上过去了</p>
+<p>好像没什么感觉</p>
+<p>但总觉得它还在那里</p>
+<h3 id="4"><a href="#4" class="headerlink" title="4"></a>4</h3><p>后来回家滴了眼药水</p>
+<p>取出来了</p>
+<p>它原来真的还在那里</p>
+<h3 id="5"><a href="#5" class="headerlink" title="5"></a>5</h3><p>今天锻炼完比昨天早了一个小时</p>
+<p>但是这一个小时就在微信和知乎里度过了</p>
+<p>相当可惜，这点时间拿来做日课不好吗</p>
+<p>自己虽然同样没有成长，但这一个小时角色的练度至少上去了呀</p>
+<p>碎片化的阅读永远无法取代个人的独立思维</p>
+<p>抱着这样的心态，订了明年一整年的三联周刊</p>
+<p>（结果自己还是在写短短的句子</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yunhao981.github.io/2021/12/21/test-infra-days/test-day-93/" data-id="cliodcf6c00jnhsqm2zpfbfmy" data-title="test-day-93" class="article-share-link">Share</a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/test/" rel="tag">test</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-test-infra-days/test-day-92" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2021/12/20/test-infra-days/test-day-92/" class="article-date">
+  <time class="dt-published" datetime="2021-12-20T02:28:26.000Z" itemprop="datePublished">2021-12-20</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/test/">test</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2021/12/20/test-infra-days/test-day-92/">test-day-92</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h2 id="Today’s-Task"><a href="#Today’s-Task" class="headerlink" title="Today’s Task"></a>Today’s Task</h2><ul>
+<li><input disabled="" type="checkbox"> Onebox-setup vmIP</li>
+<li><input disabled="" type="checkbox"> Add comment time to ReleaseMe</li>
+<li><input disabled="" type="checkbox"> Add a page to search properties on ReleaseMe<ul>
+<li><input disabled="" type="checkbox"> Router without React Router</li>
+</ul>
+</li>
+<li><input disabled="" type="checkbox"> Transfer Jenkins Jobs</li>
+<li><input disabled="" type="checkbox"> Add all components to Create-emergency-branch</li>
+<li><input disabled="" type="checkbox"> Split CheckSTG</li>
+</ul>
+<h2 id="Additional-Task"><a href="#Additional-Task" class="headerlink" title="Additional Task"></a>Additional Task</h2><ul>
+<li><input checked="" disabled="" type="checkbox"> Release Support for CHG0158807</li>
+<li><input checked="" disabled="" type="checkbox"> Release Support for CHG0158808</li>
+<li><input checked="" disabled="" type="checkbox"> Release Support for CHG0158744</li>
+<li><input checked="" disabled="" type="checkbox"> Change Chihiro grpc tag pattern</li>
+</ul>
+<h2 id="Thought"><a href="#Thought" class="headerlink" title="Thought"></a>Thought</h2><h3 id="1"><a href="#1" class="headerlink" title="1"></a>1</h3><p>复活了 2015 mbp13</p>
+<p>等 256GB 写满之后，弄块 1TB 的 SSD 吧</p>
+<p>顺便还能修一下喇叭和电池</p>
+<p>一天一次循环的话，电池还可以顶一年</p>
+<p>所以现在就当 mac mini 用了</p>
+<p>7 年前的机器 mini DP 可以输出 4k 60hz 30bit</p>
+<p>太 pro 了</p>
+<h3 id="2"><a href="#2" class="headerlink" title="2"></a>2</h3><p>CHG0158807 -&gt; INT, LB Series, </p>
+<p>CHG0158808 -&gt; INT, Nexus, not READY</p>
+<p>CHG0158572 -&gt; PROD, LB Series branch for CHG0158744</p>
+<p>CHG0158744 -&gt; PROD, former PROD CM 20211220</p>
+<h3 id="3"><a href="#3" class="headerlink" title="3"></a>3</h3><p>如果 sanity 某个挂了，sanity-test slack 群里截个图说一声</p>
+<p>三种情况，修好了，问owner，不知道问谁</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yunhao981.github.io/2021/12/20/test-infra-days/test-day-92/" data-id="cliodcf6b00jkhsqm45ys09j2" data-title="test-day-92" class="article-share-link">Share</a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/test/" rel="tag">test</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-test-infra-days/test-day-91" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2021/12/17/test-infra-days/test-day-91/" class="article-date">
+  <time class="dt-published" datetime="2021-12-17T02:25:18.000Z" itemprop="datePublished">2021-12-17</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/test/">test</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2021/12/17/test-infra-days/test-day-91/">test-day-91</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h2 id="Today’s-Task"><a href="#Today’s-Task" class="headerlink" title="Today’s Task"></a>Today’s Task</h2><ul>
+<li><input disabled="" type="checkbox"> Onebox-setup vmIP</li>
+<li><input disabled="" type="checkbox"> Add comment time to ReleaseMe</li>
+<li><input disabled="" type="checkbox"> Add a page to search properties on ReleaseMe<ul>
+<li><input disabled="" type="checkbox"> Router without React Router</li>
+</ul>
+</li>
+<li><input disabled="" type="checkbox"> Transfer Jenkins Jobs</li>
+<li><input disabled="" type="checkbox"> Add all components to Create-emergency-branch</li>
+<li><input disabled="" type="checkbox"> Split CheckSTG</li>
+</ul>
+<h2 id="Additional-Task"><a href="#Additional-Task" class="headerlink" title="Additional Task"></a>Additional Task</h2><h2 id="Thought"><a href="#Thought" class="headerlink" title="Thought"></a>Thought</h2><h3 id="1"><a href="#1" class="headerlink" title="1"></a>1</h3><p>两台 server</p>
+<p>10.86.32.116</p>
+<p>可以同时跑 LB 全家桶的 regression</p>
+<p>这样就可以从 8 个小时缩到 4 个小时了</p>
+<h3 id="2"><a href="#2" class="headerlink" title="2"></a>2</h3><p>开组会的时候有点缺氧（物理）</p>
+<p>后面圣诞节的 13 天长假里</p>
+<p>也该认真想想自己的职业规划了</p>
+<h3 id="3"><a href="#3" class="headerlink" title="3"></a>3</h3><p>事情好像越积越多</p>
+<p>越拖越久</p>
+<p>需要一个大致的时间节点</p>
+<p>去标识做完了哪些事情</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yunhao981.github.io/2021/12/17/test-infra-days/test-day-91/" data-id="cliodcf6a00jhhsqmdn7zd3zt" data-title="test-day-91" class="article-share-link">Share</a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/test/" rel="tag">test</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-test-infra-days/test-day-90" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2021/12/16/test-infra-days/test-day-90/" class="article-date">
+  <time class="dt-published" datetime="2021-12-16T02:34:55.000Z" itemprop="datePublished">2021-12-16</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/test/">test</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2021/12/16/test-infra-days/test-day-90/">test-day-90</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h2 id="Today’s-Task"><a href="#Today’s-Task" class="headerlink" title="Today’s Task"></a>Today’s Task</h2><ul>
+<li><input disabled="" type="checkbox"> Onebox-setup vmIP</li>
+<li><input disabled="" type="checkbox"> Add comment time to ReleaseMe</li>
+<li><input disabled="" type="checkbox"> Add a page to search properties on ReleaseMe<ul>
+<li><input disabled="" type="checkbox"> Router without React Router</li>
+</ul>
+</li>
+<li><input disabled="" type="checkbox"> Transfer Jenkins Jobs</li>
+<li><input disabled="" type="checkbox"> Add all components to Create-emergency-branch</li>
+<li><input disabled="" type="checkbox"> Split CheckSTG</li>
+<li><input disabled="" type="checkbox"> Failure Tracker Jenkins Job</li>
+</ul>
+<h2 id="Additional-Task"><a href="#Additional-Task" class="headerlink" title="Additional Task"></a>Additional Task</h2><ul>
+<li><input checked="" disabled="" type="checkbox"> Send Case Emails to Owners</li>
+<li><input checked="" disabled="" type="checkbox"> Track Citadel Sanity Failure</li>
+<li><input checked="" disabled="" type="checkbox"> build nucleus image for PROD and INT</li>
+<li><input checked="" disabled="" type="checkbox"> build other images for PROD and INT</li>
+</ul>
+<h2 id="Thought"><a href="#Thought" class="headerlink" title="Thought"></a>Thought</h2><h3 id="1"><a href="#1" class="headerlink" title="1"></a>1</h3><p>七点半到家，八点吃好饭，</p>
+<p>九点开始运动，十点结束</p>
+<p>其实只有一个小时可以去看点什么</p>
+<p>昨晚选择了整理书架，经典搭环境</p>
+<h3 id="2"><a href="#2" class="headerlink" title="2"></a>2</h3><p>Fuck Log4j2 Issue</p>
+<p>不仅白天需要额外做许多 FIX 相关的 image 流程</p>
+<p>每天让我亏掉当天工资的1/4</p>
+<p>还好没有持仓 Oracle</p>
+<p>不然更加惨烈…</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yunhao981.github.io/2021/12/16/test-infra-days/test-day-90/" data-id="cliodcf6900jbhsqmedg02647" data-title="test-day-90" class="article-share-link">Share</a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/test/" rel="tag">test</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-cm-notes/stg-liquibase-deploy-steps" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2021/12/15/cm-notes/stg-liquibase-deploy-steps/" class="article-date">
+  <time class="dt-published" datetime="2021-12-15T09:03:36.000Z" itemprop="datePublished">2021-12-15</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Test-Infra-Manual/">Test Infra Manual</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2021/12/15/cm-notes/stg-liquibase-deploy-steps/">stg-liquibase-deploy-steps</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <p>Steps:  </p>
+<ol>
+<li>release liquibase deploy image:<ul>
+<li>mysql:<ul>
+<li>nucleus: <a target="_blank" rel="noopener" href="https://reports.citools.ea.com/jenkins/job/ReleaseProductInNucleusRepo">https://reports.citools.ea.com/jenkins/job/ReleaseProductInNucleusRepo</a>, Product: liquibase.data</li>
+<li>more to come…</li>
+</ul>
+</li>
+<li>cassandra:<ul>
+<li>nucleus: <a target="_blank" rel="noopener" href="https://reports.citools.ea.com/jenkins/job/ReleaseProductInNucleusRepo">https://reports.citools.ea.com/jenkins/job/ReleaseProductInNucleusRepo</a>, Product: liquibase.cassandra</li>
+<li>more to come…</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Log on to <code>stgk8smaster-pci-01</code></li>
+<li><code>cd</code> into /opt/iad2_kubernetes_for_liquibase/stg/application/liquibase</li>
+<li>Git checkout latest version, currently tianyitao-liquibase, future master</li>
+<li><code>sudo bash apply.sh [job_type] [image_version] [action]</code> or <code>sudo bash apply.sh</code> for help message</li>
+<li>Log folder and other information will be printed. Example below:<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">replacing &#123;IMAGE_VERSION&#125; with 551.0.20211214.799.9f6a920.nocm.1639467754, outputting to liquibase-job-nucleus.liquibase.cassandra.deploy.yaml.211214075413</span><br><span class="line">job exists, will delete using</span><br><span class="line">kubectl delete job -n stg-liquibase stgliquibase-nucleus-liquibase-cassandra-deploy</span><br><span class="line">job.batch &quot;stgliquibase-nucleus-liquibase-cassandra-deploy&quot; deleted</span><br><span class="line">applying job using</span><br><span class="line">kubectl apply -n stg-liquibase -f liquibase-job-nucleus.liquibase.cassandra.deploy.yaml.211214075413</span><br><span class="line">job.batch/stgliquibase-nucleus-liquibase-cassandra-deploy created</span><br><span class="line">Job running, scanning for log folder</span><br><span class="line">Checking new serv dir...</span><br><span class="line">New folder not found, sleep for 5 seconds</span><br><span class="line">Checking new serv dir...</span><br><span class="line">New folder not found, sleep for 5 seconds</span><br><span class="line">Checking new serv dir...</span><br><span class="line">New folder is 211214075420</span><br><span class="line">Job is running</span><br><span class="line">check log file: /central_log_stg/app_logs/stgliquibase/nucleus.liquibase.cassandra.deploy/serv/211214075420/status.log</span><br><span class="line">or</span><br><span class="line">check pod: kubectl logs -n stg-liquibase stgliquibase-nucleus-liquibase-cassandra-deploy-qn6fs</span><br></pre></td></tr></table></figure></li>
+</ol>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yunhao981.github.io/2021/12/15/cm-notes/stg-liquibase-deploy-steps/" data-id="cliodcf27001ehsqm2hxqge6q" data-title="stg-liquibase-deploy-steps" class="article-share-link">Share</a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Test-Infra-Manual/" rel="tag">Test Infra Manual</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-test-infra-days/test-day-89" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2021/12/15/test-infra-days/test-day-89/" class="article-date">
+  <time class="dt-published" datetime="2021-12-15T02:24:31.000Z" itemprop="datePublished">2021-12-15</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/test/">test</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2021/12/15/test-infra-days/test-day-89/">test-day-89</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h2 id="Today’s-Task"><a href="#Today’s-Task" class="headerlink" title="Today’s Task"></a>Today’s Task</h2><ul>
+<li><input checked="" disabled="" type="checkbox"> Deploy Onebox-setup on nginx</li>
+<li><input checked="" disabled="" type="checkbox"> Fix Copy Button</li>
+<li><input disabled="" type="checkbox"> Add comment time to ReleaseMe</li>
+<li><input disabled="" type="checkbox"> Add a page to search properties on ReleaseMe<ul>
+<li><input disabled="" type="checkbox"> Router without React Router</li>
+</ul>
+</li>
+<li><input disabled="" type="checkbox"> Transfer Jenkins Jobs</li>
+<li><input disabled="" type="checkbox"> Add all components to Create-emergency-branch</li>
+<li><input disabled="" type="checkbox"> Split CheckSTG</li>
+</ul>
+<h2 id="Additional-Task"><a href="#Additional-Task" class="headerlink" title="Additional Task"></a>Additional Task</h2><h2 id="Thought"><a href="#Thought" class="headerlink" title="Thought"></a>Thought</h2><h3 id="1"><a href="#1" class="headerlink" title="1"></a>1</h3><p>为什么昨晚运动量减半了还是好想睡觉</p>
+<p>今天大概需要频繁触发便携式 SAN 值稳定装置了</p>
+<p>11:36 趴下的话可以瞬间昏迷</p>
+<h3 id="2"><a href="#2" class="headerlink" title="2"></a>2</h3><p>昏昏沉沉地睡了一整个中午</p>
+<p>手都是麻的…</p>
+<p>调整了桌子的高度</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yunhao981.github.io/2021/12/15/test-infra-days/test-day-89/" data-id="cliodcf6a00jehsqmd8yj764g" data-title="test-day-89" class="article-share-link">Share</a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/test/" rel="tag">test</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-test-infra-days/test-day-88" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2021/12/14/test-infra-days/test-day-88/" class="article-date">
+  <time class="dt-published" datetime="2021-12-14T02:32:43.000Z" itemprop="datePublished">2021-12-14</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/test/">test</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2021/12/14/test-infra-days/test-day-88/">test-day-88</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h2 id="Today’s-Task"><a href="#Today’s-Task" class="headerlink" title="Today’s Task"></a>Today’s Task</h2><ul>
+<li><input disabled="" type="checkbox"> Split CheckSTG</li>
+<li><input disabled="" type="checkbox"> Transfer Jenkins Jobs</li>
+<li><input disabled="" type="checkbox"> Add a page to search properties on ReleaseMe<ul>
+<li><input disabled="" type="checkbox"> Router without React Router</li>
+</ul>
+</li>
+<li><input checked="" disabled="" type="checkbox"> Onebox-setup Dockerfile Debug</li>
+<li><input disabled="" type="checkbox"> Add comment time to ReleaseMe</li>
+</ul>
+<h2 id="Additional-Task"><a href="#Additional-Task" class="headerlink" title="Additional Task"></a>Additional Task</h2><ul>
+<li><input checked="" disabled="" type="checkbox"> Rebuild ALL LB Team Components Images for INT</li>
+<li><input checked="" disabled="" type="checkbox"> Rebuild them for PROD</li>
+<li><input checked="" disabled="" type="checkbox"> Long term tasks list</li>
+</ul>
+<h2 id="Thought"><a href="#Thought" class="headerlink" title="Thought"></a>Thought</h2><h3 id="1"><a href="#1" class="headerlink" title="1"></a>1</h3><p>昨晚运动量太大了…</p>
+<p>不仅晚上睡不着</p>
+<p>早上还全身酸痛</p>
+<p>今天就骑台子吧…</p>
+<h3 id="2"><a href="#2" class="headerlink" title="2"></a>2</h3><p>需要一份中短期的 target list</p>
+<p>短期两周的我觉得我可以直接用每天的 task list</p>
+<p>长期的目标我其实有点懵</p>
+<p>不过列计划然后执行这种事情</p>
+<p>无论我 fail 多少次</p>
+<p>定计划的时候都还是很爽</p>
+<h3 id="3"><a href="#3" class="headerlink" title="3"></a>3</h3><p>后来忙了一下午 log4j 的事情</p>
+<p>其实并不需要我来修</p>
+<p>只是帮忙重新 build 所有涉及到的 40 多个 image</p>
+<p>fast-liquibase 的流程变动</p>
+<p>涉及到了 ESS Secret</p>
+<p>就需要手动上 STG 进去执行脚本</p>
+<p>Tommy Tao 写的，暂时还只支持 nucleus</p>
+<p>好消息是 Cassandra 和 Liquibase 都支持</p>
+<p>后面会慢慢切换到他的那些</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yunhao981.github.io/2021/12/14/test-infra-days/test-day-88/" data-id="cliodcf6700j5hsqmcfehafz2" data-title="test-day-88" class="article-share-link">Share</a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/test/" rel="tag">test</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-test-infra-days/test-day-87" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2021/12/13/test-infra-days/test-day-87/" class="article-date">
+  <time class="dt-published" datetime="2021-12-13T02:14:59.000Z" itemprop="datePublished">2021-12-13</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/test/">test</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2021/12/13/test-infra-days/test-day-87/">test-day-87</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h2 id="Today’s-Task"><a href="#Today’s-Task" class="headerlink" title="Today’s Task"></a>Today’s Task</h2><ul>
+<li><input checked="" disabled="" type="checkbox"> List common info on stgk8smaster in Jenkins Job</li>
+<li><input disabled="" type="checkbox"> Transfer Jenkins Jobs</li>
+<li><input disabled="" type="checkbox"> Add a page to search properties on ReleaseMe<ul>
+<li><input disabled="" type="checkbox"> Router without React Router</li>
+</ul>
+</li>
+<li><input disabled="" type="checkbox"> Add comment time to ReleaseMe</li>
+</ul>
+<h2 id="Additional-Task"><a href="#Additional-Task" class="headerlink" title="Additional Task"></a>Additional Task</h2><ul>
+<li><input checked="" disabled="" type="checkbox"> Fix saola image version tag</li>
+<li><input checked="" disabled="" type="checkbox"> Fix thread-observer gitlab CICD pipeline</li>
+</ul>
+<h2 id="Thought"><a href="#Thought" class="headerlink" title="Thought"></a>Thought</h2><h3 id="1"><a href="#1" class="headerlink" title="1"></a>1</h3><p>迷迷糊糊的周一早晨</p>
+<p>并不是什么心理上的困扰</p>
+<p>单纯是喝茶太多了睡不着…</p>
+<p>周末两天没有好好吃饭</p>
+<p>睡眠也不正常</p>
+<p>掉了很多肉</p>
+<p>无处安放的青春</p>
+<p>终究是化为了无处安放的脂肪</p>
+<h3 id="2"><a href="#2" class="headerlink" title="2"></a>2</h3><p>计划了一大堆要看的书要跟的课</p>
+<p>周末终究还是躺在床上了两天</p>
+<p>要如何才能找回动力与热情呢？</p>
+<p>小目标</p>
+<p>把两年前咕到一半的算法课看完</p>
+<h3 id="3"><a href="#3" class="headerlink" title="3"></a>3</h3><p>最近发现</p>
+<p>一边玩骑行台功率训练</p>
+<p>一边可以看动画</p>
+<p>试着看了一集人形电脑天使心</p>
+<p>还弄来了幸运星和 Air</p>
+<p>体验相当棒</p>
+<p>10年前看得云里雾里的</p>
+<p>retro mode on</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yunhao981.github.io/2021/12/13/test-infra-days/test-day-87/" data-id="cliodcf6700j2hsqm7sjq8ir5" data-title="test-day-87" class="article-share-link">Share</a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/test/" rel="tag">test</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-test-infra-days/test-day-86" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2021/12/10/test-infra-days/test-day-86/" class="article-date">
+  <time class="dt-published" datetime="2021-12-10T02:25:58.000Z" itemprop="datePublished">2021-12-10</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/test/">test</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2021/12/10/test-infra-days/test-day-86/">test-day-86</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h2 id="Today’s-Task"><a href="#Today’s-Task" class="headerlink" title="Today’s Task"></a>Today’s Task</h2><ul>
+<li><input checked="" disabled="" type="checkbox"> Release Support</li>
+<li><input checked="" disabled="" type="checkbox"> Add job link to Hadar Bot</li>
+<li><input disabled="" type="checkbox"> List common info on stgk8smaster in Jenkins Job</li>
+<li><input disabled="" type="checkbox"> Add a page to search properties on ReleaseMe<ul>
+<li><input disabled="" type="checkbox"> Router without React Router</li>
+</ul>
+</li>
+<li><input disabled="" type="checkbox"> Add comment time to ReleaseMe</li>
+<li><input disabled="" type="checkbox"> Transfer Jenkins Jobs</li>
+</ul>
+<h2 id="Additional-Task"><a href="#Additional-Task" class="headerlink" title="Additional Task"></a>Additional Task</h2><ul>
+<li><input checked="" disabled="" type="checkbox"> Investigate on Saola.flink image buildling issue</li>
+</ul>
+<h2 id="Thought"><a href="#Thought" class="headerlink" title="Thought"></a>Thought</h2><p>今晚回家记得买明天的早饭</p>
+<p>回去之后打印一下 P90X 的计划表</p>
+<p>mac 要下周周末才能拿到了</p>
+<p>比预想的时间还要晚一丢丢</p>
+<p>到时候看一下电池</p>
+<p>晚上临走前发现 saola image 做不出来</p>
+<p>是版本号的格式原因导致了 jar 包找不到</p>
+<p>试着临时修了下</p>
+<p>nexus STG 起不来的时候因为这件事情没有第一时间去问 Owner</p>
+<p>而是问了 Zhong Lu</p>
+<p>Kyle 问起来的时候有些小尴尬</p>
+<p>以后直接去问 Jiajian 吧</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yunhao981.github.io/2021/12/10/test-infra-days/test-day-86/" data-id="cliodcf6600izhsqmgj9z8bv5" data-title="test-day-86" class="article-share-link">Share</a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/test/" rel="tag">test</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+
+
+  <nav id="page-nav">
+    
+    <a class="extend prev" rel="prev" href="/page/13/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/12/">12</a><a class="page-number" href="/page/13/">13</a><span class="page-number current">14</span><a class="page-number" href="/page/15/">15</a><a class="page-number" href="/page/16/">16</a><span class="space">&hellip;</span><a class="page-number" href="/page/26/">26</a><a class="extend next" rel="next" href="/page/15/">Next &raquo;</a>
+  </nav>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Categories</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Algorithm/">Algorithm</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Alogorithm/">Alogorithm</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/GitHub/">GitHub</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Java/">Java</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/JavaScript/">JavaScript</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Test-Infra-Manual/">Test Infra Manual</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/azpr/">azpr</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/csapp/">csapp</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/git/">git</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/hexo/">hexo</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/java/">java</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/pintos/">pintos</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/react/">react</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/slackbot/">slackbot</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/softskils/">softskils</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/test/">test</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/typescript/">typescript</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%9D%82%E4%B8%83%E6%9D%82%E5%85%AB/">杂七杂八</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/">读书笔记</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Algorithm/" rel="tag">Algorithm</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Books/" rel="tag">Books</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/GitHub/" rel="tag">GitHub</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Java/" rel="tag">Java</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/JavaScript/" rel="tag">JavaScript</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/OS/" rel="tag">OS</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Test-Infra-Manual/" rel="tag">Test Infra Manual</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Test-Infra-Manualtest/" rel="tag">Test Infra Manualtest</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/azpr/" rel="tag">azpr</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/csapp/" rel="tag">csapp</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/git/" rel="tag">git</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/" rel="tag">hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/java/" rel="tag">java</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/react/" rel="tag">react</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/slackbot-ts-js/" rel="tag">slackbot ts js</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/softskils/" rel="tag">softskils</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/test/" rel="tag">test</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/typescript/" rel="tag">typescript</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/vim/" rel="tag">vim</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%9D%82%E4%B8%83%E6%9D%82%E5%85%AB/" rel="tag">杂七杂八</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/Algorithm/" style="font-size: 14px;">Algorithm</a> <a href="/tags/Books/" style="font-size: 16px;">Books</a> <a href="/tags/GitHub/" style="font-size: 14px;">GitHub</a> <a href="/tags/Java/" style="font-size: 16px;">Java</a> <a href="/tags/JavaScript/" style="font-size: 16px;">JavaScript</a> <a href="/tags/OS/" style="font-size: 12px;">OS</a> <a href="/tags/Test-Infra-Manual/" style="font-size: 18px;">Test Infra Manual</a> <a href="/tags/Test-Infra-Manualtest/" style="font-size: 10px;">Test Infra Manualtest</a> <a href="/tags/azpr/" style="font-size: 12px;">azpr</a> <a href="/tags/csapp/" style="font-size: 14px;">csapp</a> <a href="/tags/git/" style="font-size: 10px;">git</a> <a href="/tags/hexo/" style="font-size: 10px;">hexo</a> <a href="/tags/java/" style="font-size: 10px;">java</a> <a href="/tags/react/" style="font-size: 12px;">react</a> <a href="/tags/slackbot-ts-js/" style="font-size: 10px;">slackbot ts js</a> <a href="/tags/softskils/" style="font-size: 10px;">softskils</a> <a href="/tags/test/" style="font-size: 20px;">test</a> <a href="/tags/typescript/" style="font-size: 10px;">typescript</a> <a href="/tags/vim/" style="font-size: 10px;">vim</a> <a href="/tags/%E6%9D%82%E4%B8%83%E6%9D%82%E5%85%AB/" style="font-size: 10px;">杂七杂八</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/06/">June 2023</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/05/">May 2023</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/03/">March 2023</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/01/">January 2023</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/12/">December 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/11/">November 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/10/">October 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/09/">September 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/08/">August 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/07/">July 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/06/">June 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/05/">May 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/04/">April 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/03/">March 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/02/">February 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/01/">January 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/12/">December 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/11/">November 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/10/">October 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/09/">September 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/08/">August 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/04/">April 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/11/">November 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/01/">January 2019</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2023/06/09/test-infra-days/test-day-382/">test-day-382</a>
+          </li>
+        
+          <li>
+            <a href="/2023/06/08/test-infra-days/test-day-381/">test-day-381</a>
+          </li>
+        
+          <li>
+            <a href="/2023/06/07/test-infra-days/test-day-380/">test-day-380</a>
+          </li>
+        
+          <li>
+            <a href="/2023/05/25/cm-notes/cm-notes/">CM-Notes</a>
+          </li>
+        
+          <li>
+            <a href="/2023/03/29/Productivity-Section-2/">Productivity-Section-2</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+      &copy; 2023 Yunhao Liu<br>
+      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+
+<script src="/js/jquery-3.4.1.min.js"></script>
+
+
+
+  
+<script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+
+  </div>
+</body>
+</html>
