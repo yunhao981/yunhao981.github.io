@@ -35,18 +35,18 @@ date: 2023-01-10 14:23:51
 - [x] Catalog liquibase image auto trigger
 - [x] Saola Trigger All parameters
 - [x] Lockbox sloth, vaquita, cp common base image
-- [ ] Parameter Check to avoid image from retro branch merged to release (retro/xxx_MERGED)
+- [x] Parameter Check to avoid image from retro branch merged to release (retro/xxx_MERGED)
 
 ### Liquibase job
 
 - [x] Keymaster new config path support
 - [x] Fix 'null' prefix in description
-- [ ] Message for Liquibase Image
+- [x] Message for Liquibase Image
 - [ ] Message for Liquibase with Vault Support
 
 ### Code Merge
 
-- [ ] Block Merge-cut and recut for retro branch
+- [x] Block Merge-cut and recut for retro branch
 
 ### Data-Consistency Tool
 
