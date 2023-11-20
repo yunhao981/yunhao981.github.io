@@ -9,16 +9,16 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           submodules: recursive
       - name: Use Node.js 18.x
-        uses: actions/setup-node@v2
+        uses: actions/setup-node@v4
         with:
           node-version: '18'
       - name: Cache NPM dependencies
-        uses: actions/cache@v2
+        uses: actions/cache@v3
         with:
           path: node_modules
           key: ${{ runner.OS }}-npm-cache
