@@ -67,7 +67,7 @@ Saola 的 Saola.infra 下，存在其依赖组件，需要用各自单独的 Pip
 如果还是遇到了权限问题，而且gitlab 的账号配置没问题的话，再重新设置一次一模一样的 url 
 
 ```bash
-sudo git remote set-url origin https://svc_candi_git_admin%40ea.com:${token}@gitlab.ea.com/eci/${repo}.git
+sudo git remote set-url origin https://svc_candi_git_admin%40ea.com:${token}@${gitlab_url}/${repo}.git
 ```
 
 如果 merge conflict，通知完 Yanqin / James / Kyle 之后问 Owner
